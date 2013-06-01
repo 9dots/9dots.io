@@ -44,7 +44,8 @@
     "grunt-css": "~0.3.2",
     "bal-util": "~1.15.3",
     "underscore": "~1.4.3",
-    "express": "~3.2.5"
+    "express": "~3.2.5",
+    "engine.io": "~0.6.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"

@@ -1,8 +1,9 @@
 // Create Server and Express Application
-var express = require('express');
-var http = require('http');
-var app = express();
-var server = http.createServer(app).listen(3000);
+var express = require('express')
+  , http = require('http')
+  , app = express()
+  , server = http.createServer(app)
+  , io = require('engine.io').attach(server);
 
 // Add our Application Stuff
 app.use(express.bodyParser());
@@ -25,3 +26,33 @@ var docpadInstance = require('docpad').createInstance(docpadInstanceConfiguratio
         if (err)  return console.log(err.stack);
     });
 });
+
+var database = docpadInstance.getDatabase();
+
+/*setTimeout(function() {
+    docpadInstance.getCollection('html').findAll().each(function(model) {
+        console.log('model', model);
+    });
+},3000)*/
+
+
+var pages = database.findAllLive({relativeOutDirPath: 'pages'});
+
+io.on('connection', function(socket){
+  console.log('connection');
+  socket.on('message', function(message) {
+    var data = JSON.parse(message);
+    console.log('message', message);
+    if (data.req === 'pages') {
+      var modelsMeta = [];
+      pages.forEach(function(model) {
+        modelsMeta.push(model.getMeta());
+      });
+      socket.send(JSON.stringify(modelsMeta));
+    }
+  });
+});
+
+
+// start server
+server.listen(3000);

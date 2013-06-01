@@ -123,13 +123,6 @@ docpadConfig = {
 			
 			# Execute
 			balUtil.spawn command, {cwd:rootPath,output:true}, ->
-				src = []
-				gruntConfig = require './grunt-config.json'
-				_.each gruntConfig, (value, key) ->
-					src = src.concat _.flatten _.pluck value, 'src'
-				_.each src, (value) ->
-					balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
-				balUtil.spawn ['find', '.', '-type', 'd', '-empty', '-exec', 'rmdir', '{}', '\;'], {cwd:rootPath+'/out', output:false}, ->
 				next()
 
 			# Chain
