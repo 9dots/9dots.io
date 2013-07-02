@@ -18,7 +18,7 @@
 	<%- @getBlock('meta').toHTML() %>
 
 	<!-- DocPad Styles + Our Own -->
-	<%- @getBlock('styles').add(@getGruntedStyles()).toHTML() %>
+	<link rel="stylesheet" href="/styles/style.css"/>
 
 	<!-- Icons -->
 	<!-- Favicon -->
@@ -31,7 +31,8 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114x114-precomposed.png" />
 	<!-- For third-generation iPad with high-resolution Retina display: -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/apple-touch-icon-144x144-precomposed.png" />
-	<script src="/components/angular/angular.min.js"></script>
+	<link rel="stylesheet" href="/bower.css"/>
+	<script type="text/javascript" src="/bower.js"></script>
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -46,7 +47,6 @@
 
 	<!-- DocPad Scripts + Our Own -->
 	<script src="/build.js"></script>
-
-	<%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
+	<script src="/scripts/script.js"></script>
 </body>
 </html>

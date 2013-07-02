@@ -3,7 +3,8 @@ var express = require('express')
   , http = require('http')
   , app = express()
   , server = http.createServer(app)
-  , io = require('engine.io').attach(server);
+  , io = require('engine.io').attach(server)
+  , _ = require('underscore');
 
 // Add our Application Stuff
 app.use(express.bodyParser());
@@ -29,29 +30,26 @@ var docpadInstance = require('docpad').createInstance(docpadInstanceConfiguratio
 
 var database = docpadInstance.getDatabase();
 
-/*setTimeout(function() {
-    docpadInstance.getCollection('html').findAll().each(function(model) {
-        console.log('model', model);
-    });
-},3000)*/
-
 
 var pages = database.findAllLive({relativeOutDirPath: 'pages'});
 
 io.on('connection', function(socket){
-  console.log('connection');
   socket.on('message', function(message) {
     var data = JSON.parse(message);
     console.log('message', message);
     if (data.req === 'pages') {
       var modelsMeta = [];
       pages.forEach(function(model) {
-        modelsMeta.push(model.getMeta());
+        var doc = model.getMeta().toJSON();
+        doc.relativeOutPath = model.get('relativeOutPath');
+        modelsMeta.push(doc);
       });
-      socket.send(JSON.stringify(modelsMeta));
+      socket.send(JSON.stringify({res: 'pages', body: modelsMeta}));
     }
   });
 });
+
+
 
 
 // start server

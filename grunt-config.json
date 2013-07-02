@@ -1,4 +1,12 @@
 {
+  "bowerBuilder": {
+    "all": {
+      ".js": "src/files/bower.js",
+      ".css": "src/files/bower.css",
+      ".png": "src/files",
+      ".gif": "src/files"
+    }
+  },
   "min": {
     "js": {
       "src": ["out/vendor/jquery.js", "out/vendor/log.js", "out/vendor/modernizr.js", "out/scripts/script.js"],
