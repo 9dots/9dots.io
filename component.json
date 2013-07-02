@@ -1,0 +1,7 @@
+{
+  "name": "9dots.io",
+  "dependencies": {
+    "learnboost/engine.io-client": "*",
+    "component/emitter": "*"
+   }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "At.js",
+  "version": "0.3.1",
+  "main": ["dist/js/jquery.atwho.js","dist/css/jquery.atwho.css"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "libs",
+    "spec"
+  ],
+  "dependencies": {
+  	"jquery": "latest"
+  },
+  "gitHead": "550c71cd4941f892e6ba7f353b02cf953f7fced1",
+  "readme": "**Add Github like mentions autocomplete to your application.** [![Build Status](https://travis-ci.org/ichord/At.js.png)](https://travis-ci.org/ichord/At.js)  \n\n\n### Hi\nLet me know you are using it, so I will work harder on it.  \nAnd if you like **At.js** ?! Tell me by adding website [here](https://github.com/ichord/At.js/wiki/Sites)  \nHope you like it, Thanks.! :)\n\n### Notice\n\nThis branch have updated to `v0.3.0`. Please read **CHANGELOG.md** for more details.  \nEnglish Documentation will keep improving. Maybe **You can do me a favor?!**\n\n### Demo\n\nhttp://ichord.github.com/At.js\n\n\n### Features Preview\n\n* Can listen to any character\n    not just '@', and set up multiple listeners for different characters with different behavior and data.\n* Listener events can be bound to multiple textareas\n* Format returned data using templates\n* Keyboard controls in addition to mouse  \n    `Tab` or `Enter` keys select the value, `Up` and `Down` navigate between values  \n    `Right` and `left` will research the keyword.  \n* Customer data handlers and template renders by a group of configurable callbacks.\n* Support **AMD**\n\n### History Version\n\n* branch `stable-v0.2` with tag `v0.2.x`\n* branch `stable-v0.1.x` and tag `v0.1.7`\n\n\n### Rails support\nIf you are working with `Rails`. This gem: [jquery-atwho-rails](https://github.com/ichord/jquery-atwho-rails) may help you.\n\n\n### Requirements\n* jQuery >= 1.7.0.\n\n### Documentation\n\nhttps://github.com/ichord/At.js/wiki\n\n\n### Core Team Members\n\n* [@ichord](https://github.com/ichord)\n\n### One More Thing...\n\nCore function, that get the correct offset of caret, of At.js had been separated as a jQuery plugin [Caret.js](https://github.com/ichord/Caret.js)  \nIf you want to build your own 'At.js', welcome to use it. And [here](http://ichord.github.io/Caret.js) is a Demo.\n\n\n---\nProject is a member of the [OSS Manifesto](http://ossmanifesto.org/).\n",
+  "readmeFilename": "README.md",
+  "_id": "At.js@0.3.1",
+  "description": "**Add Github like mentions autocomplete to your application.** [![Build Status](https://travis-ci.org/ichord/At.js.png)](https://travis-ci.org/ichord/At.js)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ichord/At.js.git"
+  }
+}
