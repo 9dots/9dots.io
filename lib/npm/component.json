@@ -1,0 +1,11 @@
+{
+  "name": "npm",
+  "description": "npm client libs",
+  "dependencies": {},
+  "local": [],
+  "scripts": ["main.js"],
+  "templates": [],
+  "styles": [],
+  "images": [],
+  "main": "main.js"
+}

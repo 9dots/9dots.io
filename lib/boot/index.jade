@@ -1,0 +1,16 @@
+!!! 5
+html(ng-app="app")
+  head
+    base(href='/')
+    title component - modular javascript framework
+    link(rel='stylesheet', href='/app.css')
+    link(rel='stylesheet', href='/bower.css')
+    script(src='/jquery.js')
+    script(src='/bower.js')
+
+  body
+    div(ng-view)
+    script(src='/app.js')
+    script(src='/markdown/channel/bcsocket.js')
+    script
+      require('boot')

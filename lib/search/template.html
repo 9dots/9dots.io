@@ -1,0 +1,7 @@
+<div>
+	<input id='query' ng-model='query'></input>
+	<div ng-repeat='page in pages'>
+		<a href="{{page.relativeOutPath}}">{{page.title}}</a>
+		{{page.blurb}}
+	</div>
+</div>

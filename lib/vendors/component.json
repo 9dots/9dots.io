@@ -1,0 +1,7 @@
+{
+  "name": "vendors",
+  "description": "the content editor libs",
+  "local": ["npm"],
+  "scripts": ["index.js", "github.js", "liquid.js", "liquid.patch.js"],
+  "main": "index.js"
+}

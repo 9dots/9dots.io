@@ -1,0 +1,13 @@
+{
+  "name": "search",
+  "description": "page search component",
+  "dependencies": {
+  	"component/emitter": "*"
+  },
+  "local": [],
+  "scripts": ["index.js"],
+  "templates": ["template.html"],
+  "styles": [],
+  "images": [],
+  "main": "index.js"
+}

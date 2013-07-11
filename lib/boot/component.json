@@ -1,0 +1,9 @@
+{
+  "name": "boot",
+  "description": "bootstrap component",
+  "local": ["search", "markdown", "npm", "editor"],
+  "scripts": ["boot.js"],
+  "styles": ["index.styl"],
+  "images": [],
+  "main": "boot.js"
+}

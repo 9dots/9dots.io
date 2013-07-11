@@ -1,0 +1,15 @@
+{
+  "name": "codemirror",
+  "description": "codemirror for editor",
+  "scripts": [
+  	"index.js", 
+  	"codemirror.js", 
+  	"css.js", 
+  	"gfm.js",
+  	"htmlmixed.js",
+  	"markdown.js",
+  	"yaml.js",
+  	"overlay.js"
+  ],
+  "main": "index.js"
+}

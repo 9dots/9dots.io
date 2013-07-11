@@ -1,0 +1,29 @@
+{
+  "name": "npm",
+  "private": true,
+  "version": "0.0.1",
+  "description": "npm client side libs",
+  "dependencies": {
+    "js-yaml": "~2.0.4",
+    "backbone": "~1.0.0",
+    "underscore": "~1.4.4",
+    "chrono": "~1.0.4",
+    "js-base64": "~2.1.1",
+    "keymaster": "git://github.com/madrobby/keymaster.git#ddcb72eceb033db",
+    "marked": "~0.2.8",
+    "queue-async": "~1.0.3",
+    "diff": "~1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha-phantomjs -R min test/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prose/prose.git"
+  },
+  "author": "Development Seed",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "2f58c9a97bb76b21055fe76b4c97424068ad5386"
+}

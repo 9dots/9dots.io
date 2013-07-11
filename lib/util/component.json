@@ -1,0 +1,7 @@
+{
+  "name": "util",
+  "description": "the content editor libs",
+  "local": ["npm"],
+  "scripts": ["util.js"],
+  "main": "util.js"
+}
