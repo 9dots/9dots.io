@@ -1,9 +1,11 @@
 ---
 author: admin
-date: 2012-11-22 11:36:52+00:00
+date: 2012-11-22T11:36:52.000Z
 layout: post
-title: Bagulators, SpyHats, and ShredPacks, Oh My!
+title: "Bagulators, SpyHats, and ShredPacks, Oh My!"
 blurb: "A #productDesign #lessonPlan."
+published: true
+
 ---
 
 #### Unit Overview:
@@ -470,5 +472,3 @@ _4. Share Commercials  [30 minutes] _Once students are finished, share all com
 
 
 _[back to projects](http://9-dots.org/bagulators-spyhats-and-shredpacks-oh-my/#top).._
-
-
