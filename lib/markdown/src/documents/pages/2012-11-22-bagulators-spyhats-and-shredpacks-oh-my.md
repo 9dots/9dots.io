@@ -10,7 +10,7 @@ published: true
 
 #### Unit Overview:
 
-testing it what cool
+testing it what cool now
 
 Students will walk through an entire design process, from actually designing a product to marketing it to their class.
 
