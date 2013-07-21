@@ -4,7 +4,7 @@ date: "2012-11-22T11:36:52.000Z"
 layout: post
 title: "Bagulators, SpyHats, and ShredPacks, Oh My!"
 blurb: "A #productDesign #lessonPlan."
-published: true
+published: false
 
 ---
 
