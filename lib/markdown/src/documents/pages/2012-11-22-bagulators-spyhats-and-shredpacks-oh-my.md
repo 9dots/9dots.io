@@ -12,7 +12,7 @@ published: true
 
 testing it what cool now
 
-test
+t
 
 Students will walk through an entire design process, from actually designing a product to marketing it to their class.
 
