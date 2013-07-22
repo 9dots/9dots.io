@@ -6,4 +6,4 @@ blurb: "testing #lessonPlan"
 
 ---
 
-what testing test
+what testing test is
