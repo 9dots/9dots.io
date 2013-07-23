@@ -9,7 +9,9 @@ html(ng-app="app")
     script(src='/bower.js')
 
   body
-    div(ng-view)
+    span(ng-controller="main")
+      div(ng-include='vertTemplate')
+      div(ng-view)
     script(src='/app.js')
     script(src='/markdown/channel/bcsocket.js')
     script

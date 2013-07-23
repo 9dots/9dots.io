@@ -6,6 +6,7 @@
   	"codemirror.js", 
   	"css.js", 
   	"gfm.js",
+    "xml.js",
   	"htmlmixed.js",
   	"markdown.js",
   	"yaml.js",
