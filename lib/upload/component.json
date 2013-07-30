@@ -1,0 +1,13 @@
+{
+  "name": "upload",
+  "description": "file upload",
+  "dependencies": {
+    "component/upload": "*"
+  },
+  "local": [],
+  "scripts": ["main.js","jquery.ui.widget.js", "jquery.iframe-transport.js", "jquery.fileupload.js", "jquery.fileupload-process.js", "jquery.fileupload-image.js", "jquery.fileupload-validate.js", "jquery.fileupload-angular.js", "controller.js"],
+  "templates": [],
+  "styles": [],
+  "images": [],
+  "main": "main.js"
+}
