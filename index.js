@@ -16,6 +16,8 @@ app.set('view engine', 'jade');
 app.use(express.logger('dev'));
 app.use(express.static(__dirname + '/public'));
 
+
+
 // mount
 
 // serves markdown pages at /markdown/pages
@@ -26,6 +28,11 @@ app.use(require('./lib/gatekeeper'));
 
 // markdown editor
 app.use('/editor', require('./lib/editor'));
+
+app.use(require('./lib/upload'));
+//app.post('/upload', function() {
+//	console.log('upload');
+//})
 
 // boot app
 app.use(require('boot'));

@@ -2,10 +2,11 @@
   "name": "markdown",
   "description": "page view component",
   "dependencies": {
+    "component/emitter": "*"
   },
-  "local": [],
-  "scripts": ["comp.js"],
-  "templates": ["template.html"],
+  "local": ["npm"],
+  "scripts": ["comp.js", "renderClient.js"],
+  "templates": ["template.html", "layoutsPost.html"],
   "styles": ["comp.css"],
   "images": [],
   "main": "comp.js"

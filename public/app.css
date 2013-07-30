@@ -13,6 +13,7 @@ iframe {
 
 
 
+
 /* ------------------------------------------
   Reset ♥
   http://meyerweb.com/eric/tools/css/reset/
@@ -710,6 +711,14 @@ ins {
 
 .vert .ico.login:hover,
 .ico.login:hover {
+  background-color:#73955c;
+  }
+
+.vert .ico.logout,
+.ico.logout         { background-color:red; color:#fff; }
+
+.vert .ico.logout:hover,
+.ico.logout:hover {
   background-color:#73955c;
   }
 
@@ -1734,9 +1743,9 @@ ins {
   white-space:pre-wrap;
   }
 
-.meta .chzn-container-single .chzn-single,
-.meta .chzn-container-multi .chzn-choices,
-.meta input {
+.edit .chzn-container-single .chzn-single,
+.edit .chzn-container-multi .chzn-choices,
+.edit input {
   font-size: 20px;
   width: 100%;
   margin-bottom: 10px;
@@ -1746,7 +1755,7 @@ ins {
   -webkit-box-shadow:none;
           box-shadow:none;
 }
-  .meta .chzn-container-single .chzn-single {
+  .edit .chzn-container-single .chzn-single {
     height:30px;
     }
 
@@ -1757,10 +1766,10 @@ ins {
   -webkit-border-radius:0 0 4px 4px;
           border-radius:0 0 4px 4px;
   }
-.meta .form {
+.edit .form {
   padding:15px 15px 30px;
   }
-  .meta .form-item {
+  .edit .form-item {
     padding:8px 15px 0;
     }
     .meta .form-item.link {

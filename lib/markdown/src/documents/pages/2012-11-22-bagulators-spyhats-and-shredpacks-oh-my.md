@@ -9,6 +9,7 @@ blurb: "A #productDesign #lessonPlan."
 #### Unit Overview:
 
 
+
 Students will walk through an entire design process, from actually designing a product to marketing it to their class.
 
 
@@ -16,7 +17,6 @@ Students will walk through an entire design process, from actually designing a p
 
 
 4-8
-
 
 #### Projects:
 

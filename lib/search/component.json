@@ -4,7 +4,7 @@
   "dependencies": {
   	"component/emitter": "*"
   },
-  "local": [],
+  "local": ["markdown", "npm"],
   "scripts": ["index.js"],
   "templates": ["template.html"],
   "styles": [],
