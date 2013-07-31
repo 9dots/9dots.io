@@ -10,8 +10,6 @@ blurb: "A #mechanicalEngineering #lessonPlan that teaches #testing and #iteratio
 #### Unit Overview:
 
 
-
-
 Students will learn about simple machines and particularly about cranks.  Students will understand how cranks work, why they are useful, find examples of cranks in their everyday lives, and create 2 crank projects.
 
 

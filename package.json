@@ -26,6 +26,7 @@
     "level-sublevel": "~4.8.2",
     "level-store": "~3.9.1",
     "mime": "~1.2.10",
-    "gm": "~1.11.0"
+    "gm": "~1.11.0",
+    "level-live-stream": "~1.4.6"
   }
 }
