@@ -4,14 +4,12 @@ date: "2012-11-22T11:36:52.000Z"
 layout: post
 title: "Bagulators, SpyHats, and ShredPacks, Oh My!"
 blurb: "A #productDesign #lessonPlan."
-published: false
 
 ---
 
 #### Unit Overview:
 
 testing it what cool nowa
-d
 tee
 Students will walk through an entire design process, from actually designing a product to marketing it to their class.
 
