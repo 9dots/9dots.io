@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/markdown', require('./lib/markdown'));
 
 // github auth
-app.use(require('./lib/gatekeeper'));
+app.use(require('./lib/auth'));
 
 // markdown editor
 app.use('/editor', require('./lib/editor'));
