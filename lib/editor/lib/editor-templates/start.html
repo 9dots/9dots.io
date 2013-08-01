@@ -1,0 +1,14 @@
+<div class='round splash' ng-controller="editorLoginCtrl">
+  <h2 class='icon landing'>9 Dots Collaborate</h2>
+  <div class='inner'>
+    <p>9 Dots collaboration is built on github.</p>
+    <p><a href='/about.html'>Learn more</a></p>
+    <span ng-hide='loggingIn'>
+	    <a class='round button' href='https://github.com/login/oauth/authorize?client_id={{clientId}}&scope=repo,user,gist&redirect_uri={{redirectUri}}'>Authorize with GitHub</a>
+	  </span>
+	  <span ng-show='loggingIn'>
+	  	Logging In ...
+	  </span>
+  </div>
+</div>
+

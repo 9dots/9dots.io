@@ -1,0 +1,128 @@
+ <div id="post" class="post" ng-controller='editorPostCtrl'>
+  <div class='inner editor views markdown'>
+    <span ng-switch='post.mode'>
+      <div ng-switch-when='save' class='view prose diff' >
+        <h2> Review your changes:</br>
+          <span class="deemphasize small">Additions are highlighted in green. Deletions are crossed out.</span>     
+        </h2>
+        <div class='diff-content inner' ng-bind-html-unsafe='post.html'></div>
+      </div>
+      <div ng-switch-when='preview' class='view preview prose' ng-bind-html-unsafe='post.html'>
+      </div>
+      <div ng-switch-when='edit' class='view active edit'>
+        <form>
+          <input id='title' ng-model='post.data.metadata.title'></input>
+          <input id='blurb' ng-model='post.data.metadata.blurb'></input>
+          <img ng-src='{{post.data.metadata.image}}' height='100px'></img>
+          <div ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
+            <input class="fileUpload" type="file" name="files[]" multiple>
+          </div>
+        </form>
+        <div class='topbar-wrapper'>
+          <div class='topbar'>
+            <div id='toolbar' class='containment toolbar round'>
+              <a class='publish-flag round contain' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+                {{post.publishedText()}}<span class='ico small checkmark'></span>
+              </a>
+              <div class='options clearfix'>
+                <span \class='action round fl ico small document {{avatar}}'>
+                  <span class='status'></span>
+                    <span class='popup round arrow-top'>save</span>
+                  </span>
+                </span>
+                <ul class='group round clearfix'>
+                  <li><a title='Heading' data-key='heading' data-snippet='##\n\n' ng-click='post.markdownSnippet($event)'>h2</a></li>
+                  <li><a title='Sub Heading' data-key='sub-heading' data-snippet='###\n\n' ng-click='post.markdownSnippet($event)'>h3</a></li>
+                </ul>
+                <ul class='group round clearfix'>
+                  <li>
+                    <a title='Insert Link' \data-key='link' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small link'></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a title='Insert Image' data-key='media' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small picture'></span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class='group round clearfix'>
+                  <li><a title='Bold' data-key='bold' data-snippet='****' ng-click='post.markdownSnippet($event)'>B</a></li>
+                  <li>
+                    <a data-key='italic' title='Italic' data-snippet='__' ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small italic'></span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class='group round clearfix'>
+                  <li>
+                    <a title='Blockquote' data-key='quote' data-snippet='> We loved with a love that was more than love\n\n' ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small quote'></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a title='List' data-key='list' data-snippet='- item\n- item\n- item\n\n' ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small list'></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a title='Numbered List' data-key='numbered-list' data-snippet='1. item\n2. item\n3. item\n\n' ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small numbered-list'></span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class='group round clearfix'>
+                  <li>
+                    <a class='round' data-key='help' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
+                      <span class='ico small question'></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id='dialog'>
+                <span ng-switch='post.dialog'>
+                  <div ng-switch-when='link' class='inner'>
+                    <label>Title</label>
+                    <input type='text' name='href' placeholder='Link URL' />
+                    <input type='text' name='text' placeholder='Link Name' />
+                    <input type='text' name='title' placeholder='Title (optional)' />
+
+                    <span ng-show='post.relativeLinks'>
+                      <div class='collapsible'>
+                        <select data-placeholder='Insert a local link' class='chzn-select'>
+                          <option value></option>
+                          <option value='{{link.href}},{{link.text}}' ng-repeat='link in post.relativeLinks'>{{link.text}}</option>
+                        </select>
+                      </div>
+                    </span>
+                    <a class='button round insert' data-type='link' ng-click='post.dialogInsert($event);'>insert</a>
+                  </div>
+                  <div ng-switch-when='media' class='inner'>
+                    <form id="fileupload" ng-controller="uploadCtrl">
+                      <label>Insert Image</label>
+                      <div class='contain clearfix'>
+                        <span class='ico picture-add fl'></span>
+                        Upload images by Dragging & Dropping or <br>
+                        <span class='button'>
+                          <span>add file</span>
+                          <input class="fileUpload" type="file" name="files[]" multiple>
+                        </span>
+
+                      </div>
+                      <input type='text' name='alt' placeholder='Alt text (optional)' />
+                      <a class='button round insert' data-type='media' ng-click='post.dialogInsertImage(path);'>Insert</a>
+                    </form>
+                  </div>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+    <div id='code' ng-show='post.mode == "edit"'></div>
+  </div>
+</div>
+
+
