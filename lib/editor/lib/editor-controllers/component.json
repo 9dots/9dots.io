@@ -7,6 +7,6 @@
   },
   "description": "the content editor controllers",
   "local": ["npm", "util", "codemirror", "markdown", "upload"],
-  "scripts": [ "index.js", "app.js", "post.js", "start.js", "heading.js", "vert.js"],
+  "scripts": [ "index.js", "post.js", "start.js", "vert.js"],
   "main": "index.js"
 }

@@ -1,0 +1,7 @@
+{
+  "name": "editor-templates",
+  "description": "the content editor templates",
+  "scripts": ["index.js"],
+  "templates": [ "post.html", "start.html", "vert.html"],
+  "main": "index.js"
+}
