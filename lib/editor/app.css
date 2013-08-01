@@ -1332,11 +1332,11 @@ ins {
   .dialog > .inner {
     padding:25px 15px 15px;
     }
-  .dialog.no-directory {
+  .dialog.media {
     width:240px;
     left:50px;
     }
-    .fixed .dialog.no-directory {
+    .fixed .dialog.media {
       left:105px;
       }
   .dialog.link {

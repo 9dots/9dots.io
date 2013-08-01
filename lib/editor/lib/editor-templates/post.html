@@ -79,7 +79,7 @@
                   </li>
                 </ul>
               </div>
-              <div id='dialog'>
+              <div id='dialog' ng-class='post.dialogClass()'>
                 <span ng-switch='post.dialog'>
                   <div ng-switch-when='link' class='inner'>
                     <label>Title</label>
@@ -113,6 +113,7 @@
                       <a class='button round insert' data-type='media' ng-click='post.dialogInsertImage(path);'>Insert</a>
                     </form>
                   </div>
+                  <div ng-switch-default></div>
                 </span>
               </div>
 
