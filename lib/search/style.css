@@ -72,7 +72,7 @@ html, body {
 }
 
 .pages-container {
-  margin: 15px 50px;
+  margin: 15px 20px;
   text-align: center;
 }
 
@@ -90,18 +90,22 @@ html, body {
 .page-image-wrap {
 	width: 295px;
 	height: 215px;
+  background-size: cover;
+  background-position: center;
 }
 
 .page-heel {
-  height: 105px;
+  padding: 15px;
+  width: 295px;
+  /*height: 85px;*/
   float: left;
 }
 
-.page-image {
+/*.page-image {
 	max-height: 215px;
 	width: auto;
 	height: auto;
 	max-width: 295px;
 	margin: auto auto;
 	display: block;
-}
+}*/
