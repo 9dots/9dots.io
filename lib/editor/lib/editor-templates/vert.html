@@ -1,16 +1,6 @@
 <span ng-controller='editorVertCtrl' ng-class='{open: sidebar}'> 
   <div id='vert' class='vert clearfix navigation' >
     <ul class='post-views nav clearfix'>
-      <li ng-hide='!vert.mode'>
-        <a href='/' class='ico round'>
-          H
-        </a>
-      </li>
-      <li ng-hide='vert.mode == "edit"'>
-        <a class='ico round new new-file' ng-click='vert.new()'>
-          <span class='popup round arrow-right'>New</span>
-        </a>
-      </li>
       <li ng-show='vert.mode == "edit" || vert.mode == "pages"'>
         <a class='ico round pencil edit' ng-class='{active: vert.editMode == "edit" && vert.mode == "edit"}' ng-click='vert.edit($event)'>
           <span class='popup round arrow-right'>Edit</span>
@@ -29,16 +19,6 @@
           </a>
         </li>
       </span>
-    </ul>
-    <ul class='auth nav clearfix'>
-      <li>
-        <a ng-hide='auth.authenticated()' class='ico round switch login' href='https://github.com/login/oauth/authorize?client_id={{auth.id}}&scope=repo,user,gist&redirect_uri={{redirectUri}}'>
-          <span class='popup round arrow-right'>Login</span>
-        </a>
-        <a ng-show='auth.authenticated()' class='ico round switch logout' href='/logout'>
-          <span class='popup round arrow-right'>Logout</span>
-        </a>
-      </li>
     </ul>
   </div>
   <div id='drawer' class='sidebar'>

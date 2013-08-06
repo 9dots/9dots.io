@@ -4,6 +4,7 @@ date: 2013-03-29 22:55:00+00:00
 layout: post
 title: 'GarageBand Part I: Secret Agent'
 blurb: "#digitalMedia #lessonPlan"
+image: "/upload/garageband.jpg"
 ---
 
 ## Plus, a song that makes you want to dance, and one that makes you sleepy...

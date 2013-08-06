@@ -4,6 +4,7 @@ date: 2013-02-19 17:36:21+00:00
 layout: post
 title: It's Electric
 blurb: "A #computerProgramming and #electronics #lessonPlan."
+image: "/upload/electriy.jpg"
 ---
 
 #### Unit Overview:

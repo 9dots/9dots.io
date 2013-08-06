@@ -4,6 +4,7 @@ date: 2013-02-28 17:26:11+00:00
 layout: post
 title: Marshmallow Catapults
 blurb: "#lessonPlan #mechanicalEngineering"
+image: "/upload/catapult.jpg"
 ---
 
 

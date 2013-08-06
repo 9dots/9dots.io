@@ -1,4 +1,5 @@
  <div id="post" class="post" ng-controller='editorPostCtrl'>
+  <div ng-include='"editor/vert.html"'></div>
   <div class='inner editor views markdown'>
     <span ng-switch='post.mode'>
       <div ng-switch-when='save' class='view prose diff' >
@@ -68,13 +69,6 @@
                   <li>
                     <a title='Numbered List' data-key='numbered-list' data-snippet='1. item\n2. item\n3. item\n\n' ng-click='post.markdownSnippet($event)'>
                       <span class='ico small numbered-list'></span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class='group round clearfix'>
-                  <li>
-                    <a class='round' data-key='help' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
-                      <span class='ico small question'></span>
                     </a>
                   </li>
                 </ul>

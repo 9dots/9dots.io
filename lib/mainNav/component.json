@@ -1,0 +1,13 @@
+{
+  "name": "mainNav",
+  "description": "the main navigation",
+  "dependencies": {
+    "component/url": "*"
+  },
+  "local": [],
+  "scripts": ["index.js", "controller.js"],
+  "templates": ["template.html"],
+  "styles": ["style.css"],
+  "images": [],
+  "main": "index.js"
+}

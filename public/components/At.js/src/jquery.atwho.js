@@ -7,6 +7,7 @@
   Licensed under the MIT license.
 */
 
+console.log('At.js');
 
 (function() {
   var __slice = [].slice;
@@ -351,6 +352,8 @@
       };
 
       View.prototype.reposition = function() {
+        console.log('dont reposition');
+        return;
         var offset, rect;
         rect = this.context.rect();
         if (rect.bottom + this.$el.height() - $(window).scrollTop() > $(window).height()) {

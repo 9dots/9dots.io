@@ -4,6 +4,7 @@ date: 2013-04-06 08:27:54+00:00
 layout: post
 title: Delving into Chemistry with Elephant's Toothpaste
 blurb: "A #chemistry and #science #lessonPlan."
+image: "/upload/delving.jpg"
 ---
 
 Our lesson on chemistry started out with a review of basic terms (atoms, molecules, chemical reactions, etc.)  Students learned about the difference between chemical reactions (which can't be undone) and physical reactions (which can).

@@ -4,6 +4,7 @@ date: 2012-11-22 11:31:55+00:00
 layout: post
 title: Drive My Car
 blurb: "An #environmentEnginering and #mechanicalEngineering lesson plan."
+image: "/upload/drive.jpg"
 ---
 
 #### Unit Overview:

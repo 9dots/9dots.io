@@ -4,6 +4,7 @@ date: 2012-12-17 03:49:00+00:00
 layout: post
 title: Borax Crystal Ornaments
 blurb: "A #lessonPlan that teaches students about #chemistry through the creation of borax crystals."
+image: "/upload/borax.jpg"
 ---
 
 ## Borax Crystal Ornaments
