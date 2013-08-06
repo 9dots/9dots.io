@@ -4,6 +4,20 @@ iframe {
 	height: 100%;
 }
 
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
 
 .blur {
   -webkit-filter: blur(40px);
@@ -11,7 +25,6 @@ iframe {
   -o-filter: blur(40px);
   -ms-filter: blur(40px);
   filter: blur(40px);
-  /*opacity: 0.4;*/
 }
 
 .stretch {
@@ -25,16 +38,77 @@ iframe {
   background-position: center;
 }
 
-.page img {
-  max-width: 100%;
-}
-
 .page-content-wrap {
   z-index: 1;
   position: relative;
-  background: #FFF;
-	width: 770px;
-  padding: 20px;
+  background: #4D4D4D;
+	width: 935px;
 	margin: 60px auto;
 	max-width: 1100px;
+}
+
+.page-inner {
+  width: 615px;
+  float: left;
+  background: #FFF;
+}
+
+.page-sidebar {
+  width: 320px;
+  float: left;
+  background: #4D4D4D;
+}
+
+.page-inner img {
+  max-width: 100%;
+}
+
+.page-inner .page-info {
+  background: #F0F0E8;
+  padding: 25px 35px;
+}
+
+.page-image {
+  width: 320px;
+  height: 232px;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-inner h1, .page-inner h2, .page-inner h3 {
+  margin: 10px 0;
+  color: #666;
+}
+
+.page-inner h1.title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.page-inner h1 {
+  font-size: 30px;
+}
+
+.page-inner h2 {
+  font-size: 25px;
+  border: 0;
+}
+
+.page-inner article {
+  padding: 20px;
+}
+
+.page-inner p {
+  font: 14px/25px 'OpenSans';
+  color: #666;
+}
+
+.page-inner a {
+  font-weight: normal;
+  color: #69B7E3;
+}
+
+.page-inner a:hover {
+  color: #69B7E3;
+  text-decoration: underline;
 }
