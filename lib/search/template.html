@@ -1,4 +1,4 @@
-<div>
+<div class='search-container'>
 	<div class="search-filter-bar">
 		<div class="inner-search-filter-bar">
 			<input id='query' ng-model='query' placeholder='Search by keyword or #hashtag'></input>
@@ -12,14 +12,18 @@
 			</ul>
 		</div>
 	</div>
-	<div ng-repeat='page in pages | orderBy:sort' class="page-overview">
-		<div class='page-image-wrap'>
-			<img ng-src="{{page.image}}" class='page-image'></img>
+	<div class='pages-container clearfix'>
+		<div ng-repeat='page in pages | orderBy:sort' class="page-overview">
+			<div class='page-image-wrap'>
+				<img ng-src="{{page.image}}" class='page-image'></img>
+			</div>
+			<div class='page-heel'>
+				<a ng-href='/pages/{{page.id}}'>
+					<div class='page-title'>{{page.title}}</div>
+				</a>
+				<div class='page-blurb'>{{page.blurb}}</div>
+				<span class='page-views'>{{page.views}}</div>
+			</div>
 		</div>
-		<a ng-href='/pages/{{page.id}}'>
-			<div class='page-title'>{{page.title}}</div>
-		</a>
-		<div class='page-blurb'>{{page.blurb}}</div>
-		<span class='page-views'>{{page.views}}</div>
 	</div>
 </div>

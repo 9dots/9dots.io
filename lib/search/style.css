@@ -1,3 +1,7 @@
+html, body {
+  background: #F2F0E7 !important;
+}
+
 .search-filter-bar {
 	height: 85px;
 	background: #69B7E3;
@@ -40,13 +44,13 @@
 #query::-moz-placeholder {  /* Firefox 19+ */
    color: #333;
    vertical-align: baseline;
-   padding-top: 6px; 
+   padding-top: 6px;
 }
 
-#query:-ms-input-placeholder {  
+#query:-ms-input-placeholder {
    color: #333;
    vertical-align: baseline;
-   padding-top: 6px;  
+   padding-top: 6px;
 }
 
 .search-sort {
@@ -67,16 +71,30 @@
 	color: #fff;
 }
 
+.pages-container {
+  margin: 15px 50px;
+  text-align: center;
+}
+
 .page-overview {
+  display: inline-block;
+  text-align: left;
 	width: 295px;
 	height: 320px;
-	float: left;
-	margin-left: 25px;
+	margin: 15px;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
 .page-image-wrap {
 	width: 295px;
 	height: 215px;
+}
+
+.page-heel {
+  height: 105px;
+  float: left;
 }
 
 .page-image {
