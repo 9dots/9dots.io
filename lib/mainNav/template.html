@@ -1,0 +1,22 @@
+<header id='main-header'>
+	<div class='inner-main-header'>
+		<div class='logo'>
+			9dots.io
+		</div>
+		<nav id='nav'>
+			<ul>
+				<li ng-repeat='link in links'>
+					<a ng-href='{{link.path}}'>{{link.name}}</a>
+				</li>
+				<li>
+					<a ng-hide='auth.authenticated()' href='https://github.com/login/oauth/authorize?client_id={{auth.id}}&scope=repo,user,gist&redirect_uri={{redirectUri}}'>
+						Sign In
+	        </a>
+	        <a ng-show='auth.authenticated()' href='/logout'>
+	        	Sign Out
+	        </a>
+	       </li>
+			<ul>
+		</nav>
+	</div>
+</header>

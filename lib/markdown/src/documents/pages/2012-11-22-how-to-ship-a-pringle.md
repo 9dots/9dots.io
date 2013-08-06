@@ -4,6 +4,7 @@ date: 2012-11-22 11:40:46+00:00
 layout: post
 title: How to Ship a Pringle
 blurb: "A #productDesign and #structuralEngineering #lessonPlan."
+image: "/upload/pringle.jpg"
 ---
 
 ## The Pringles Challenge: How to Ship a Pringle

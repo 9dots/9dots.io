@@ -9,9 +9,8 @@ html(ng-app="app")
     script(src='/bower.js')
 
   body
-    span(ng-controller="main")
-      div(ng-include='vertTemplate')
-      div(ng-view)
+    div(main-nav)
+    div(ng-view)
     script(src='/app.js')
     script
       require('boot')

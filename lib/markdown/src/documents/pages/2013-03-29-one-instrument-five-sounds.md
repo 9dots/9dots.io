@@ -3,6 +3,8 @@ author: admin
 date: 2013-03-29 21:19:54+00:00
 title: One Instrument, Five Sounds
 blurb: "#physics #science #lessonPlan"
+image: "/upload/instrument.jpg"
+layout: post
 ---
 
 ## The science behind sound, & making your own instruments!

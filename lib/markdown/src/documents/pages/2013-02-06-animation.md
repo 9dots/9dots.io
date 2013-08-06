@@ -4,6 +4,7 @@ date: 2013-02-06 20:22:34+00:00
 layout: post
 title: Don't stop! Stop-motion animation and more!
 blurb: "#animation #lessonPlan."
+image: "/upload/stopmotion.jpg"
 ---
 
 #### Unit Overview:

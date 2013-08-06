@@ -7,6 +7,7 @@
   Licensed under the MIT license.
 */
 
+console.log('Atwho');
 
 (function() {
   var __slice = [].slice;
@@ -387,8 +388,8 @@
       View.prototype.show = function() {
         if (!this.visible()) {
           this.$el.show();
+          this.reposition();
         }
-        return this.reposition();
       };
 
       View.prototype.hide = function(time) {

@@ -4,6 +4,7 @@ date: 2013-03-12 04:22:08+00:00
 layout: post
 title: 'It''s Electric, Week 2: Mazes'
 blurb: "#computerProgramming #electronics #lessonPlan"
+image: "/upload/mazes.jpg"
 ---
 
 For the second part of our week working with [MaKey MaKey](http://makeymakey.com) & [Scratch](http://scratch.mit.edu), students designed their own mazes that could be navigated using the arrow keys or the MaKey MaKey! For a brief intro to MaKey MaKey and Scratch, click [here](http://9-dots.org/its-electric-week-2-fun-with-sprites/) for our post on the previous day's project.

@@ -4,6 +4,7 @@ date: 2013-03-11 14:46:48+00:00
 layout: post
 title: 'It''s Electric, Week 2: Fun with Sprites'
 blurb: "#computerProgramming #electronics #lessonPlan"
+image: "/upload/sprites.jpg"
 ---
 
 ## Fun with sprites in Scratch + MaKey MaKey

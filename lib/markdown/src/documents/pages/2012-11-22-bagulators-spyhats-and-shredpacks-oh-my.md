@@ -5,7 +5,7 @@ layout: post
 title: "Bagulators, SpyHats, and ShredPacks, Oh My!"
 blurb: "A #productDesign #lessonPlan."
 published: true
-
+image: "/upload/stamps.jpg"
 ---
 
 #### Unit Overview:

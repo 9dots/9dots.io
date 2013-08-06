@@ -4,6 +4,7 @@ date: 2012-11-23 22:56:22+00:00
 layout: post
 title: Toothpick & Gumdrop Bridges
 blurb: "A #lessonPlan that teaches student about #structuralEngineering by building toothpick and gumdrop #bridges."
+image: "/upload/toothpick.jpg"
 ---
 
 ## Toothpick & Gumdrop Bridges

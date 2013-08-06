@@ -1,8 +1,25 @@
 <div>
-	<input id='query' ng-model='query'></input>
-	<div ng-repeat='page in pages'>
-		<a href="/pages/{{page.id}}">{{page.title}}</a>
-		{{page.blurb}}
-		{{page.views}}
+	<div class="search-filter-bar">
+		<div class="inner-search-filter-bar">
+			<input id='query' ng-model='query' placeholder='Search by keyword or #hashtag'></input>
+			<ul class='search-sort'>
+				<li>
+					<a ng-click='sort = "-recent"' ng-class='{active: sort == "-recent"}'>Recent</a>
+				</li>
+				<li>
+					<a ng-click='sort = "-views"' ng-class='{active: sort == "-views"}'>Popular</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div ng-repeat='page in pages | orderBy:sort' class="page-overview">
+		<div class='page-image-wrap'>
+			<img ng-src="{{page.image}}" class='page-image'></img>
+		</div>
+		<a ng-href='/pages/{{page.id}}'>
+			<div class='page-title'>{{page.title}}</div>
+		</a>
+		<div class='page-blurb'>{{page.blurb}}</div>
+		<span class='page-views'>{{page.views}}</div>
 	</div>
 </div>

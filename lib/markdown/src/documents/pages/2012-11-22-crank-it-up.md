@@ -5,6 +5,7 @@ date: 2012-11-22 11:29:17+00:00
 layout: post
 title: Crank it up!
 blurb: "A #mechanicalEngineering #lessonPlan that teaches #testing and #iteration."
+image: "/upload/crank.jpg"
 ---
 
 #### Unit Overview:

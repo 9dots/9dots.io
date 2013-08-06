@@ -4,6 +4,7 @@ date: 2012-11-22 11:38:12+00:00
 layout: post
 title: Weighty Matters – Gravity
 blurb: "A #lessonPlan that teach students about #energy, #structures, and #productDesign in the context of learning about #gravity."
+image: "/upload/gravity.jpg"
 ---
 
 #### Unit Overview:
