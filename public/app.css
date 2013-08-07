@@ -961,16 +961,6 @@ ins {
                      -10px 0 10px -10px rgba(0,0,0,0.1);
   }
 
-.vert {
-  background:#fff;
-  position:fixed;
-  right:0;
-  top: 100px;
-  z-index:5000;
-  width:60px;
-  height:100%;
-  border-left:1px solid #fff;
-  }
   .open .vert {
     border-color:#d4d7d9;
     }
@@ -979,6 +969,10 @@ ins {
   margin:15px 0 0;
   padding-bottom:5px;
   }
+
+.vert ul li {
+  float: left;
+}
 
 .vert .nav.auth {
   position:absolute;

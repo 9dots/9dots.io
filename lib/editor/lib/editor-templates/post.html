@@ -1,5 +1,5 @@
  <div id="post" class="post " ng-controller='editorPostCtrl'>
-  <div ng-include='"editor/vert.html"'></div>
+  
   <div class='page-content-wrap inner editor views markdown clearfix'>
     <span ng-switch='post.mode'>
       <div ng-switch-when='save' class='view prose diff' >
@@ -120,6 +120,7 @@
       <div class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
         <input class="fileUpload" type="file" name="files[]" multiple>
       </div>
+      <div ng-include='"editor/vert.html"'></div>
     </div>
     <div id='code' ng-show='post.mode == "edit"'></div>
   </div>

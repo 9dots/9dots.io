@@ -1,38 +1,26 @@
 <span ng-controller='editorVertCtrl' ng-class='{open: sidebar}'> 
   <div id='vert' class='vert clearfix navigation' >
     <ul class='post-views nav clearfix'>
-      <li ng-show='vert.mode == "edit" || vert.mode == "pages"'>
+      <li>
         <a class='ico round pencil edit' ng-class='{active: vert.editMode == "edit" && vert.mode == "edit"}' ng-click='vert.edit($event)'>
           <span class='popup round arrow-right'>Edit</span>
         </a>
       </li>
-      <span ng-show='vert.mode == "edit"'>
-        <li>
-          <a class='ico round eye blob preview' ng-class='{active: vert.editMode == "preview"}' ng-click='vert.preview($event)'>
-            <span class='popup round arrow-right'>Preview</span>
-          </a>
-        </li>
-        <li>
-          <a class='ico round save' ng-class='vert.saveClass()' ng-click='vert.save($event)'>
-            <div class='status'></div>
-            <span class='popup round arrow-right'>{{vert.saveMessage || "No Changes to Save"}}</span>
-          </a>
-        </li>
-      </span>
+      <li>
+        <a class='ico round eye blob preview' ng-class='{active: vert.editMode == "preview"}' ng-click='vert.preview($event)'>
+          <span class='popup round arrow-right'>Preview</span>
+        </a>
+      </li>
+      <li>
+        <a class='ico round save' ng-class='vert.saveClass()' ng-click='vert.save($event)'>
+          <div class='status'></div>
+          <span class='popup round arrow-right'>{{vert.saveMessage || "No Changes to Save"}}</span>
+        </a>
+      </li>
     </ul>
   </div>
   <div id='drawer' class='sidebar'>
     <span ng-switch='sidebar'>
-      <span ng-switch-when='settings'>
-        <div class='inner'>
-          <h2 class='label'>Options</h2>
-        </div>
-        <div class='inner authoring'>
-          <span ng-show='vert.writeable'>
-            <a class='delete button round' ng-click='vert.deleteFile($event)'>Delete</a>
-          </span>
-        </div>
-      </span>
       <span ng-switch-when='save'>
         <div class='inner'>
           <h2 class='label'>Describe your changes</h2>
