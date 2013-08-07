@@ -3,27 +3,31 @@
 		<div class="inner-search-filter-bar">
 			<input id='query' ng-model='query' placeholder='Search by keyword or #hashtag'></input>
 			<ul class='search-sort'>
-				<li>
-					<a ng-click='sort = "-recent"' ng-class='{active: sort == "-recent"}'>Recent</a>
-				</li>
-				<li>
-					<a ng-click='sort = "-views"' ng-class='{active: sort == "-views"}'>Popular</a>
-				</li>
+				<li><a ng-click='sort = "-recent"' ng-class='{active: sort == "-recent"}'>Recent</a></li>
+				<li><a ng-click='sort = "-views"' ng-class='{active: sort == "-views"}'>Popular</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class='pages-container clearfix'>
 		<div ng-repeat='page in pages | orderBy:sort' class="page-overview">
 			<div class='page-image-wrap'  style='background-image: url({{page.image}})'>
-				<!-- <img ng-src="{{page.image}}" class='page-image'></img> -->
+				<a class='page-title' ng-href='/pages/{{page.id}}'>{{page.title}}</a>
 			</div>
 			<div class='page-heel'>
-				<a ng-href='/pages/{{page.id}}'>
-					<div class='page-title'>{{page.title}}</div>
-				</a>
+
 				<div class='page-blurb'>{{page.blurb}}</div>
-				<span class='page-views'>{{page.views}}</div>
+				<span class='page-views'>{{page.views}} view<span ng-show='page.views!=1'>s</span></div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<footer class='footer'>
+	<h1>9DOTS.IO</h1>
+	<ul>
+		<li><a>Contact</a></li>
+		<li><a>FAQ</a></li>
+		<li><a>Terms &amp; Service</a></li>
+		<li><a>9-dots.org</a></li>
+	</ul>
+</footer>

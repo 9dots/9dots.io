@@ -4,6 +4,20 @@ iframe {
 	height: 100%;
 }
 
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
 
 .blur {
   -webkit-filter: blur(40px);
@@ -11,7 +25,6 @@ iframe {
   -o-filter: blur(40px);
   -ms-filter: blur(40px);
   filter: blur(40px);
-  /*opacity: 0.4;*/
 }
 
 .stretch {
@@ -25,16 +38,136 @@ iframe {
   background-position: center;
 }
 
-.page img {
-  max-width: 100%;
-}
-
 .page-content-wrap {
   z-index: 1;
   position: relative;
-  background: #FFF;
-	width: 770px;
-  padding: 20px;
+  background: #4D4D4D;
+	width: 935px;
 	margin: 60px auto;
-	max-width: 1100px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.page-inner {
+  width: 615px;
+  float: left;
+  background: #FFF;
+}
+
+.page-sidebar {
+  width: 320px;
+  float: left;
+  background: #4D4D4D;
+}
+
+.page-inner img {
+  max-width: 100%;
+}
+
+.page-inner .page-info {
+  background: #F0F0E8;
+  padding: 25px 35px;
+}
+
+.page-image {
+  width: 320px;
+  height: 232px;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4 {
+  margin: 10px 0 0;
+  color: #666;
+}
+
+.page-inner h1.title {
+  font-size: 30px;
+  margin: 0;
+}
+.page-inner h1 {
+  font-size: 30px;
+}
+.page-inner h2 {
+  font-size: 25px;
+  border: 0;
+}
+.page-inner h3 {
+  font-size: 20px;
+  font-size: lighter;
+}
+.page-inner h4 {
+  font-size: 14px;
+}
+
+.page-inner article {
+  padding: 20px;
+}
+
+.page-inner p {
+  font: 14px/25px 'OpenSans';
+  color: #666;
+}
+
+.page-inner a {
+  font-weight: normal;
+  color: #69B7E3;
+}
+
+.page-inner a:hover {
+  color: #69B7E3;
+  text-decoration: underline;
+}
+
+.page-inner ul, .page-inner ol {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.page-inner ul { list-style-type: disc; }
+.page-inner ol { list-style-type: decimal; }
+
+
+
+
+/* EDITOR */
+
+.blurb-wrap {
+  position: relative;
+  width: 630px;
+}
+
+.edit form input {
+  padding: 15px;
+  margin: 0 15px 8px;
+  width: 630px;
+  background: #FFF;
+}
+
+.editor {
+  padding-top: 0 !important;
+}
+
+.edit form {
+  padding-top: 15px;
+  background: #F0F0E8;
+}
+
+#title {
+  font: 20px/25px 'OpenSans';
+}
+
+#blurb {
+  font: 15px/20px 'OpenSans';
+}
+
+.blurb-wrap .char-count {
+  font-size: 11px;
+  position: absolute;
+  right: -7px;
+  bottom: 0px;
+  color: #999;
 }
