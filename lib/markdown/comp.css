@@ -44,7 +44,7 @@ iframe {
   background: #4D4D4D;
 	width: 935px;
 	margin: 60px auto;
-	max-width: 1100px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .page-inner {
@@ -75,8 +75,8 @@ iframe {
   background-size: cover;
 }
 
-.page-inner h1, .page-inner h2, .page-inner h3 {
-  margin: 10px 0;
+.page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4 {
+  margin: 10px 0 0;
   color: #666;
 }
 
@@ -84,14 +84,19 @@ iframe {
   font-size: 30px;
   margin: 0;
 }
-
 .page-inner h1 {
   font-size: 30px;
 }
-
 .page-inner h2 {
   font-size: 25px;
   border: 0;
+}
+.page-inner h3 {
+  font-size: 20px;
+  font-size: lighter;
+}
+.page-inner h4 {
+  font-size: 14px;
 }
 
 .page-inner article {
@@ -112,3 +117,15 @@ iframe {
   color: #69B7E3;
   text-decoration: underline;
 }
+
+.page-inner ul, .page-inner ol {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.page-inner ul { list-style-type: disc; }
+.page-inner ol { list-style-type: decimal; }

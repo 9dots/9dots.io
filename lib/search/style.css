@@ -2,6 +2,28 @@ html, body {
   background: #F2F0E7 !important;
 }
 
+footer {
+  margin-top: 20px;
+  height: 200px;
+  background: #FFF;
+  box-shadow: 0 -1px 0 rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+footer ul li a {
+  font-weight: lighter;
+}
+
+footer h1 {
+  padding-top: 40px;
+  font: 600 40px 'OpenSans';
+}
+
 .search-filter-bar {
 	height: 85px;
   line-height: 85px;
@@ -90,7 +112,7 @@ html, body {
 	height: 320px;
 	margin: 15px;
   background: #FFFFFF;
-  box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 0px rgba(0,0,0,0.05);
   overflow: hidden;
 }
 
