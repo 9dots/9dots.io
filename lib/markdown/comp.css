@@ -136,8 +136,10 @@ iframe {
 /* EDITOR */
 
 #code {
-  clear: both;
+  float: left;
   width: 615px;
+  padding: 0px 15px 15px 0;
+  background: #FFF;
 }
 
 .page-inner-edit {
@@ -186,7 +188,39 @@ iframe {
 .page-sidebar .upload-image {
   height: 232px;
   width: 100%;
+  background-color: #666;
   background-position: center;
   background-size: cover;
+  position: relative;
+}
 
+.page-sidebar .upload-image:before {
+  content: 'Upload Image';
+  position: absolute;
+  color: #333;
+  top: 90px;
+  width: 200px;
+  font: 20px/40px 'OpenSans';
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+.page-sidebar .upload-image:hover:before {
+  opacity: 1;
+  background: rgba(255,255,255,0.7);
+}
+
+.upload-image input {
+  height: 100%;
+  width: 100%;
+  /*background: red;*/
+  opacity: 0;
+  cursor: pointer;
+}
+
+.editor .page-sidebar {
+  float: right;
 }
