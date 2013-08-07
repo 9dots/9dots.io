@@ -135,15 +135,26 @@ iframe {
 
 /* EDITOR */
 
+#code {
+  clear: both;
+  width: 615px;
+}
+
+.page-inner-edit {
+  width: 615px;
+  float: left;
+  background: #FFF;
+}
+
 .blurb-wrap {
   position: relative;
-  width: 630px;
+  width: 585px;
 }
 
 .edit form input {
   padding: 15px;
   margin: 0 15px 8px;
-  width: 630px;
+  width: 585px;
   background: #FFF;
 }
 
@@ -170,4 +181,12 @@ iframe {
   right: -7px;
   bottom: 0px;
   color: #999;
+}
+
+.page-sidebar .upload-image {
+  height: 232px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+
 }

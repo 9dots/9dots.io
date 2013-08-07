@@ -1,6 +1,6 @@
- <div id="post" class="post" ng-controller='editorPostCtrl'>
+ <div id="post" class="post " ng-controller='editorPostCtrl'>
   <div ng-include='"editor/vert.html"'></div>
-  <div class='page-content-wrap inner editor views markdown'>
+  <div class='page-content-wrap inner editor views markdown clearfix'>
     <span ng-switch='post.mode'>
       <div ng-switch-when='save' class='view prose diff' >
         <h2> Review your changes:</br>
@@ -10,17 +10,12 @@
       </div>
       <div ng-switch-when='preview' class='view preview prose' ng-bind-html-unsafe='post.html'>
       </div>
-      <div ng-switch-when='edit' class='view active edit'>
-        <form>
+      <div ng-switch-when='edit' class='view active edit page-inner-edit'>
+        <form class='clearfix'>
           <input id='title' ng-model='post.data.metadata.title' placeholder='Title...' />
-
           <div class='blurb-wrap'>
             <input id='blurb' ng-model='post.data.metadata.blurb' placeholder='Summary...' maxlength='140'/>
             <div class='char-count'>{{post.data.metadata.blurb.length || 0}}/140</div>
-          </div>
-          <img ng-src='{{post.data.metadata.image}}' height='100px'></img>
-          <div ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
-            <input class="fileUpload" type="file" name="files[]" multiple>
           </div>
         </form>
         <div class='topbar-wrapper'>
@@ -120,8 +115,15 @@
         </div>
       </div>
     </span>
+    <div class='page-sidebar'>
+      <!-- <img ng-src='{{post.data.metadata.image}}' height='100px' /> -->
+      <div class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
+        <input class="fileUpload" type="file" name="files[]" multiple>
+      </div>
+    </div>
     <div id='code' ng-show='post.mode == "edit"'></div>
   </div>
+  <div class='blur stretch' style='background-image: url({{post.data.metadata.image}})' />
 </div>
 
 
