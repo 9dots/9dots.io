@@ -129,3 +129,45 @@ iframe {
 
 .page-inner ul { list-style-type: disc; }
 .page-inner ol { list-style-type: decimal; }
+
+
+
+
+/* EDITOR */
+
+.blurb-wrap {
+  position: relative;
+  width: 630px;
+}
+
+.edit form input {
+  padding: 15px;
+  margin: 0 15px 8px;
+  width: 630px;
+  background: #FFF;
+}
+
+.editor {
+  padding-top: 0 !important;
+}
+
+.edit form {
+  padding-top: 15px;
+  background: #F0F0E8;
+}
+
+#title {
+  font: 20px/25px 'OpenSans';
+}
+
+#blurb {
+  font: 15px/20px 'OpenSans';
+}
+
+.blurb-wrap .char-count {
+  font-size: 11px;
+  position: absolute;
+  right: -7px;
+  bottom: 0px;
+  color: #999;
+}
