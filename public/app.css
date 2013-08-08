@@ -860,7 +860,6 @@ ins {
 .containment,
 .limiter {
   position:relative;
-  width:680px;
   margin:0 auto;
   }
 
@@ -1564,7 +1563,7 @@ ins {
   .topbar .containment.content-search {
     background:#fff;
     height:60px;
-    background:rgba(255,255,255,0.95);
+    background:#F0F0E8;
     border-bottom:1px solid #d4d7d9;
     }
 
@@ -1609,8 +1608,8 @@ ins {
   border-color:#fff;
   }
   .markdown .toolbar {
-    background:#f0f0f0;
-    border-color:#f0f0f0;
+    background:#F0F0E8;
+    border-color:#F0F0E8;
     }
   .toolbar .group {
     background:#fff;

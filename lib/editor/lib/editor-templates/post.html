@@ -21,7 +21,7 @@
         </form>
         <div class='topbar-wrapper'>
           <div class='topbar'>
-            <div id='toolbar' class='containment toolbar round'>
+            <div id='toolbar' class='containment toolbar'>
               <a class='publish-flag round contain' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
                 {{post.publishedText()}}<span class='ico small checkmark'></span>
               </a>
@@ -31,11 +31,11 @@
                     <span class='popup round arrow-top'>save</span>
                   </span>
                 </span>
-                <ul class='group round clearfix'>
+                <ul class='group clearfix'>
                   <li><a title='Heading' data-key='heading' data-snippet='##\n\n' ng-click='post.markdownSnippet($event)'>h2</a></li>
                   <li><a title='Sub Heading' data-key='sub-heading' data-snippet='###\n\n' ng-click='post.markdownSnippet($event)'>h3</a></li>
                 </ul>
-                <ul class='group round clearfix'>
+                <ul class='group clearfix'>
                   <li>
                     <a title='Insert Link' \data-key='link' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
                       <span class='ico small link'></span>
@@ -47,7 +47,7 @@
                     </a>
                   </li>
                 </ul>
-                <ul class='group round clearfix'>
+                <ul class='group clearfix'>
                   <li><a title='Bold' data-key='bold' data-snippet='****' ng-click='post.markdownSnippet($event)'>B</a></li>
                   <li>
                     <a data-key='italic' title='Italic' data-snippet='__' ng-click='post.markdownSnippet($event)'>
@@ -55,7 +55,7 @@
                     </a>
                   </li>
                 </ul>
-                <ul class='group round clearfix'>
+                <ul class='group clearfix'>
                   <li>
                     <a title='Blockquote' data-key='quote' data-snippet='> We loved with a love that was more than love\n\n' ng-click='post.markdownSnippet($event)'>
                       <span class='ico small quote'></span>
@@ -114,14 +114,16 @@
             </div>
           </div>
         </div>
+
       </div>
     </span>
     <div class='page-sidebar'>
-      <!-- <img ng-src='{{post.data.metadata.image}}' height='100px' /> -->
-      <div class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
-        <input class="fileUpload" type="file" name="files[]" multiple>
-      </div>
-      
+      <span ng-switch='post.mode'>
+        <div ng-switch-when='edit' class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
+          <input class="fileUpload" type="file" name="files[]" multiple>
+        </div>
+        <div ng-switch-when='save' style='background-image: url({{post.data.metadata.image}})' class='page-image'></div>
+      </span>
     </div>
     <div id='code' ng-show='post.mode == "edit"'></div>
   </div>
