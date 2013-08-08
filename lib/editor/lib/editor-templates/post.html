@@ -127,7 +127,7 @@
     </div>
     <div id='code' ng-show='post.mode == "edit"'></div>
   </div>
-  <div class='stretch' style='background-image: url({{post.data.metadata.image}})' />
+  <canvas id='post-blurred-image' class='stretch' blur='{{post.data.metadata.image}}'></canvas>
 </div>
 
 
