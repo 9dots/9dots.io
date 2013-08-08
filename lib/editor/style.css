@@ -1,0 +1,11 @@
+.vert-wrap {
+	position: relative;
+	width: 935px;
+	margin: 0px auto;
+}
+
+.vert {
+	position: absolute;
+	top: 225px;
+	left: 620px;
+}

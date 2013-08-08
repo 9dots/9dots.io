@@ -1,15 +1,16 @@
  <div id="post" class="post " ng-controller='editorPostCtrl'>
-  
-  <div class='page-content-wrap inner editor views markdown clearfix'>
+  <div ng-include='"editor/vert.html"'></div>
+  <div ng-show='post.mode == "preview"' class='view preview prose' ng-bind-html-unsafe='post.html'>
+  </div>
+  <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
     <span ng-switch='post.mode'>
-      <div ng-switch-when='save' class='view prose diff' >
+      <div ng-switch-when='save' class='view prose diff page-inner-edit' >
         <h2> Review your changes:</br>
           <span class="deemphasize small">Additions are highlighted in green. Deletions are crossed out.</span>
         </h2>
         <div class='diff-content inner' ng-bind-html-unsafe='post.html'></div>
       </div>
-      <div ng-switch-when='preview' class='view preview prose' ng-bind-html-unsafe='post.html'>
-      </div>
+      
       <div ng-switch-when='edit' class='view active edit page-inner-edit'>
         <form class='clearfix'>
           <input id='title' ng-model='post.data.metadata.title' placeholder='Title...' />
@@ -120,11 +121,11 @@
       <div class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
         <input class="fileUpload" type="file" name="files[]" multiple>
       </div>
-      <div ng-include='"editor/vert.html"'></div>
+      
     </div>
     <div id='code' ng-show='post.mode == "edit"'></div>
   </div>
-  <div class='blur stretch' style='background-image: url({{post.data.metadata.image}})' />
+  <div class='stretch' style='background-image: url({{post.data.metadata.image}})' />
 </div>
 
 

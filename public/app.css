@@ -922,7 +922,6 @@ ins {
   }
 
 .sidebar {
-  position:fixed;
   z-index:1000;
   top:0;
   right:-100%;
@@ -3121,6 +3120,17 @@ only screen and (min-device-pixel-ratio:2) {
     }
 }
 
+.vert-wrap {
+	position: relative;
+	width: 935px;
+	margin: 0px auto;
+}
+
+.vert {
+	position: absolute;
+	top: 225px;
+	left: 620px;
+}
 #main-header {
 	background: #444;
 	min-width: 1220px;

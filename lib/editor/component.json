@@ -9,7 +9,7 @@
   },
   "local": ["editor-controllers", "editor-templates", "npm", "vendors", "upload"],
   "scripts": ["boot.js", "models.js", "oauth.js", "short.js"],
-  "styles": ["app.css"],
+  "styles": ["app.css", "style.css"],
   "paths": ["lib"],
   "main": "boot.js"
 }
