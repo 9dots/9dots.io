@@ -11,6 +11,7 @@ html(ng-app="app")
   body
     div(main-nav)
     div(ng-view)
+    div(ng-include="'footer.html'")
     script(src='/app.js')
     script
       require('boot')

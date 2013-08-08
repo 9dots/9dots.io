@@ -3171,6 +3171,9 @@ only screen and (min-device-pixel-ratio:2) {
 
 #nav a:hover {
 }
+.footer {
+	position: relative;
+}
 body {
   margin: 0
 }
