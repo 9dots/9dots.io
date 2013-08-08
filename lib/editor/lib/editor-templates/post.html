@@ -1,6 +1,6 @@
  <div id="post" class="post " ng-controller='editorPostCtrl'>
   <div ng-include='"editor/vert.html"'></div>
-  <div ng-show='post.mode == "preview"' class='view preview prose' ng-bind-html-unsafe='post.html'>
+  <div ng-show='post.mode == "preview"' class='view preview' ng-bind-html-unsafe='post.html'>
   </div>
   <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
     <span ng-switch='post.mode'>
@@ -10,7 +10,7 @@
         </h2>
         <div class='diff-content inner' ng-bind-html-unsafe='post.html'></div>
       </div>
-      
+
       <div ng-switch-when='edit' class='view active edit page-inner-edit'>
         <form class='clearfix'>
           <input id='title' ng-model='post.data.metadata.title' placeholder='Title...' />
