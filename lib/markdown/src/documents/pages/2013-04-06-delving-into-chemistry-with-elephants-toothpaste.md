@@ -1,10 +1,12 @@
 ---
 author: admin
-date: 2013-04-06 08:27:54+00:00
+date: "2013-04-06T08:27:54.000Z"
 layout: post
-title: Delving into Chemistry with Elephant's Toothpaste
+title: "Delving into Chemistry with Elephant's Toothpaste"
 blurb: "A #chemistry and #science #lessonPlan."
-image: "/upload/delving.jpg"
+image: /upload/delving.jpg
+published: true
+
 ---
 
 Our lesson on chemistry started out with a review of basic terms (atoms, molecules, chemical reactions, etc.)  Students learned about the difference between chemical reactions (which can't be undone) and physical reactions (which can).
@@ -141,5 +143,3 @@ Next, pass out project materials.  Every group should start with the elephant's
 For the second experiment, students should try mixing the different materials set up at the table to see which ones react chemically and which react physically.
 
 Lastly, we played some science jeopardy with categories of "plants & animals", "chemistry", "electricity", and "9 Dots".
-
-
