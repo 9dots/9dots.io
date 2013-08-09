@@ -1,36 +1,41 @@
 #main-header {
-	background: #F9F9F9;
+	background: #444;
 	min-width: 1220px;
+	position: relative;
+	z-index: 1;
 }
 
 .inner-main-header {
 	width: 1160px;
 	margin: 0 auto;
 	padding: 0 20px;
-	height: 100px;
+	height: 80px;
 }
 
 .logo {
 	float: left;
-	color: #333;
-	margin-top: 31px;
+	color: #EEE;
+	line-height: 75px;
 	font-size: 24px;
 }
 
 #nav {
 	float: right;
-
 }
 
 #nav li {
 	float: left;
-	line-height: 100px;
-	margin-left: 30px;
+	line-height: 80px;
+	text-align: center;
+	margin-left: 25px;
 }
 
 #nav a {
 	font-size: 14px;
-	color: #333;
-	text-shadow: 0px -1px 0px #F9F9F9;
+	font-weight: lighter;
+	color: #EEE;
 	display: block;
+}
+
+#nav a:hover {
 }

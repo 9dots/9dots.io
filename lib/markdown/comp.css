@@ -4,27 +4,265 @@ iframe {
 	height: 100%;
 }
 
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
 
 .blur {
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -o-filter: blur(20px);
-    -ms-filter: blur(20px);
-    filter: blur(20px);
-    opacity: 0.4;
+  -webkit-filter: blur(40px);
+  -moz-filter: blur(40px);
+  -o-filter: blur(40px);
+  -ms-filter: blur(40px);
+  filter: blur(40px);
 }
 
 .stretch {
-	width: 100%;
-	height: 100%;
+	width: 110%;
+	height: 110%;
 	position: fixed;
-	z-index: -1;
-	top: 0;
-	left: 0;
+	z-index: 0;
+	top: -5%;
+	left: -5%;
+  background-size: cover;
+  background-position: center;
 }
 
 .page-content-wrap {
-	width: 770px;
+  z-index: 1;
+  position: relative;
+  background: #4D4D4D;
+  min-height: 461px;
+	width: 935px;
 	margin: 60px auto;
-	max-width: 1100px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.page-inner {
+  width: 615px;
+  float: left;
+  background: #FFF;
+}
+
+.page-sidebar {
+  min-height: 461px;
+  width: 320px;
+  float: left;
+  background: #4D4D4D;
+}
+
+.page-inner img {
+  max-width: 100%;
+}
+
+.page-inner .page-info {
+  background: #F0F0E8;
+  padding: 25px 35px;
+}
+
+.page-image {
+  width: 320px;
+  height: 232px;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4 {
+  margin: 10px 0 0;
+  color: #666;
+}
+
+.page-inner h1.title {
+  font-size: 30px;
+  margin: 0;
+}
+.page-inner h1 {
+  font-size: 30px;
+}
+.page-inner h2 {
+  font-size: 25px;
+  border: 0;
+}
+.page-inner h3 {
+  font-size: 20px;
+  font-size: lighter;
+}
+.page-inner h4 {
+  font-size: 14px;
+}
+
+.page-inner article {
+  padding: 20px;
+}
+
+.page-inner p {
+  font: 14px/25px 'OpenSans';
+  color: #666;
+}
+
+.page-inner a {
+  font-weight: normal;
+  color: #69B7E3;
+}
+
+.page-inner a:hover {
+  color: #69B7E3;
+  text-decoration: underline;
+}
+
+.page-inner ul, .page-inner ol {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.page-inner ul { list-style-type: disc; }
+.page-inner ol { list-style-type: decimal; }
+
+
+/* TOOLBAR */
+
+.toolbar .group li a.publish-flag {
+  cursor: pointer;
+  background: #FFF;
+  width: auto;
+}
+
+.toolbar .group li a {
+  cursor: pointer;
+  border-radius: 0 !important;
+}
+
+/* EDITOR */
+
+#code {
+  float: left;
+  width: 615px;
+  padding: 0px 15px 15px 0;
+  background: #FFF;
+}
+
+.page-inner-edit {
+  width: 615px;
+  float: left;
+  background: #FFF;
+}
+
+.blurb-wrap {
+  position: relative;
+  width: 585px;
+}
+
+.edit form input {
+  padding: 15px;
+  margin: 0 15px 8px;
+  width: 585px;
+  background: #FFF;
+}
+
+.editor {
+  padding-top: 0 !important;
+}
+
+.edit form {
+  padding-top: 15px;
+  background: #F0F0E8;
+}
+
+#title {
+  font: 20px/25px 'OpenSans';
+}
+
+#blurb {
+  font: 15px/20px 'OpenSans';
+}
+
+.blurb-wrap .char-count {
+  font-size: 11px;
+  position: absolute;
+  right: -7px;
+  bottom: 0px;
+  color: #999;
+}
+
+.page-sidebar .upload-image {
+  height: 232px;
+  width: 100%;
+  background-color: #666;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.page-sidebar .upload-image:before {
+  content: 'Upload Image';
+  position: absolute;
+  color: #333;
+  top: 90px;
+  width: 200px;
+  font: 20px/40px 'OpenSans';
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+.page-sidebar .upload-image:hover:before {
+  opacity: 1;
+  background: rgba(255,255,255,0.7);
+}
+
+.upload-image input {
+  height: 100%;
+  width: 100%;
+  /*background: red;*/
+  opacity: 0;
+  cursor: pointer;
+}
+
+.editor .page-sidebar {
+  float: right;
+}
+
+
+/* Diff */
+
+.view.diff.page-inner .diff-content {
+  background: #FFF;
+}
+
+#drawer h2 {
+  padding: 0;
+  color: #EEE;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 16px 15px -4px;
+  border-bottom: 0;
+}
+
+#drawer textarea {
+  padding: 15px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #444;
+  border-radius: 0;
+  background: #F5F5F5;
+}
+
+#drawer textarea:focus {
+  border-color: #69B7E3;
 }

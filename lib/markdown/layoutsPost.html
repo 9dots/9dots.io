@@ -1,12 +1,16 @@
-<div class='page'>
-	<img src='{{data.image}}' class="blur stretch"></img>
-	<div class='page-content-wrap'>
-		<div class='page-inner'>
-			<h2>{{data.title}}</h2>
-			<h3>{{data.blurb}}</h3>
-			<article>
-				{{data.content}}
-			</article>
+<canvas id='post-blurred-image' class='stretch' blur='{{data.image}}'></canvas>
+<div class='page-content-wrap clearfix'>
+	<div class='page-inner'>
+		<div class='page-info'>
+			<h1 class='title'>{{data.title}}</h1>
+			<p>{{data.blurb}}</p>
+		</div>
+		<article>
+			{{data.content}}
+		</article>
+	</div>
+	<div class='page-sidebar'>
+		<div style='background-image: url({{data.image}})' class='page-image'>
 		</div>
 	</div>
 </div>

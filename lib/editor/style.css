@@ -1,0 +1,53 @@
+.vert-wrap {
+	position: relative;
+	width: 935px;
+	margin: 0px auto;
+}
+
+.vert {
+	position: absolute;
+  top: 232px;
+  left: 616px;
+  width: 320px;
+  z-index: 2;
+  box-shadow: 0 -1px 0 rgba(0,0,0, .1);
+}
+
+.vert ul {
+  margin: 0px;
+  padding: 0;
+  border-top: 1px solid rgba(255,255,255, .18)
+}
+
+.vert .nav li {
+  width: 50%;
+}
+
+.vert .nav li a {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  background: #666;
+  color: #999;
+  font-weight: lighter;
+  transition: all .3s;
+}
+
+.vert .nav li a:hover {
+  background: #888;
+  color: #444;
+}
+
+.vert .nav li a.dirty, .vert .nav li.commit a {
+  background: #69B7E3;
+  color: #FFF;
+}
+
+.sidebar-save {
+  z-index: 2;
+  position: relative;
+}
+
+#code {
+  min-height: 280px;
+}

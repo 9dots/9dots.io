@@ -1,0 +1,9 @@
+{
+  "name": "footer",
+  "description": "footer component",
+  "local": [],
+  "scripts": ["main.js"],
+  "styles": ["style.css"],
+  "templates": ["footer.html"],
+  "main": "main.js"
+}

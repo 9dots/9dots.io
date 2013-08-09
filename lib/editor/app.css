@@ -454,7 +454,6 @@ ins {
 .containment,
 .limiter {
   position:relative;
-  width:680px;
   margin:0 auto;
   }
 
@@ -516,7 +515,6 @@ ins {
   }
 
 .sidebar {
-  position:fixed;
   z-index:1000;
   top:0;
   right:-100%;
@@ -589,16 +587,6 @@ ins {
                      -10px 0 10px -10px rgba(0,0,0,0.1);
   }
 
-.vert {
-  background:#fff;
-  position:fixed;
-  right:0;
-  top: 100px;
-  z-index:5000;
-  width:60px;
-  height:100%;
-  border-left:1px solid #fff;
-  }
   .open .vert {
     border-color:#d4d7d9;
     }
@@ -607,6 +595,10 @@ ins {
   margin:15px 0 0;
   padding-bottom:5px;
   }
+
+.vert ul li {
+  float: left;
+}
 
 .vert .nav.auth {
   position:absolute;
@@ -924,57 +916,57 @@ ins {
       }
 
 @-webkit-keyframes spin {
-	0%    { -webkit-transform: rotate(0deg); }	
+	0%    { -webkit-transform: rotate(0deg); }
 	100%  { -webkit-transform: rotate(360deg); }
   }
 @-moz-keyframes spin {
-	0%    { -moz-transform: rotate(0deg); }	
+	0%    { -moz-transform: rotate(0deg); }
 	100%  { -moz-transform: rotate(360deg); }
   }
 @-o-keyframes spin {
-	0%    { -o-transform: rotate(0deg); }	
+	0%    { -o-transform: rotate(0deg); }
 	100%  { -o-transform: rotate(360deg); }
   }
 @keyframes spin {
-	0%    { transform: rotate(0deg); }	
+	0%    { transform: rotate(0deg); }
 	100%  { transform: rotate(360deg); }
   }
 
 @-webkit-keyframes saved {
-	0%    { -webkit-transform:scale(1); opacity:1; }	
+	0%    { -webkit-transform:scale(1); opacity:1; }
 	100%  { -webkit-transform:scale(1.5); opacity:0; }
   }
 @-moz-keyframes saved {
-	0%    { -moz-transform:scale(1); opacity:1; }	
+	0%    { -moz-transform:scale(1); opacity:1; }
 	100%  { -moz-transform:scale(1.5); opacity:0; }
   }
 @-o-keyframes saved {
-	0%    { -o-transform:scale(1); opacity:1; }	
+	0%    { -o-transform:scale(1); opacity:1; }
 	100%  { -o-transform:scale(1.5); opacity:0; }
   }
 @keyframes saved {
-	0%    { transform:scale(1); opacity:1; }	
+	0%    { transform:scale(1); opacity:1; }
 	100%  { transform:scale(1.5); opacity:0; }
   }
 
 @-webkit-keyframes pulsate {
-	0%    { -webkit-box-shadow:0 0 2px rgb(211,82,82); }	
-	50%   { -webkit-box-shadow:0 0 6px rgba(211,82,82,0.5); }	
+	0%    { -webkit-box-shadow:0 0 2px rgb(211,82,82); }
+	50%   { -webkit-box-shadow:0 0 6px rgba(211,82,82,0.5); }
 	100%  { -webkit-box-shadow:0 0 2px rgb(211,82,82); }
   }
 @-moz-keyframes pulsate {
-	0%    { box-shadow:0 0 2px rgb(211,82,82); }	
-	50%   { box-shadow:0 0 6px rgba(211,82,82,0.5); }	
+	0%    { box-shadow:0 0 2px rgb(211,82,82); }
+	50%   { box-shadow:0 0 6px rgba(211,82,82,0.5); }
 	100%  { box-shadow:0 0 2px rgb(211,82,82); }
   }
 @-o-keyframes pulsate {
-	0%    { box-shadow:0 0 2px rgb(211,82,82); }	
-	50%   { box-shadow:0 0 6px rgba(211,82,82,0.5); }	
+	0%    { box-shadow:0 0 2px rgb(211,82,82); }
+	50%   { box-shadow:0 0 6px rgba(211,82,82,0.5); }
 	100%  { box-shadow:0 0 2px rgb(211,82,82); }
   }
 @keyframes pulsate {
-	0%    { box-shadow:0 0 2px rgb(211,82,82); }	
-	50%   { box-shadow:0 0 6px rgba(211,82,82,0.5); }	
+	0%    { box-shadow:0 0 2px rgb(211,82,82); }
+	50%   { box-shadow:0 0 6px rgba(211,82,82,0.5); }
 	100%  { box-shadow:0 0 2px rgb(211,82,82); }
   }
 
@@ -1165,7 +1157,7 @@ ins {
   .topbar .containment.content-search {
     background:#fff;
     height:60px;
-    background:rgba(255,255,255,0.95);
+    background:#F0F0E8;
     border-bottom:1px solid #d4d7d9;
     }
 
@@ -1210,8 +1202,8 @@ ins {
   border-color:#fff;
   }
   .markdown .toolbar {
-    background:#f0f0f0;
-    border-color:#f0f0f0;
+    background:#F0F0E8;
+    border-color:#F0F0E8;
     }
   .toolbar .group {
     background:#fff;

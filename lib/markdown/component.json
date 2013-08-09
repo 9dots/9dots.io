@@ -4,7 +4,7 @@
   "dependencies": {
     "component/emitter": "*"
   },
-  "local": ["npm"],
+  "local": ["npm", "blur"],
   "scripts": ["comp.js", "renderClient.js"],
   "templates": ["template.html", "layoutsPost.html"],
   "styles": ["comp.css"],
