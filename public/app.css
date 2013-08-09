@@ -3,6 +3,36 @@ html, body {
   background: #F2F0E7 !important;
 }
 
+/* At Who */
+
+#atwho-ground-query .atwho-view {
+  border: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#atwho-ground-query .atwho-view ul li {
+  font-size: 24px;
+  padding: 12px 32px;
+  background: #69B7E3;
+  color: #FFF;
+  border: 0;
+}
+
+#atwho-ground-query .atwho-view ul li strong {
+  color: #FFF;
+}
+
+#atwho-ground-query .atwho-view .cur {
+  color: #69B7E3;
+  background: #FFF;
+}
+
+#atwho-ground-query .atwho-view .cur strong {
+  color: #69B7E3;
+}
+
+/* Footer */
+
 footer {
   margin-top: 20px;
   height: 200px;
@@ -169,6 +199,7 @@ footer h1 {
 	display: block;
 }*/
 
+
 iframe {
 	width: 100%;
 	border: none;
@@ -212,7 +243,9 @@ iframe {
 .page-content-wrap {
   z-index: 1;
   position: relative;
-  background: #4D4D4D;
+  background: #FFF;
+  /*background: #4D4D4D;*/
+  min-height: 461px;
 	width: 935px;
 	margin: 60px auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
@@ -225,6 +258,7 @@ iframe {
 }
 
 .page-sidebar {
+  min-height: 461px;
   width: 320px;
   float: left;
   background: #4D4D4D;
@@ -302,7 +336,18 @@ iframe {
 .page-inner ol { list-style-type: decimal; }
 
 
+/* TOOLBAR */
 
+.toolbar .group li a.publish-flag {
+  cursor: pointer;
+  background: #FFF;
+  width: auto;
+}
+
+.toolbar .group li a {
+  cursor: pointer;
+  border-radius: 0 !important;
+}
 
 /* EDITOR */
 
@@ -394,6 +439,35 @@ iframe {
 
 .editor .page-sidebar {
   float: right;
+}
+
+
+/* Diff */
+
+.view.diff.page-inner .diff-content {
+  background: #FFF;
+}
+
+#drawer h2 {
+  padding: 0;
+  color: #EEE;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 16px 15px -4px;
+  border-bottom: 0;
+}
+
+#drawer textarea {
+  padding: 15px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #444;
+  border-radius: 0;
+  background: #F5F5F5;
+}
+
+#drawer textarea:focus {
+  border-color: #69B7E3;
 }
 
 
@@ -3127,9 +3201,52 @@ only screen and (min-device-pixel-ratio:2) {
 
 .vert {
 	position: absolute;
-	top: 225px;
-	left: 620px;
+  top: 232px;
+  left: 615px;
+  width: 320px;
+  z-index: 2;
+  box-shadow: 0 -1px 0 rgba(0,0,0, .1);
 }
+
+.vert ul {
+  margin: 0px;
+  padding: 0;
+  border-top: 1px solid rgba(255,255,255, .18)
+}
+
+.vert .nav li {
+  width: 50%;
+}
+
+.vert .nav li a {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  background: #666;
+  color: #999;
+  font-weight: lighter;
+  transition: all .3s;
+}
+
+.vert .nav li a:hover {
+  background: #888;
+  color: #444;
+}
+
+.vert .nav li a.dirty, .vert .nav li.commit a {
+  background: #69B7E3;
+  color: #FFF;
+}
+
+.sidebar-save {
+  z-index: 2;
+  position: relative;
+}
+
+#code {
+  min-height: 280px;
+}
+
 #main-header {
 	background: #444;
 	min-width: 1220px;

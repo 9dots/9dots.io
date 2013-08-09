@@ -1,0 +1,7 @@
+{
+  "name": "blur",
+  "description": "blur component",
+  "local": [],
+  "scripts": ["main.js", "stack-blur.js"],
+  "main": "main.js"
+}
