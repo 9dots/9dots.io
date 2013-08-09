@@ -243,8 +243,7 @@ iframe {
 .page-content-wrap {
   z-index: 1;
   position: relative;
-  background: #FFF;
-  /*background: #4D4D4D;*/
+  background: #4D4D4D;
   min-height: 461px;
 	width: 935px;
 	margin: 60px auto;
@@ -3202,7 +3201,7 @@ only screen and (min-device-pixel-ratio:2) {
 .vert {
 	position: absolute;
   top: 232px;
-  left: 615px;
+  left: 616px;
   width: 320px;
   z-index: 2;
   box-shadow: 0 -1px 0 rgba(0,0,0, .1);
