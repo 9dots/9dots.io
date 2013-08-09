@@ -2,6 +2,36 @@ html, body {
   background: #F2F0E7 !important;
 }
 
+/* At Who */
+
+#atwho-ground-query .atwho-view {
+  border: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#atwho-ground-query .atwho-view ul li {
+  font-size: 24px;
+  padding: 12px 32px;
+  background: #69B7E3;
+  color: #FFF;
+  border: 0;
+}
+
+#atwho-ground-query .atwho-view ul li strong {
+  color: #FFF;
+}
+
+#atwho-ground-query .atwho-view .cur {
+  color: #69B7E3;
+  background: #FFF;
+}
+
+#atwho-ground-query .atwho-view .cur strong {
+  color: #69B7E3;
+}
+
+/* Footer */
+
 footer {
   margin-top: 20px;
   height: 200px;

@@ -7,7 +7,6 @@
   Licensed under the MIT license.
 */
 
-console.log('At.js');
 
 (function() {
   var __slice = [].slice;
@@ -154,7 +153,7 @@ console.log('At.js');
         return this.model.reload(this.setting.data);
       };
 
-      Controller.prototype.super_call = function() {
+      Controller.prototype.call_default = function() {
         var args, func_name;
         func_name = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
         try {
@@ -189,7 +188,7 @@ console.log('At.js');
         content = this.$inputor.val();
         caret_pos = this.$inputor.caret('pos');
         subtext = content.slice(0, caret_pos);
-        query = this.callbacks("matcher").call(this, this.key, subtext);
+        query = this.callbacks("matcher").call(this, this.key, subtext, this.get_opt('start_with_space'));
         if (typeof query === "string" && query.length <= this.get_opt('max_len', 20)) {
           start = caret_pos - query.length;
           end = start + query.length;
@@ -218,12 +217,11 @@ console.log('At.js');
       };
 
       Controller.prototype.insert = function(str) {
-        var $inputor, flag_len, source, start_str, text;
+        var $inputor, source, start_str, text;
         $inputor = this.$inputor;
         str = '' + str;
         source = $inputor.val();
-        flag_len = this.get_opt("display_flag") ? 0 : this.key.length;
-        start_str = source.slice(0, (this.query['head_pos'] || 0) - flag_len);
+        start_str = source.slice(0, this.query['head_pos'] || 0);
         text = "" + start_str + str + " " + (source.slice(this.query['end_pos'] || 0));
         $inputor.val(text);
         $inputor.caret('pos', start_str.length + str.length + 1);
@@ -352,8 +350,6 @@ console.log('At.js');
       };
 
       View.prototype.reposition = function() {
-        console.log('dont reposition');
-        return;
         var offset, rect;
         rect = this.context.rect();
         if (rect.bottom + this.$el.height() - $(window).scrollTop() > $(window).height()) {
@@ -457,9 +453,12 @@ console.log('At.js');
         }
         return _results;
       },
-      matcher: function(flag, subtext) {
+      matcher: function(flag, subtext, should_start_with_space) {
         var match, regexp;
-        flag = '(?:^|\\s)' + flag.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+        flag = flag.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+        if (should_start_with_space) {
+          flag = '(?:^|\\s)' + flag;
+        }
         regexp = new RegExp(flag + '([A-Za-z0-9_\+\-]*)$|' + flag + '([^\\x00-\\xff]*)$', 'gi');
         match = regexp.exec(subtext);
         if (match) {
@@ -567,7 +566,7 @@ console.log('At.js');
       search_key: "name",
       limit: 5,
       max_len: 20,
-      display_flag: true,
+      start_with_space: true,
       display_timeout: 300
     };
   });

@@ -1,16 +1,17 @@
  <div id="post" class="post " ng-controller='editorPostCtrl'>
   <div ng-include='"editor/vert.html"'></div>
-  <div ng-show='post.mode == "preview"' class='view preview prose' ng-bind-html-unsafe='post.html'>
+  <div ng-show='post.mode == "preview"' class='view preview' ng-bind-html-unsafe='post.html'>
   </div>
   <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
-    <span ng-switch='post.mode'>
-      <div ng-switch-when='save' class='view prose diff page-inner-edit' >
-        <h2> Review your changes:</br>
-          <span class="deemphasize small">Additions are highlighted in green. Deletions are crossed out.</span>
-        </h2>
+    <span ng-switch='post.mode' >
+      <div ng-switch-when='save' class='view diff page-inner'>
+        <div class='page-info'>
+          <h1 class='title'> Review your changes:</h1>
+          <p>Additions are highlighted in green. Deletions are crossed out.</p>
+        </div>
         <div class='diff-content inner' ng-bind-html-unsafe='post.html'></div>
       </div>
-      
+
       <div ng-switch-when='edit' class='view active edit page-inner-edit'>
         <form class='clearfix'>
           <input id='title' ng-model='post.data.metadata.title' placeholder='Title...' />
@@ -22,9 +23,6 @@
         <div class='topbar-wrapper'>
           <div class='topbar'>
             <div id='toolbar' class='containment toolbar'>
-              <a class='publish-flag round contain' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
-                {{post.publishedText()}}<span class='ico small checkmark'></span>
-              </a>
               <div class='options clearfix'>
                 <span \class='action round fl ico small document {{avatar}}'>
                   <span class='status'></span>
@@ -32,8 +30,15 @@
                   </span>
                 </span>
                 <ul class='group clearfix'>
-                  <li><a title='Heading' data-key='heading' data-snippet='##\n\n' ng-click='post.markdownSnippet($event)'>h2</a></li>
-                  <li><a title='Sub Heading' data-key='sub-heading' data-snippet='###\n\n' ng-click='post.markdownSnippet($event)'>h3</a></li>
+                  <li>
+                    <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+                      {{post.publishedText()}}<span class='ico small checkmark'></span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class='group clearfix'>
+                  <li><a title='Heading' data-key='heading' data-snippet='## ' ng-click='post.markdownSnippet($event)'>h2</a></li>
+                  <li><a title='Sub Heading' data-key='sub-heading' data-snippet='### ' ng-click='post.markdownSnippet($event)'>h3</a></li>
                 </ul>
                 <ul class='group clearfix'>
                   <li>
@@ -57,12 +62,12 @@
                 </ul>
                 <ul class='group clearfix'>
                   <li>
-                    <a title='Blockquote' data-key='quote' data-snippet='> We loved with a love that was more than love\n\n' ng-click='post.markdownSnippet($event)'>
+                    <a title='Blockquote' data-key='quote' data-snippet='> ' ng-click='post.markdownSnippet($event)'>
                       <span class='ico small quote'></span>
                     </a>
                   </li>
                   <li>
-                    <a title='List' data-key='list' data-snippet='- item\n- item\n- item\n\n' ng-click='post.markdownSnippet($event)'>
+                    <a title='List' data-key='list' data-snippet='- ' ng-click='post.markdownSnippet($event)'>
                       <span class='ico small list'></span>
                     </a>
                   </li>
