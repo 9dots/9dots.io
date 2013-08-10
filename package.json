@@ -31,6 +31,7 @@
     "chokidar": "~0.6.2",
     "shoe": "0.0.12",
     "js-yaml": "~2.1.0",
-    "minimatch": "~0.2.12"
+    "minimatch": "~0.2.12",
+    "send": "~0.1.3"
   }
 }

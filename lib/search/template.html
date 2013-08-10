@@ -11,7 +11,7 @@
 	<div class='pages-container clearfix'>
 		<div ng-repeat='page in pages | orderBy:sort' class="page-overview">
 			<div class='page-image-wrap'  style='background-image: url({{page.image}})'>
-				<a class='page-title' ng-href='/pages/{{page.id}}'>{{page.title}}</a>
+				<a class='page-title' ng-href='/{{page.id}}'>{{page.title}}</a>
 			</div>
 			<div class='page-heel'>
 
