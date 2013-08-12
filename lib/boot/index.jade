@@ -2,9 +2,11 @@
 html(ng-app="app")
   head
     base(href='/')
-    title component - modular javascript framework
+    title= settings.title
     link(rel='stylesheet', href='/app.css')
     link(rel='stylesheet', href='/bower.css')
+    script.
+      SETTINGS = !{JSON.stringify(settings)}
     script(src='/bower.js')
 
   body
@@ -14,3 +16,4 @@ html(ng-app="app")
     script(src='/app.js')
     script
       require('boot')
+    

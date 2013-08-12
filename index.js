@@ -10,7 +10,6 @@ var app = module.exports = express();
 
 app.set('view engine', 'jade');
 
-
 // middleware
 
 app.use(express.logger('dev'));
