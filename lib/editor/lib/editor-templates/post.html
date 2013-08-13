@@ -1,6 +1,5 @@
  <div id="post" class="post " ng-controller='editorPostCtrl'>
-  <div ng-include='"editor/vert.html"'></div>
-  <div ng-show='post.mode == "preview"' class='view preview' ng-bind-html-unsafe='post.html'>
+  <div ng-show='post.mode == "preview"' class='view preview' ng-include='post.previewUrl'>
   </div>
   <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
     <span ng-switch='post.mode' >
@@ -129,6 +128,7 @@
         </div>
         <div ng-switch-when='save' style='background-image: url({{post.data.metadata.image}})' class='page-image'></div>
       </span>
+      <div editor-menu></div>
     </div>
     <div id='code' ng-show='post.mode == "edit"'></div>
   </div>

@@ -8,7 +8,7 @@
     "component/emitter": "*"
   },
   "local": ["editor-controllers", "editor-templates", "npm", "vendors", "upload"],
-  "scripts": ["boot.js", "models.js", "oauth.js", "short.js"],
+  "scripts": ["boot.js", "models.js", "short.js"],
   "styles": ["app.css", "style.css"],
   "paths": ["lib"],
   "main": "boot.js"

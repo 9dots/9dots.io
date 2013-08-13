@@ -13,9 +13,7 @@ module.exports = {
   	homepage: '9dots.io',
   	description: '9dots.io pages'
   },
-  userRepoDev: {
-  	name: '9dots.io-pages-dev',
-  },
+
   hook: {
 	  "name": "web",
 	  "active": true,
@@ -25,5 +23,14 @@ module.exports = {
 	  "config": {
 	    "content_type": "json"
 	  }
-	}
+	},
+
+  server: 'http://9dots.io',
+
+  dev: {
+    userRepo: {
+      name: '9dots.io-pages-dev'
+    },
+    server: 'http://76.168.229.78'
+  }
 };
