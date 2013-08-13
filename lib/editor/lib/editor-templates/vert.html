@@ -1,7 +1,7 @@
 <span ng-controller='editorVertCtrl' ng-class='{open: sidebar}'>
   <div class='vert-wrap'>
   <div id='vert' class='vert clearfix navigation' >
-    <ul class='post-views nav clearfix' ng-show='vert.mode == "edit"'>
+    <ul class='post-views nav clearfix' ng-show='vert.mode == "edit" || vert.mode == "new"'>
       <li ng-show='vert.editMode == "preview"'>
         <a class='edit' ng-class='{active: vert.editMode == "edit"}' ng-click='vert.edit($event)'>
           Edit
@@ -25,7 +25,7 @@
         <a ng-click='vert.cancel($event)'>Cancel</a>
       </li>
     </ul>
-    <ul class='post-views nav clearfix' ng-show='vert.mode =="pages"'>
+    <ul class='post-views nav clearfix' ng-show='vert.editable'>
       <li>
         <a class='edit' ng-href='/edit/{{vert.page}}'>
           Edit

@@ -54,6 +54,10 @@ iframe {
   background: #FFF;
 }
 
+.page-inner.page-full {
+  width: 935px;
+}
+
 .page-sidebar {
   min-height: 461px;
   width: 320px;
