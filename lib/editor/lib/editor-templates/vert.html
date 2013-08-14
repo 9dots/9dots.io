@@ -21,7 +21,7 @@
         <a ng-show='!vert.writeable' ng-click='vert.submitFile()'>Submit</a>
       </li>
       <li ng-show='vert.editMode == "save"'>
-        <a ng-click='vert.cancel($event)'>Cancel</a>
+        <a ng-click='vert.edit($event)'>Cancel</a>
       </li>
     </ul>
     <ul class='post-views nav clearfix' ng-show='vert.editable'>
