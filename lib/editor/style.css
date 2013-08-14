@@ -3,9 +3,11 @@
 }
 
 .vert ul {
-  margin: 0px;
+  margin: -1px 0 0;
   padding: 0;
-  border-top: 1px solid rgba(255,255,255, .18)
+  border-top: 1px solid rgba(255,255,255, .14);
+  box-shadow: 0 -1px 0 rgba(0,0,0, .14);
+  position: relative;
 }
 
 .vert .nav li {
@@ -38,5 +40,5 @@
 }
 
 #code {
-  min-height: 280px;
+  min-height: 309px;
 }
