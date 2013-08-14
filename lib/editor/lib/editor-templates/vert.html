@@ -12,7 +12,7 @@
         </a>
       </li>
       <li ng-hide='vert.editMode == "save"'>
-        <a class='save' ng-class='vert.saveClass()' ng-click='vert.save($event)'>
+        <a class='save' ng-class='{dirty: post.dirty}' ng-click='vert.save($event)'>
           Save
         </a>
       </li>
