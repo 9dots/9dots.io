@@ -14,13 +14,14 @@
 				<a class='page-title' ng-href='/{{page.id}}'>{{page.title}}</a>
 			</div>
 			<div class='page-heel'>
-
 				<div class='page-blurb'>{{page.blurb}}</div>
-				<span>
-					<img ng-src="{{page.author | avatar}}"></img>
-					{{page.author}}
-				</span>
-				<span class='page-views'>{{page.views}} view<span ng-show='page.views!=1'>s</span></div>
+				<div class='author-info'>
+					<span class='name'>by {{page.author}}</span>
+					<span class='page-views'>
+						{{page.views}} view<span ng-show='page.views!=1'>s</span>
+					</span>
+					<img ng-src="{{page.author | avatar}}" />
+				</div>
 			</div>
 		</div>
 	</div>

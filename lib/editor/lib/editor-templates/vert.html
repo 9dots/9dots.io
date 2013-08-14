@@ -2,12 +2,12 @@
   <div id='vert' class='vert clearfix navigation' >
     <ul class='post-views nav clearfix' ng-show='vert.mode == "edit" || vert.mode == "new"'>
       <li ng-show='vert.editMode == "preview"'>
-        <a class='edit' ng-class='{active: vert.editMode == "edit"}' ng-click='vert.edit($event)'>
+        <a class='edit' ng-click='vert.edit($event)'>
           Edit
         </a>
       </li>
       <li ng-show='vert.editMode == "edit"'>
-        <a class='preview' ng-class='{active: vert.editMode == "preview"}' ng-click='vert.preview($event)'>
+        <a class='preview' ng-click='vert.preview($event)'>
           Preview
         </a>
       </li>
@@ -25,7 +25,7 @@
       </li>
     </ul>
     <ul class='post-views nav clearfix' ng-show='vert.editable'>
-      <li>
+      <li class='full-width'>
         <a class='edit' ng-href='/edit/{{vert.page}}'>
           Edit
         </a>

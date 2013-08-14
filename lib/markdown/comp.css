@@ -34,6 +34,7 @@ iframe {
 	z-index: 0;
 	top: -5%;
 	left: -5%;
+  background-color: #F2F0E7;
   background-size: cover;
   background-position: center;
 }
@@ -41,8 +42,8 @@ iframe {
 .page-content-wrap {
   z-index: 1;
   position: relative;
-  background: #4D4D4D;
-  min-height: 461px;
+  background: #FFF;
+  min-height: 490px;
 	width: 935px;
 	margin: 60px auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
@@ -59,10 +60,12 @@ iframe {
 }
 
 .page-sidebar {
-  min-height: 461px;
+  min-height: 490px;
+  position: absolute;
   width: 320px;
-  float: left;
+  right: 0;
   background: #4D4D4D;
+  height: 100%;
 }
 
 .page-inner img {
@@ -214,12 +217,13 @@ iframe {
 .page-sidebar .upload-image:before {
   content: 'Upload Image';
   position: absolute;
+  display: block;
   color: #333;
-  top: 90px;
+  margin: auto;
+  bottom: 0; top: 0; left: 0; right: 0;
   width: 200px;
+  height: 40px;
   font: 20px/40px 'OpenSans';
-  left: 50%;
-  margin-left: -100px;
   text-align: center;
   -webkit-transition: all 0.5s;
   opacity: 0.6;

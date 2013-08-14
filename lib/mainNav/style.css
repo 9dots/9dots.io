@@ -1,12 +1,12 @@
 #main-header {
 	background: #444;
-	min-width: 1220px;
+	min-width: 980px;
 	position: relative;
 	z-index: 1;
 }
 
 .inner-main-header {
-	width: 1160px;
+	width: 980px;
 	margin: 0 auto;
 	padding: 0 20px;
 	height: 80px;

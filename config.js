@@ -1,4 +1,4 @@
-module.exports = { 
+module.exports = {
 	clientId: '232a8f6747152e6eae6f',
   gatekeeperUrl: 'http://localhost:3000',
   repo: {
@@ -31,6 +31,6 @@ module.exports = {
     userRepo: {
       name: '9dots.io-pages-dev'
     },
-    server: 'http://76.168.229.78'
+    server: 'http://76.168.229.78:3500'
   }
 };

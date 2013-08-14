@@ -3,9 +3,11 @@
 }
 
 .vert ul {
-  margin: 0px;
+  margin: -1px 0 0;
   padding: 0;
-  border-top: 1px solid rgba(255,255,255, .18)
+  border-top: 1px solid rgba(255,255,255, .14);
+  box-shadow: 0 -1px 0 rgba(0,0,0, .14);
+  position: relative;
 }
 
 .vert .nav li {
@@ -20,6 +22,21 @@
   color: #999;
   font-weight: lighter;
   transition: all .3s;
+}
+
+.vert .nav li.full-width {
+  width: 100%;
+}
+
+.site .vert .nav {
+  box-shadow: 0 0;
+  border: 0;
+}
+.site .vert .nav li.full-width {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 120px;
 }
 
 .vert .nav li a:hover {
@@ -38,5 +55,28 @@
 }
 
 #code {
-  min-height: 280px;
+  min-height: 309px;
+}
+
+.splash-container {
+  background: #F2F0E7;
+}
+
+.splash {
+  width: 380px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  color: #666;
+}
+.splash a {
+  color: #666;
+}
+
+.splash a.button {
+  background: #4D4D4D;
+  color: #DDD;
+}
+.splash a.button:hover {
+  color: #FFF;
 }
