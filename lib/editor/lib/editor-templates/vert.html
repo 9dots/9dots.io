@@ -12,7 +12,7 @@
         </a>
       </li>
       <li ng-hide='vert.editMode == "save"'>
-        <a class='save' ng-class='vert.saveClass()' ng-click='vert.save($event)'>
+        <a class='save' ng-class='{dirty: post.dirty}' ng-click='vert.save($event)'>
           Save
         </a>
       </li>
@@ -21,7 +21,7 @@
         <a ng-show='!vert.writeable' ng-click='vert.submitFile()'>Submit</a>
       </li>
       <li ng-show='vert.editMode == "save"'>
-        <a ng-click='vert.cancel($event)'>Cancel</a>
+        <a ng-click='vert.edit($event)'>Cancel</a>
       </li>
     </ul>
     <ul class='post-views nav clearfix' ng-show='vert.editable'>
