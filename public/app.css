@@ -237,7 +237,6 @@ footer h1 {
 	display: block;
 }*/
 
-
 iframe {
 	width: 100%;
 	border: none;
@@ -3264,6 +3263,21 @@ only screen and (min-device-pixel-ratio:2) {
   transition: all .3s;
 }
 
+.vert .nav li.full-width {
+  width: 100%;
+}
+
+.site .vert .nav {
+  box-shadow: 0 0;
+  border: 0;
+}
+.site .vert .nav li.full-width {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 120px;
+}
+
 .vert .nav li a:hover {
   background: #888;
   color: #444;
@@ -3283,6 +3297,28 @@ only screen and (min-device-pixel-ratio:2) {
   min-height: 309px;
 }
 
+.splash-container {
+  background: #F2F0E7;
+}
+
+.splash {
+  width: 380px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  color: #666;
+}
+.splash a {
+  color: #666;
+}
+
+.splash a.button {
+  background: #4D4D4D;
+  color: #DDD;
+}
+.splash a.button:hover {
+  color: #FFF;
+}
 #main-header {
 	background: #444;
 	min-width: 980px;
