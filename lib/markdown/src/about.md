@@ -1,5 +1,5 @@
 ---
-layout: menu
+layout: post
 title: About
 ---
 
