@@ -10,7 +10,7 @@
 					<a ng-href='{{link.path}}'>{{link.name}}</a>
 				</li>
 				<li>
-					<a ng-hide='auth.authenticated()' href='https://github.com/login/oauth/authorize?client_id={{auth.id}}&scope=repo,user,gist&redirect_uri={{redirectUri}}'>
+					<a ng-hide='auth.authenticated()' href='/login?redirect_uri={{redirectUri}}'>
 						Sign In
 	        </a>
 	        <a ng-show='auth.authenticated()' href='/logout'>
