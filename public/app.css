@@ -172,6 +172,7 @@ footer h1 {
 }
 
 .page-image-wrap {
+  /*display: inline-block;*/
 	width: 295px;
 	height: 215px;
   background-size: cover;
@@ -212,12 +213,10 @@ footer h1 {
   text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
 
   font: lighter 14px/20px 'OpenSans';
-  display: block;
   position: absolute;
   width: 100%;
   padding: 90px 10px 10px;
   bottom: 0;
-
 
   background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
   background: -webkit-linear-gradient(top,  rgba(0,0,0,0),rgba(0,0,0,0.6));
@@ -227,6 +226,33 @@ footer h1 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#bf000000',GradientType=0 );
 
 }
+
+.page-image-wrap .draft-text {
+  position: absolute;
+  top: 7px; right: 0; left: 0;
+  margin: auto;
+  background: rgba(255,255,255, 0.8);
+  color: #666;
+  width: 280px;
+  height: 35px;
+  font: bolder 16px/35px 'OpenSans';
+  text-align: center;
+  border-radius: 0px;
+
+  /*opacity: 0.7;
+  transition: all 0.3s;*/
+}
+
+/*.page-image-wrap:hover .draft-text {
+  opacity: 1;
+}*/
+
+/*.page-image-wrap:hover .draft-text:after {
+  content: 'Only Seen By You';
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  color: #FFF;
+}*/
 
 /*.page-image {
 	max-height: 215px;
