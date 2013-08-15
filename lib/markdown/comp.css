@@ -234,13 +234,65 @@ iframe {
   background: rgba(255,255,255,0.7);
 }
 
-.upload-image input {
+.upload-image input, .upload-image input.fileUpload {
   height: 100%;
   width: 100%;
-  /*background: red;*/
+  padding: 0;
   opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#fileupload {
+  padding: 0 0 10px;
+}
+
+#fileupload .upload-image {
+  clear: both;
+  background-color: #4D4D4D;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #EEE;
+  width: 207px;
+  display: block;
+  text-align: center;
+  line-height: 150px;
+}
+
+#fileupload input[type='text'], #dialog.dialog.link input[type='text'] {
+  margin: 10px;
+  width: 188px;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#dialog {
+  border-radius: 0 !important;
+}
+
+#dialog.dialog.link input[type='text'] {
+  margin: 10px 0;
+}
+
+#dialog.dialog.link {
+  padding: 5px 15px;
+}
+
+#fileupload .button, #dialog.dialog.link .button {
+  margin: 10px 10px 0;
+  background: #69B7E3;
   cursor: pointer;
 }
+
+#dialog.dialog.link .button {
+  margin: 20px 0 0;
+}
+
 
 .editor .page-sidebar {
   float: right;

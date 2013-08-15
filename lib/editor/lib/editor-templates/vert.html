@@ -17,8 +17,10 @@
         </a>
       </li>
       <li ng-show='vert.editMode == "save"' class='commit'>
-        <a ng-show='vert.writeable' ng-click='vert.commitFile()'>Commit</a>
+        <a ng-show='vert.writeable' ng-click='post.save != "saving" && vert.commitFile()'>Commit</a>
         <a ng-show='!vert.writeable' ng-click='vert.submitFile()'>Submit</a>
+        <img class='gif' ng-show='post.save == "saving"' src='/commit.gif' />
+        <span class='error' ng-show='post.save == "error"'>Error. Try Again.</span>
       </li>
       <li ng-show='vert.editMode == "save"'>
         <a ng-click='vert.edit($event)'>Cancel</a>

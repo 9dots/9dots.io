@@ -98,7 +98,7 @@ footer h1 {
 }
 
 .inner-search-filter-bar {
-	max-width: 1180px;
+	max-width: 980px;
 	margin: 0 auto;
 	padding: 0 20px;
 	overflow: hidden;
@@ -499,13 +499,65 @@ iframe {
   background: rgba(255,255,255,0.7);
 }
 
-.upload-image input {
+.upload-image input, .upload-image input.fileUpload {
   height: 100%;
   width: 100%;
-  /*background: red;*/
+  padding: 0;
   opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#fileupload {
+  padding: 0 0 10px;
+}
+
+#fileupload .upload-image {
+  clear: both;
+  background-color: #4D4D4D;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #EEE;
+  width: 207px;
+  display: block;
+  text-align: center;
+  line-height: 150px;
+}
+
+#fileupload input[type='text'], #dialog.dialog.link input[type='text'] {
+  margin: 10px;
+  width: 188px;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#dialog {
+  border-radius: 0 !important;
+}
+
+#dialog.dialog.link input[type='text'] {
+  margin: 10px 0;
+}
+
+#dialog.dialog.link {
+  padding: 5px 15px;
+}
+
+#fileupload .button, #dialog.dialog.link .button {
+  margin: 10px 10px 0;
+  background: #69B7E3;
   cursor: pointer;
 }
+
+#dialog.dialog.link .button {
+  margin: 20px 0 0;
+}
+
 
 .editor .page-sidebar {
   float: right;
@@ -1877,14 +1929,14 @@ ins {
     }
   .dialog.media {
     width:240px;
-    left:50px;
+    left:200px;
     }
     .fixed .dialog.media {
       left:105px;
       }
   .dialog.link {
     width:210px;
-    left:23px;
+    left:180px;
     }
     .fixed .dialog.link {
       left:78px;
@@ -3277,6 +3329,7 @@ only screen and (min-device-pixel-ratio:2) {
 
 .vert .nav li {
   width: 50%;
+  position: relative;
 }
 
 .vert .nav li a {
@@ -3287,6 +3340,26 @@ only screen and (min-device-pixel-ratio:2) {
   color: #999;
   font-weight: lighter;
   transition: all .3s;
+}
+
+.vert .nav li .gif {
+  position: absolute;
+  top: 13px;
+  z-index: 99;
+  right: 20px;
+}
+.vert .nav li .error {
+  position: absolute;
+  background: rgba(236, 87, 98, 0.8);
+  border: 1px solid rgba(236, 87, 98, 1);
+  color: #FFF;
+  width: 107px;
+  right: -15px;
+  bottom: -9px;
+  text-align: center;
+  line-height: 19px;
+  z-index: 11;
+  font-size: 12px;
 }
 
 .vert .nav li.full-width {
@@ -3345,6 +3418,10 @@ only screen and (min-device-pixel-ratio:2) {
 .splash a.button:hover {
   color: #FFF;
 }
+
+
+
+
 #main-header {
 	background: #444;
 	min-width: 980px;

@@ -79,8 +79,7 @@
               </div>
               <div id='dialog' ng-class='post.dialogClass()'>
                 <span ng-switch='post.dialog'>
-                  <div ng-switch-when='link' class='inner'>
-                    <label>Title</label>
+                  <div ng-switch-when='link' class=''>
                     <input type='text' name='href' placeholder='Link URL' />
                     <input type='text' name='text' placeholder='Link Name' />
                     <input type='text' name='title' placeholder='Title (optional)' />
@@ -93,22 +92,16 @@
                         </select>
                       </div>
                     </span>
-                    <a class='button round insert' data-type='link' ng-click='post.dialogInsert($event);'>insert</a>
+                    <a class='button insert' data-type='link' ng-click='post.dialogInsert($event);'>insert</a>
                   </div>
                   <div ng-switch-when='media' class='inner'>
                     <form id="fileupload" ng-controller="uploadCtrl">
-                      <label>Insert Image</label>
-                      <div class='contain clearfix'>
-                        <span class='ico picture-add fl'></span>
-                        Upload images by Dragging & Dropping or <br>
-                        <span class='button'>
-                          <span>add file</span>
-                          <input class="fileUpload" type="file" name="files[]" multiple>
-                        </span>
-
+                      <div class='upload-image' style='background-image: url({{path}})'>
+                        Upload Image
+                        <input class="fileUpload" type="file" name="files[]" multiple />
                       </div>
                       <input type='text' name='alt' placeholder='Alt text (optional)' />
-                      <a class='button round insert' data-type='media' ng-click='post.dialogInsertImage(path);'>Insert</a>
+                      <a class='button insert' data-type='media' ng-click='post.dialogInsertImage(path);'>Insert</a>
                     </form>
                   </div>
                   <div ng-switch-default></div>

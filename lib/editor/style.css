@@ -12,6 +12,7 @@
 
 .vert .nav li {
   width: 50%;
+  position: relative;
 }
 
 .vert .nav li a {
@@ -22,6 +23,26 @@
   color: #999;
   font-weight: lighter;
   transition: all .3s;
+}
+
+.vert .nav li .gif {
+  position: absolute;
+  top: 13px;
+  z-index: 99;
+  right: 20px;
+}
+.vert .nav li .error {
+  position: absolute;
+  background: rgba(236, 87, 98, 0.8);
+  border: 1px solid rgba(236, 87, 98, 1);
+  color: #FFF;
+  width: 107px;
+  right: -15px;
+  bottom: -9px;
+  text-align: center;
+  line-height: 19px;
+  z-index: 11;
+  font-size: 12px;
 }
 
 .vert .nav li.full-width {
@@ -80,3 +101,6 @@
 .splash a.button:hover {
   color: #FFF;
 }
+
+
+
