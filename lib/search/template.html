@@ -1,7 +1,11 @@
 <div class='search-container'>
 	<div class="search-filter-bar">
 		<div class="inner-search-filter-bar">
-			<input id='query' ng-model='query' placeholder='Search by keyword or #hashtag'></input>
+			<ul class='search-type'>
+				<li><a ng-click='type = "unit"' ng-class='{active: type === "unit"}'>Unit</a></li>
+				<li><a ng-click='type = "lesson"' ng-class='{active: type === "lesson"}'>Lesson</a></li>
+			</ul>
+			<input id='query' ng-model='query' placeholder='Search by keyword, #hash-tag or @author'></input>
 			<ul class='search-sort'>
 				<li><a ng-click='sort = "-recent"' ng-class='{active: sort == "-recent"}'>Recent</a></li>
 				<li><a ng-click='sort = "-views"' ng-class='{active: sort == "-views"}'>Popular</a></li>
@@ -9,8 +13,8 @@
 		</div>
 	</div>
 	<div class='pages-container clearfix'>
-		<div ng-repeat='page in pages | orderBy:sort' class="page-overview">
-			<a ng-href='/{{page.id}}' ng-init='draftText = "Draft"'>
+		<div ng-repeat='page in pages | filter:{type: type} | orderBy:sort' class="page-overview">
+			<a ng-href='/{{link(page)}}' ng-init='draftText = "Draft"'>
 				<div class='page-image-wrap'  style='background-image: url({{page.image}})' ng-mouseenter='draftText = "Only You Can See Me"' ng-mouseleave='draftText = "Draft"'>
 					<div ng-show='!page.published' class='draft-text'>{{draftText}}</div>
 					<div class='page-title'>{{page.title}}</div>

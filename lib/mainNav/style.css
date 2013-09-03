@@ -1,4 +1,4 @@
-#main-header {
+#main-nav-header {
 	background: #444;
 	min-width: 980px;
 	position: relative;
@@ -37,5 +37,3 @@
 	display: block;
 }
 
-#nav a:hover {
-}

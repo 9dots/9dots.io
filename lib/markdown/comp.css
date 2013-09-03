@@ -84,6 +84,21 @@ iframe {
   background-size: cover;
 }
 
+.lessons .page-overview {
+  width: 247px;
+  height: 240px;
+}
+
+.lessons .page-image-wrap {
+  width: 247px;
+  height: 180px;
+}
+
+.lessons .page-heel {
+  width: 247px;
+  height: 60px;
+}
+
 .page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4 {
   margin: 10px 0 0;
   color: #666;

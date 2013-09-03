@@ -1,0 +1,32 @@
+<canvas id='post-blurred-image' class='stretch' blur='{{data.image}}'></canvas>
+<div class='page-content-wrap clearfix'>
+	<div class='page-inner'>
+		<div class='page-info'>
+			<h1 class='title'>{{data.title}}</h1>
+			<p>{{data.blurb}}</p>
+		</div>
+		<article>
+			<div class="lessons">
+				{{#data.lessons}}
+					{{=<% %>=}}
+					<div class='page-overview'>
+						<a ng-href='/<%.%>'>
+							<div class='page-image-wrap'  style='background-image: url({{$pages["<%.%>"].image}})'>
+								<div class='page-title'>{{$pages["<%.%>"].title}}</div>
+							</div>
+						</a>
+						<div class='page-heel'>
+							<div class='page-blurb'>{{$pages["<%.%>"].blurb}}</div>
+						</div>
+					</div>
+					<%={{ }}=%>
+				{{/data.lessons}}
+			</div>
+		</article>
+	</div>
+	<div class='page-sidebar'>
+		<div style='background-image: url({{data.image}})' class='page-image'></div>
+		<div editor-menu default-edit-mode='preview'></div>
+	</div>
+</div>
+

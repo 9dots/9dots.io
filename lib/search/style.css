@@ -85,7 +85,7 @@ footer h1 {
 }
 
 .search-filter-bar input {
-	width: 740px;
+	width: 625px;
 	display: block;
 	background: none;
 	border: 0;
@@ -116,28 +116,37 @@ footer h1 {
    color: #FFF;
 }
 
+.search-type {
+  float: left;
+  margin-right: 15px;
+}
+
 .search-sort {
 	float: right;
 }
 
-.search-sort li {
+.search-sort li, .search-type li {
 	float: left;
 	width: 100px;
   text-align: center;
 }
 
-.search-sort a {
+.search-type li {
+  width: 50px;
+}
+
+.search-sort a, .search-type a {
   color: #5D5D5D;
   font-weight: lighter;
   cursor: pointer;
   position: relative;
 }
 
-.search-sort a:hover {
+.search-sort a:hover, .search-type a:hover {
   color: #444;
 }
 
-.search-sort a.active {
+.search-sort a.active, .search-type a.active {
   font-weight: 600;
 }
 

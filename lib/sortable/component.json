@@ -1,0 +1,6 @@
+{
+  "name": "sortable",
+  "description": "make list sortable component",
+  "scripts": ["index.js", "jquery-ui-1.10.3.custom.js"],
+  "main": "index.js"
+}

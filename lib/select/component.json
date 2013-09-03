@@ -1,0 +1,8 @@
+{
+  "name": "select",
+  "description": "select component",
+  "scripts": ["index.js"],
+  "templates": ["template.html"],
+  "styles": ["style.css"],
+  "main": "index.js"
+}

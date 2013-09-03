@@ -1,7 +1,7 @@
 {
   "name": "boot",
   "description": "bootstrap component",
-  "local": ["search", "markdown", "npm", "editor", "mainNav", "footer"],
+  "local": ["search", "markdown", "npm", "editor", "mainNav", "footer", "select"],
   "scripts": ["boot.js"],
   "styles": ["index.styl"],
   "main": "boot.js"

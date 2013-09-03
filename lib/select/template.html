@@ -1,0 +1,6 @@
+<ng-form>
+	<input id='select-query' ng-model='select.query' ng-change='select.change()' ng-keydown='select.keypress($event)' ng-keypress='$event.keyCode == 13 && select.submit()' placeholder='{{placeholder}}'/>
+	<ul class='selection' ng-show='select.focus'>
+		<li ng-repeat='result in select.results' ng-class='{active: $index == select.idx}' class='transclude-here'></li>
+	</ul>
+</ng-form>

@@ -1,0 +1,16 @@
+<form class='clearfix'>
+	<div select='post.addLesson(result)' search='post.pageQuery(query)' placeholder='add lesson'>
+		<div>{{result.title}}</div>
+	</div>
+	<a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+    {{post.publishedText()}}<span class='ico small checkmark'></span>
+  </a>
+	<ul class='unit-form-lessons' ui-sortable ng-model='post.data.metadata.lessons'>
+		<li ng-repeat='lessonId in post.data.metadata.lessons'>
+			<span class='image'><img ng-src='{{post.getPage(lessonId).image}}'></img></span>
+			<span class='title'>{{post.getPage(lessonId).title}}</span>
+			<span class='blurb'>{{post.getPage(lessonId).blurb}}</span>
+			<span class='remove' ng-click='post.removeLesson($index)'>remove</span>
+		</li>
+	</ul>
+</form>

@@ -86,7 +86,7 @@ footer h1 {
 }
 
 .search-filter-bar input {
-	width: 740px;
+	width: 625px;
 	display: block;
 	background: none;
 	border: 0;
@@ -117,28 +117,37 @@ footer h1 {
    color: #FFF;
 }
 
+.search-type {
+  float: left;
+  margin-right: 15px;
+}
+
 .search-sort {
 	float: right;
 }
 
-.search-sort li {
+.search-sort li, .search-type li {
 	float: left;
 	width: 100px;
   text-align: center;
 }
 
-.search-sort a {
+.search-type li {
+  width: 50px;
+}
+
+.search-sort a, .search-type a {
   color: #5D5D5D;
   font-weight: lighter;
   cursor: pointer;
   position: relative;
 }
 
-.search-sort a:hover {
+.search-sort a:hover, .search-type a:hover {
   color: #444;
 }
 
-.search-sort a.active {
+.search-sort a.active, .search-type a.active {
   font-weight: 600;
 }
 
@@ -347,6 +356,21 @@ iframe {
   height: 232px;
   background-position: center;
   background-size: cover;
+}
+
+.lessons .page-overview {
+  width: 247px;
+  height: 240px;
+}
+
+.lessons .page-image-wrap {
+  width: 247px;
+  height: 180px;
+}
+
+.lessons .page-heel {
+  width: 247px;
+  height: 60px;
 }
 
 .page-inner h1, .page-inner h2, .page-inner h3, .page-inner h4 {
@@ -591,6 +615,7 @@ iframe {
 #drawer textarea:focus {
   border-color: #69B7E3;
 }
+
 
 
 
@@ -3419,10 +3444,26 @@ only screen and (min-device-pixel-ratio:2) {
   color: #FFF;
 }
 
+.unit-form-lessons .image img {
+  height: 50px;
+}
+
+.page-content-wrap.page-types-container {
+  height: 350px;
+  min-height: 350px;
+}
+
+.page-type {
+  font-size: 32px;
+  width: 200px;
+  height: 100px;
+  float: left;
+}
 
 
 
-#main-header {
+
+#main-nav-header {
 	background: #444;
 	min-width: 980px;
 	position: relative;
@@ -3461,10 +3502,12 @@ only screen and (min-device-pixel-ratio:2) {
 	display: block;
 }
 
-#nav a:hover {
-}
+
 .footer {
 	position: relative;
+}
+.selection .active {
+	background: blue;
 }
 body {
   margin: 0

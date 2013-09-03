@@ -6,7 +6,7 @@
   	"component/emitter": "*"
   },
   "description": "the content editor controllers",
-  "local": ["npm", "util", "codemirror", "markdown", "upload"],
-  "scripts": [ "index.js", "post.js", "start.js", "vert.js"],
+  "local": ["npm", "util", "codemirror", "markdown", "upload", "sortable"],
+  "scripts": [ "index.js", "post.js", "start.js", "vert.js", "lesson.js", "unit.js"],
   "main": "index.js"
 }

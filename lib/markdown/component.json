@@ -6,7 +6,7 @@
   },
   "local": ["npm", "blur"],
   "scripts": ["comp.js", "renderClient.js"],
-  "templates": ["template.html", "layoutsPost.html"],
+  "templates": ["template.html", "layoutsPost.html", "layoutsUnit.html"],
   "styles": ["comp.css"],
   "images": [],
   "main": "comp.js"

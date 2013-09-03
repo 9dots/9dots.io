@@ -102,5 +102,21 @@
   color: #FFF;
 }
 
+.unit-form-lessons .image img {
+  height: 50px;
+}
+
+.page-content-wrap.page-types-container {
+  height: 350px;
+  min-height: 350px;
+}
+
+.page-type {
+  font-size: 32px;
+  width: 200px;
+  height: 100px;
+  float: left;
+}
+
 
 
