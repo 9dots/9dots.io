@@ -86,14 +86,14 @@ footer h1 {
 }
 
 .search-filter-bar input {
-	width: 625px;
+	width: 570px;
 	display: block;
 	background: none;
 	border: 0;
 	font: 24px/35px OpenSans;
   padding: 25px 0;
 	color: #5D5D5D;
-  margin: 0;
+  margin: 0 0 0 15px;
 	float: left;
 }
 
@@ -3449,20 +3449,250 @@ only screen and (min-device-pixel-ratio:2) {
 }
 
 .page-content-wrap.page-types-container {
-  height: 350px;
-  min-height: 350px;
+  height: auto;
+  min-height: 0;
+  box-shadow: 0 0;
+  text-align: center;
+  margin: 0;
+  padding: 60px;
+  background: #F2F0E7;
+  width: 100%;
 }
+
 
 .page-type {
+  display: inline-block;
+}
+.page-type a {
+  display: block;
+  margin: 50px 20px 60px;
   font-size: 32px;
-  width: 200px;
-  height: 100px;
-  float: left;
+  width: 270px;
+  height: 250px;
+  box-sizing: border-box;
+  padding-top: 105px;
+  /*padding: 90px 0 50px;*/
+  /*line-height: 250px;*/
+  background: rgba(255,255,255, 0.3);
+  outline: 4px solid white;
+  transition: all 0.5s;
+}
+.page-type a small {
+  transition: all 0.5s;
+  opacity: 0;
+  font-weight: lighter;
+  border-top: 2px solid #444;
+  padding-top: 10px;
+  /*margin-top: -10px;*/
+
+}
+.page-type a:hover {
+  background: white;
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+.page-type a:hover small {
+  opacity: 1;
+  /*color: #777;*/
+}
+
+ul.selection {
+  margin: 0 15px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  position: absolute;
+  width: 585px;
+}
+
+ul.selection li {
+  font-size: 20px;
+  padding: 10px;
+}
+
+ul.selection li.active {
+  background: #69B7E3;
+  color: white;
+}
+
+.unit-form {
+  min-height: 352px;
+  background: #F0F0E8;
+}
+
+.unit-form #select-query {
+  width: 445px;
+  padding: 11px;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.unit-form .publish-flag {
+  margin: 0px 15px 10px 0;
+  background: white;
+  width: 132px;
+  text-align: center;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.unit-form .publish-flag .ico {
+  float: right;
+  margin: 0 -20px 0 0;
+}
+
+.unit-form-lessons {
+  clear: both;
+  margin: 0 15px;
+}
+
+.unit-form-lessons li {
+  background: white;
+  height: 50px;
+  margin-bottom: 1px;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.unit-form-lessons li:hover {
+  outline: 1px solid rgba(0,0,0, 0.05);
+}
+
+.unit-form-lessons li:active {
+  outline: 1px dashed rgba(0,0,0, 0.1);
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+  opacity: 0.8;
 }
 
 
+.unit-form-lessons li .image {
+  float: left;
+  margin-right: 10px;
+  height: 50px;
+  width: 70px;
+  background-color: rgba(0,0,0,0.1);
+  background-size: cover;
+}
+
+.unit-form-lessons li .title {
+  font-size: 25px;
+  line-height: 50px;
+  margin-right:5px;
+}
+
+.unit-form-lessons li .blurb {
+  font-size: 15px;
+  line-height: 50px;
+  font-style: italic;
+}
+
+.unit-form-lessons li .remove {
+  float: right;
+  font-size: 11px;
+  margin: 15px 10px 0 0;
+  padding: 0px 12px;
+  opacity: 0;
+  color: white;
+  background: rgba(236, 87, 98, 0.65);
+  border-radius: 20px;
+  transition: opacity 0.3s;
+}
+
+.unit-form-lessons li:hover .remove {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.unit-form-lessons li .remove:hover {
+  background: rgba(236, 87, 98, 0.85);
+}
 
 
+.search-type li {
+  float: none;
+  display: inline-block;
+  width: auto;
+}
+
+.search-type li a {
+  display: block;
+  padding: 0;
+  width: 67px;
+  background: #555;
+  line-height: 35px;
+  color: #888;
+  border-radius: 2px;
+}
+
+.search-type li a:hover, .search-type li a.active{
+  background: #444;
+  color: #BBB;
+}
+
+
+.upload-attachment {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  cursor: pointer;
+  color: #999;
+  margin: 10px auto;
+  text-align: center;
+  background: #666;
+  line-height: 46px;
+  transition: all 0.3s;
+}
+
+.upload-attachment:hover {
+  background: #888;
+  color: #444;
+}
+
+.upload-attachment:after {
+  content: 'Upload Attachments';
+}
+
+.upload-attachment input {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.attachments li a {
+  color: #999;
+  padding: 0px 10px;
+  display: block;
+}
+
+.attachments li a:hover {
+  background: #555;
+}
+
+.attachments li span {
+  color: #999;
+  float: right;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: #444;
+  height: 15px;
+  width: 15px;
+  margin: 2px -2px 0 0;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.attachments li:hover span {
+  opacity: 1;
+}
+
+.attachments li span:hover {
+  background: #333;
+  text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
 #main-nav-header {
 	background: #444;
 	min-width: 980px;

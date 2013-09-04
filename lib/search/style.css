@@ -85,14 +85,14 @@ footer h1 {
 }
 
 .search-filter-bar input {
-	width: 625px;
+	width: 570px;
 	display: block;
 	background: none;
 	border: 0;
 	font: 24px/35px OpenSans;
   padding: 25px 0;
 	color: #5D5D5D;
-  margin: 0;
+  margin: 0 0 0 15px;
 	float: left;
 }
 

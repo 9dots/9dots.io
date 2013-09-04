@@ -20,7 +20,7 @@
           </div>
         </form>
         <div ng-include='post.bodyTemplate'></div>
-            
+
       </div>
     </span>
     <div class='page-sidebar'>
@@ -37,12 +37,14 @@
         </div>
         <ul class='attachments'>
           <li ng-repeat='attachment in post.data.metadata.attachments'>
-            <a ng-href='{{attachment.path}}' download='{{attachment.name}}' target="_self">{{attachment.name}}</a><span ng-click='post.removeAttachment($index)'>x<span>
+            <a ng-href='{{attachment.path}}' download='{{attachment.name}}' target="_self">{{attachment.name}}
+              <span ng-click='$event.preventDefault(); post.removeAttachment($index)'>&times;</span>
+            </a>
           </li>
         </ul>
       </span>
     </div>
-    <div id='code' ng-show='post.mode == "edit"'></div>
+    <div id='code' ng-show='post.mode == "edit" && post.type == "lesson"' ></div>
   </div>
   <canvas id='post-blurred-image' class='stretch' blur='{{post.data.metadata.image}}'></canvas>
 </div>
