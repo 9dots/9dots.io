@@ -319,6 +319,15 @@ ul.selection li.active {
   cursor: pointer;
 }
 
+.attachments .attachment-header {
+  padding: 20px 0 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 1px 0 #555;
+  border-bottom: 1px solid #444;
+  color: #999;
+  text-align: center;
+}
+
 .attachments li a {
   color: #999;
   padding: 0px 10px;
