@@ -75,8 +75,14 @@
   position: relative;
 }
 
-#code {
-  min-height: 309px;
+.post .view .md-area .code {
+  height: 250px;
+  background: #F0F0E8;
+  padding: 15px 15px;
+}
+
+.markdown .CodeMirror {
+  height: 220px;
 }
 
 .splash-container {

@@ -1,6 +1,6 @@
-<ng-form>
-	<input id='select-query' ng-model='select.query' ng-change='select.change()' ng-keydown='select.keypress($event)' ng-keypress='$event.keyCode == 13 && select.submit()' placeholder='{{placeholder}}'/>
+<ng-form tabindex='-1'>
+	<input id='select-query' ng-model='select.query' ng-change='select.change()' ng-keydown='select.keypress($event)' ng-keypress='$event.keyCode == 13 && select.submit()' placeholder='{{placeholder}}' ng-focus='select.focusIn()'/>
 	<ul class='selection' ng-show='select.focus'>
-		<li ng-repeat='result in select.results' ng-class='{active: $index == select.idx}' class='transclude-here'></li>
+		<li ng-repeat='result in select.results' ng-class='{active: $index == select.idx}' tabindex='-1' ng-click='select.submit($index)' class='transclude-here'></li>
 	</ul>
 </ng-form>
