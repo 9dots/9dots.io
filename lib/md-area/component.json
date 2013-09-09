@@ -1,0 +1,9 @@
+{
+  "name": "md-area",
+  "description": "markdown text area component",
+  "local": ["codemirror", "npm"],
+  "scripts": ["main.js"],
+  "templates": ["template.html"],
+  "styles": ["style.css"],
+  "main": "main.js"
+}
