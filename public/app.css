@@ -3416,14 +3416,127 @@ only screen and (min-device-pixel-ratio:2) {
   position: relative;
 }
 
-.post .view .md-area .code {
-  height: 250px;
+.edit .group.clearfix:first-child {
+  float: right;
+}
+.sections {
   background: #F0F0E8;
-  padding: 15px 15px;
 }
 
-.markdown .CodeMirror {
-  height: 220px;
+.sections .pagination {
+  margin: -5px 0 0 15px;
+  padding-bottom: 10px;
+  background: #F0F0E8;
+}
+
+.sections .pagination div {
+  background: #FFF;
+  padding: 2px 7px;
+  float: left;
+  margin-right: 2px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sections .pagination .prev {
+  margin-left: 12px;
+}
+
+ul.section-tabs {
+  margin-left: 15px;
+}
+
+ul.section-tabs li {
+  float: left;
+  padding: 2px 9px;
+  cursor: pointer;
+  background: #FFF;
+  margin: 10px 15px 10px 0;
+  position: relative;
+  font-size: 12px;
+}
+
+ul.section-tabs li:last-child {
+  margin-right: 0;
+}
+
+ul.section-tabs li:after, ul.section-tabs li:before, .pagination div.next:after, .pagination div.prev:after {
+  content: '';
+  display: block;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-left-color: #FFF;
+}
+
+.sections .pagination div.prev:after {
+  left: -24px;
+  border-left-color: transparent;
+  border-right-color: #FFF;
+}
+
+ul.section-tabs li:not(:first-child):before {
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: #FFF;
+  border-bottom-color: #FFF;
+  border-width: 12px;
+  left: -12px;
+}
+
+ul.section-tabs li:hover, .pagination div:hover {
+  background: #FAFAEC;
+}
+
+ul.section-tabs li:hover:after, .pagination div.next:hover:after {
+border-left-color: #FAFAEC;
+}
+
+.pagination div.prev:hover:after {
+  border-right-color: #FAFAEC;
+}
+
+ul.section-tabs li:hover:before {
+  border-top-color: #FAFAEC;
+  border-bottom-color: #FAFAEC;
+}
+
+ul.section-tabs li.active {
+  background: #F0F0E8;
+}
+
+ul.section-tabs li.active:after {
+border-left-color: #F0F0E8;
+}
+
+ul.section-tabs li.active:before {
+  border-top-color: #F0F0E8;
+  border-bottom-color: #F0F0E8;
+}
+
+
+.topbar-wrapper {
+  clear: both;
+}
+
+.post .view .md-area .code {
+  /*min-height: 265px;*/
+  background: #F0F0E8;
+  padding: 15px;
+}
+
+.CodeMirror {
+  padding: 10px;
+}
+
+.code .CodeMirror-scroll {
+  min-height: 216px;
 }
 
 .splash-container {
@@ -3463,7 +3576,6 @@ only screen and (min-device-pixel-ratio:2) {
   background: #F2F0E7;
   width: 100%;
 }
-
 
 .page-type {
   display: inline-block;
@@ -3530,7 +3642,7 @@ ul.selection li.active {
   font-size: 15px;
 }
 
-.unit-form .publish-flag {
+.unit-form .publish-flag, .edit .publish-flag {
   margin: 0px 15px 10px 0;
   background: white;
   width: 132px;
@@ -3539,9 +3651,20 @@ ul.selection li.active {
   cursor: pointer;
 }
 
-.unit-form .publish-flag .ico {
+.unit-form .publish-flag .ico, .edit .publish-flag .ico {
   float: right;
   margin: 0 -20px 0 0;
+}
+
+.edit .publish-flag {
+  margin: 10px 15px 10px 0;
+  width: 110px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0;
+  padding-right: 24px;
+  font-size: 11px;
+  border-radius: 2px;
 }
 
 .unit-form-lessons {
