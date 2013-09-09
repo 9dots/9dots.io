@@ -9,7 +9,8 @@
 	<ul class='unit-form-lessons' ui-sortable ng-model='post.data.metadata.lessons'>
 		<li ng-repeat='lessonId in post.data.metadata.lessons'>
 			<div class='image' style='background-image: url({{post.getPage(lessonId).image}});'></div>
-			<div class='title'>{{post.getPage(lessonId).title}}</div>
+			<span class='title'>{{post.getPage(lessonId).title}}</span>
+			<span class='blurb'>{{post.getPage(lessonId).blurb}}</span>
 			<span class='remove' ng-click='post.removeLesson($index)'>remove</span>
 		</li>
 	</ul>
