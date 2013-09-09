@@ -1,90 +1,15 @@
-<div class='topbar-wrapper'>
-  <div class='topbar'>
-    <div id='toolbar' class='containment toolbar'>
-      <div class='options clearfix'>
-        <span \class='action round fl ico small document {{avatar}}'>
-          <span class='status'></span>
-            <span class='popup round arrow-top'>save</span>
-          </span>
-        </span>
-        <ul class='group clearfix'>
-          <li>
-            <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
-              {{post.publishedText()}}<span class='ico small checkmark'></span>
-            </a>
-          </li>
-        </ul>
-        <ul class='group clearfix'>
-          <li><a title='Heading' data-key='heading' data-snippet='## ' ng-click='post.markdownSnippet($event)'>h2</a></li>
-          <li><a title='Sub Heading' data-key='sub-heading' data-snippet='### ' ng-click='post.markdownSnippet($event)'>h3</a></li>
-        </ul>
-        <ul class='group clearfix'>
-          <li>
-            <a title='Insert Link' \data-key='link' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
-              <span class='ico small link'></span>
-            </a>
-          </li>
-          <li>
-            <a title='Insert Image' data-key='media' data-snippet=false data-dialog=true ng-click='post.markdownSnippet($event)'>
-              <span class='ico small picture'></span>
-            </a>
-          </li>
-        </ul>
-        <ul class='group clearfix'>
-          <li><a title='Bold' data-key='bold' data-snippet='****' data-offset='2' ng-click='post.markdownSnippet($event)'>B</a></li>
-          <li>
-            <a data-key='italic' title='Italic' data-snippet='__' data-offset='1' ng-click='post.markdownSnippet($event)'>
-              <span class='ico small italic'></span>
-            </a>
-          </li>
-        </ul>
-        <ul class='group clearfix'>
-          <li>
-            <a title='Blockquote' data-key='quote' data-snippet='> ' ng-click='post.markdownSnippet($event)'>
-              <span class='ico small quote'></span>
-            </a>
-          </li>
-          <li>
-            <a title='List' data-key='list' data-snippet='- ' ng-click='post.markdownSnippet($event)'>
-              <span class='ico small list'></span>
-            </a>
-          </li>
-          <li>
-            <a title='Numbered List' data-key='numbered-list' data-snippet='1. ' ng-click='post.markdownSnippet($event)'>
-              <span class='ico small numbered-list'></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div id='dialog' ng-class='post.dialogClass()'>
-        <span ng-switch='post.dialog'>
-          <div ng-switch-when='link' class=''>
-            <input type='text' name='href' placeholder='Link URL' />
-            <input type='text' name='text' placeholder='Link Name' />
-            <input type='text' name='title' placeholder='Title (optional)' />
-
-            <span ng-show='post.relativeLinks'>
-              <div class='collapsible'>
-                <select data-placeholder='Insert a local link' class='chzn-select'>
-                  <option value></option>
-                  <option value='{{link.href}},{{link.text}}' ng-repeat='link in post.relativeLinks'>{{link.text}}</option>
-                </select>
-              </div>
-            </span>
-            <a class='button insert' data-type='link' ng-click='post.dialogInsert($event);'>insert</a>
-          </div>
-          <div ng-switch-when='media' class='inner'>
-            <form id="fileupload" ng-controller="uploadCtrl">
-              <div class='upload-image' style='background-image: url({{path}})'>
-                Upload Image
-                <input class="fileUpload" type="file" name="files[]" multiple />
-              </div>
-              <input type='text' name='alt' placeholder='Alt text (optional)' />
-              <a class='button insert' data-type='media' ng-click='post.dialogInsertImage(path);'>Insert</a>
-            </form>
-          </div>
-        </span>
-      </div>
-    </div>
+<ul class='group clearfix'>
+  <li>
+    <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+      {{post.publishedText()}}<span class='ico small checkmark'></span>
+    </a>
+  </li>
+</ul>
+<div class='sections'>
+  <div class='section' ng-repeat='section in post.sections'>
+    <h3>{{section.title}}</h3>
+    <div md-area='section.content'>
   </div>
+</div>
+
 </div>

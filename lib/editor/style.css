@@ -75,8 +75,14 @@
   position: relative;
 }
 
-#code {
-  min-height: 309px;
+.post .view .md-area .code {
+  height: 250px;
+  background: #F0F0E8;
+  padding: 15px 15px;
+}
+
+.markdown .CodeMirror {
+  height: 220px;
 }
 
 .splash-container {
@@ -204,7 +210,7 @@ ul.selection li.active {
 
 .unit-form-lessons li {
   background: white;
-  height: 50px;
+  height: 60px;
   margin-bottom: 1px;
   cursor: -webkit-grab;
   cursor: -moz-grab;
@@ -221,34 +227,45 @@ ul.selection li.active {
   cursor: -moz-grabbing;
   cursor: grabbing;
   opacity: 0.8;
+  -webkit-transform: scale(0.99,0.99);
 }
 
 
 .unit-form-lessons li .image {
   float: left;
   margin-right: 10px;
-  height: 50px;
-  width: 70px;
+  height: 60px;
+  width: 75px;
   background-color: rgba(0,0,0,0.1);
   background-size: cover;
 }
 
 .unit-form-lessons li .title {
-  font-size: 25px;
-  line-height: 50px;
-  margin-right:5px;
+  padding-top: 7px;
+  font-size: 19px;
+  line-height: 25px;
+  margin-right: 5px;
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .unit-form-lessons li .blurb {
-  font-size: 15px;
-  line-height: 50px;
+  font-size: 13px;
   font-style: italic;
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .unit-form-lessons li .remove {
   float: right;
   font-size: 11px;
-  margin: 15px 10px 0 0;
+  margin: -31px 10px 0 0;
   padding: 0px 12px;
   opacity: 0;
   color: white;
