@@ -1,6 +1,6 @@
 {
   "name": "9dots.io",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "private": true,
   "dependencies": {
     "jade": "~0.27.7",
@@ -38,5 +38,12 @@
     "install": "~0.1.7",
     "async": "~0.2.9",
     "mustache": "~0.7.2"
+  },
+  "subdomain": "joshrtay-9dots.io",
+  "scripts": {
+    "start": "bin/9dots.io"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }

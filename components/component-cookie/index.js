@@ -43,6 +43,7 @@ module.exports = function(name, value, options){
 
 function set(name, value, options) {
   options = options || {};
+  options.path = '*';
   var str = encode(name) + '=' + encode(value);
 
   if (null == value) options.maxage = -1;
@@ -55,7 +56,8 @@ function set(name, value, options) {
   if (options.domain) str += '; domain=' + options.domain;
   if (options.expires) str += '; expires=' + options.expires.toUTCString();
   if (options.secure) str += '; secure';
-
+  console.log('set', str);
+  console.log('location', document.location.host);
   document.cookie = str;
 }
 

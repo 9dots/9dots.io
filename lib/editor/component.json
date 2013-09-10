@@ -2,7 +2,7 @@
   "name": "editor",
   "description": "the content editor",
   "dependencies": {
-  	"component/cookie": "*",
+  	"marcuswestin/store.js": "*",
   	"component/url": "*",
   	"component/querystring": "*",
     "component/emitter": "*"

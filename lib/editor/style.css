@@ -95,6 +95,7 @@
   margin-right: 2px;
   position: relative;
   cursor: pointer;
+  height: 24px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -117,6 +118,7 @@ ul.section-tabs li {
   margin: 10px 15px 10px 0;
   position: relative;
   font-size: 12px;
+  height: 24px;
 }
 
 ul.section-tabs li:last-child {

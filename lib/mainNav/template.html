@@ -13,7 +13,7 @@
 					<a ng-hide='auth.authenticated()' href='/login?redirect_uri={{redirectUri}}'>
 						Sign In
 	        </a>
-	        <a ng-show='auth.authenticated()' href='/logout'>
+	        <a class='logout' ng-show='auth.authenticated()' ng-click='logout()'>
 	        	Sign Out
 	        </a>
 	       </li>
