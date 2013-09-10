@@ -5,11 +5,18 @@
     </a>
   </li>
 </ul>
-<div class='sections'>
-  <div class='section' ng-repeat='section in post.sections'>
-    <h3>{{section.title}}</h3>
-    <div md-area='section.content'>
+<div class='sections' ng-init='Section.tab = "Hook"'>
+  <ul class='section-tabs'>
+    <li ng-repeat='section in post.sections' ng-class='{active: Section.tab == section.title}' ng-click='Section.tab = section.title'>
+      {{section.title}}
+    </li>
+  </ul>
+  <div class='section' ng-repeat='section in post.sections' ng-show='Section.tab == section.title'>
+    <div md-area='section.content'></div>
+    <div class='pagination'>
+      <div class='prev' ng-hide='$first' ng-click='Section.tab = post.sections[($index-1)].title'>Prev</div>
+      <div class='next' ng-hide='$last' ng-click='Section.tab = post.sections[($index+1)].title'>Next</div>
+      <div style='clear: both; float: none; height: 0; padding: 0;'></div>
+    </div>
   </div>
-</div>
-
 </div>
