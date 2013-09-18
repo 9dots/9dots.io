@@ -1,7 +1,8 @@
- <div id="post" class="post">
+ <div id="post" class="post" ng-class='post.data.metadata.type'>
   <div ng-show='post.mode == "preview"' class='view preview' ng-include='post.previewUrl'>
   </div>
   <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
+    <div editor-menu></div>
     <span ng-switch='post.mode' >
       <div ng-switch-when='save' class='view diff page-inner'>
         <div class='page-info'>
@@ -10,7 +11,6 @@
         </div>
         <div class='diff-content inner' ng-bind-html-unsafe='post.html'></div>
       </div>
-
       <div ng-switch-when='edit' class='view active edit page-inner-edit'>
         <form class='clearfix'>
           <input id='title' ng-model='post.data.metadata.title' placeholder='Title...' ng-change='post.makeDirty()'/>
@@ -20,17 +20,24 @@
           </div>
         </form>
         <div ng-include='post.bodyTemplate'></div>
-
       </div>
     </span>
-    <div class='page-sidebar'>
+    <div class='page-sidebar' ng-show='post.showSidebar()'>
       <span ng-switch='post.mode'>
         <div ng-switch-when='edit' class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
           <input class="fileUpload" type="file" name="files[]" multiple>
         </div>
-        <div ng-switch-when='save' style='background-image: url({{post.data.metadata.image}})' class='page-image'></div>
+        <div ng-switch-when='save'>
+          <div id='drawer'>
+            <h2 class='label'>Describe your changes below:</h2>
+            <div class='inner authoring'>
+              <div class='commit'>
+                <textarea class='commit-message' placeholder="{{post.commitPlaceholder}}..." ng-model='post.commitMessage'></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
       </span>
-      <div editor-menu></div>
       <span ng-show='post.showAttachments()'>
         <div class='upload-attachment' ng-controller="uploadCtrl" onend='post.addAttachment(path, name); post.makeDirty()'>
           <input class="fileUpload" type="file" name="files[]" multiple>

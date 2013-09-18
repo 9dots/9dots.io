@@ -1,0 +1,7 @@
+{
+  "name": "sails",
+  "description": "sails socket.io shortcuts",
+  "dependencies": {},
+  "scripts": ["index.js"],
+  "main": "index.js"
+}

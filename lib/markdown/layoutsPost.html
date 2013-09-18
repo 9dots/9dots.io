@@ -1,5 +1,6 @@
 <canvas id='post-blurred-image' class='stretch' blur='{{data.image}}'></canvas>
 <div class='page-content-wrap clearfix'>
+	<div editor-menu default-edit-mode='preview'></div>
 	<div class='page-inner'>
 		<div class='page-info'>
 			<h1 class='title'>{{data.title}}</h1>
@@ -11,7 +12,6 @@
 	</div>
 	<div class='page-sidebar'>
 		<div style='background-image: url({{data.image}})' class='page-image'></div>
-		<div editor-menu default-edit-mode='preview'></div>
 		<ul class='attachments'>
 			{{#data.attachments.length}}
 				<li class='attachment-header'>Attachments</li>

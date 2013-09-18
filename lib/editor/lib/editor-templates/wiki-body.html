@@ -1,0 +1,8 @@
+<ul class='group clearfix'>
+  <li>
+    <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+      {{post.publishedText()}}<span class='ico small checkmark'></span>
+    </a>
+  </li>
+</ul>
+<div md-area='post.content'></div>

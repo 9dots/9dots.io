@@ -7,7 +7,7 @@
   	"component/querystring": "*",
     "component/emitter": "*"
   },
-  "local": ["editor-controllers", "editor-templates", "npm", "vendors", "upload"],
+  "local": ["editor-controllers", "editor-templates", "npm", "vendors"],
   "scripts": ["boot.js", "models.js", "short.js"],
   "styles": ["app.css", "style.css"],
   "paths": ["lib"],

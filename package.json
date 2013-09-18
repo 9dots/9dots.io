@@ -38,7 +38,8 @@
     "install": "~0.1.7",
     "async": "~0.2.9",
     "mustache": "~0.7.2",
-    "leveldown": "~0.8.2"
+    "leveldown": "~0.8.2",
+    "knox": "~0.8.6"
   },
   "subdomain": "joshrtay-9dots.io",
   "scripts": {

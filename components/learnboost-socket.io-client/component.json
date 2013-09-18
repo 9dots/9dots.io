@@ -17,5 +17,6 @@
     "lib/socket.js",
     "lib/emitter.js"
   ],
+  "main": "lib/index.js",
   "repo": "https://raw.github.com/learnboost/socket.io-client"
 }

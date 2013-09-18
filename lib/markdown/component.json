@@ -4,9 +4,9 @@
   "dependencies": {
     "component/emitter": "*"
   },
-  "local": ["npm", "blur"],
+  "local": ["npm", "blur", "sails"],
   "scripts": ["comp.js", "renderClient.js", "type2Layout.js"],
-  "templates": ["template.html", "layoutsPost.html", "layoutsUnit.html"],
+  "templates": ["template.html", "layoutsPost.html", "layoutsUnit.html", "layoutsWiki.html"],
   "styles": ["comp.css"],
   "images": [],
   "main": "comp.js"

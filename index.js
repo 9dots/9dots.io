@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 // mount
 
 // serves markdown pages at /markdown/pages
-app.use(require('./lib/markdown'));
+// app.use(require('./lib/markdown'));
 
 // github auth
 app.use(require('./lib/auth'));

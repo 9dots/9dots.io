@@ -86,7 +86,7 @@ footer h1 {
 }
 
 .search-filter-bar input {
-	width: 570px;
+	width: 500px;
 	display: block;
 	background: none;
 	border: 0;
@@ -180,6 +180,8 @@ footer h1 {
   overflow: hidden;
 }
 
+
+
 .page-image-wrap {
   /*display: inline-block;*/
 	width: 295px;
@@ -202,6 +204,19 @@ footer h1 {
   font: 12px/16px OpenSans;
 }
 
+.wiki .page-image-wrap {
+  height: 135px;
+}
+
+.wiki .page-heel {
+  height: 190px;
+}
+
+.wiki .page-heel .page-blurb {
+  height: 140px;
+  font-size: 14px;
+}
+
 .page-heel .author-info {
   line-height: 30px;
   color: #999;
@@ -215,6 +230,14 @@ footer h1 {
 
 .page-heel .page-views {
   float: right;
+}
+
+.wiki .page-image-wrap .page-title {
+  color: #343131;
+  background: none;
+  font-size: 24px;
+  position: static;
+  padding: 105px 10px 10px;
 }
 
 .page-image-wrap .page-title {
@@ -272,6 +295,7 @@ footer h1 {
 	display: block;
 }*/
 
+
 iframe {
 	width: 100%;
 	border: none;
@@ -321,6 +345,10 @@ iframe {
 	width: 935px;
 	margin: 60px auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.wiki .page-inner {
+  width: 100%;
 }
 
 .page-inner {
@@ -442,179 +470,6 @@ iframe {
   border-radius: 0 !important;
 }
 
-/* EDITOR */
-
-#code {
-  float: left;
-  width: 615px;
-  padding: 0px 15px 15px 0;
-  background: #FFF;
-}
-
-.page-inner-edit {
-  width: 615px;
-  float: left;
-  background: #FFF;
-}
-
-.blurb-wrap {
-  position: relative;
-  width: 585px;
-}
-
-.edit form input {
-  padding: 15px;
-  margin: 0 15px 8px;
-  width: 585px;
-  background: #FFF;
-}
-
-.editor {
-  padding-top: 0 !important;
-}
-
-.edit form {
-  padding-top: 15px;
-  background: #F0F0E8;
-}
-
-#title {
-  font: 20px/25px 'OpenSans';
-}
-
-#blurb {
-  font: 15px/20px 'OpenSans';
-}
-
-.blurb-wrap .char-count {
-  font-size: 11px;
-  position: absolute;
-  right: -7px;
-  bottom: 0px;
-  color: #999;
-}
-
-.page-sidebar .upload-image {
-  height: 232px;
-  width: 100%;
-  background-color: #666;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-.page-sidebar .upload-image:before {
-  content: 'Upload Image';
-  position: absolute;
-  display: block;
-  color: #333;
-  margin: auto;
-  bottom: 0; top: 0; left: 0; right: 0;
-  width: 200px;
-  height: 40px;
-  font: 20px/40px 'OpenSans';
-  text-align: center;
-  -webkit-transition: all 0.5s;
-  opacity: 0.6;
-  border-radius: 2px;
-}
-.page-sidebar .upload-image:hover:before {
-  opacity: 1;
-  background: rgba(255,255,255,0.7);
-}
-
-.upload-image input, .upload-image input.fileUpload {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  opacity: 0;
-  margin: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#fileupload {
-  padding: 0 0 10px;
-}
-
-#fileupload .upload-image {
-  clear: both;
-  background-color: #4D4D4D;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  color: #EEE;
-  width: 207px;
-  display: block;
-  text-align: center;
-  line-height: 150px;
-}
-
-#fileupload input[type='text'], #dialog.dialog.link input[type='text'] {
-  margin: 10px;
-  width: 188px;
-  border-radius: 0;
-  font-size: 14px;
-  padding: 10px;
-}
-
-#dialog {
-  border-radius: 0 !important;
-}
-
-#dialog.dialog.link input[type='text'] {
-  margin: 10px 0;
-}
-
-#dialog.dialog.link {
-  padding: 5px 15px;
-}
-
-#fileupload .button, #dialog.dialog.link .button {
-  margin: 10px 10px 0;
-  background: #69B7E3;
-  cursor: pointer;
-}
-
-#dialog.dialog.link .button {
-  margin: 20px 0 0;
-}
-
-
-.editor .page-sidebar {
-  float: right;
-}
-
-
-/* Diff */
-
-.view.diff.page-inner .diff-content {
-  background: #FFF;
-}
-
-#drawer h2 {
-  padding: 0;
-  color: #EEE;
-  font-size: 14px;
-  font-weight: 300;
-  margin: 16px 15px -4px;
-  border-bottom: 0;
-}
-
-#drawer textarea {
-  padding: 15px;
-  height: 150px;
-  resize: none;
-  border: 1px solid #444;
-  border-radius: 0;
-  background: #F5F5F5;
-}
-
-#drawer textarea:focus {
-  border-color: #69B7E3;
-}
 
 
 
@@ -1221,10 +1076,6 @@ ins {
   margin:15px 0 0;
   padding-bottom:5px;
   }
-
-.vert ul li {
-  float: left;
-}
 
 .vert .nav.auth {
   position:absolute;
@@ -1953,14 +1804,14 @@ ins {
     }
   .dialog.media {
     width:240px;
-    left:200px;
+    left:55px;
     }
     .fixed .dialog.media {
       left:105px;
       }
   .dialog.link {
     width:210px;
-    left:180px;
+    left:30px;
     }
     .fixed .dialog.link {
       left:78px;
@@ -3340,19 +3191,17 @@ only screen and (min-device-pixel-ratio:2) {
 }
 
 .vert {
-  box-shadow: 0 -1px 0 rgba(0,0,0, .1);
+  position: absolute;
+  right: -100px;
 }
 
 .vert ul {
-  margin: -1px 0 0;
   padding: 0;
-  border-top: 1px solid rgba(255,255,255, .14);
-  box-shadow: 0 -1px 0 rgba(0,0,0, .14);
   position: relative;
 }
 
 .vert .nav li {
-  width: 50%;
+  width: 100px;
   position: relative;
 }
 
@@ -3533,6 +3382,189 @@ ul.section-tabs li.active:before {
   padding: 15px;
 }
 
+.edit form input {
+  padding: 15px;
+  margin: 0 15px 8px;
+  width: 585px;
+  background: #FFF;
+}
+
+/* EDITOR */
+
+#code {
+  float: left;
+  width: 615px;
+  padding: 0px 15px 15px 0;
+  background: #FFF;
+}
+
+.page-inner-edit {
+  width: 615px;
+  float: left;
+  background: #FFF;
+}
+
+.blurb-wrap {
+  position: relative;
+  width: 585px;
+}
+
+.wiki .blurb-wrap {
+  width: 900px;
+}
+
+#title {
+  font: 20px/25px 'OpenSans';
+}
+
+#blurb {
+  font: 15px/20px 'OpenSans';
+}
+
+.blurb-wrap .char-count {
+  font-size: 11px;
+  position: absolute;
+  right: -7px;
+  bottom: 0px;
+  color: #999;
+}
+
+.page-sidebar .upload-image {
+  height: 232px;
+  width: 100%;
+  background-color: #666;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.page-sidebar .upload-image:before {
+  content: 'Upload Image';
+  position: absolute;
+  display: block;
+  color: #333;
+  margin: auto;
+  bottom: 0; top: 0; left: 0; right: 0;
+  width: 200px;
+  height: 40px;
+  font: 20px/40px 'OpenSans';
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.page-sidebar .upload-image:hover:before {
+  opacity: 1;
+  background: rgba(255,255,255,0.7);
+}
+
+.upload-image input, .upload-image input.fileUpload {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#fileupload {
+  padding: 0 0 10px;
+}
+
+#fileupload .upload-image {
+  clear: both;
+  background-color: #4D4D4D;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #EEE;
+  width: 207px;
+  display: block;
+  text-align: center;
+  line-height: 150px;
+}
+
+#fileupload input[type='text'], #dialog.dialog.link input[type='text'] {
+  margin: 10px;
+  width: 188px;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#dialog {
+  border-radius: 0 !important;
+}
+
+#dialog.dialog.link input[type='text'] {
+  margin: 10px 0;
+}
+
+#dialog.dialog.link {
+  padding: 5px 15px;
+}
+
+#fileupload .button, #dialog.dialog.link .button {
+  margin: 10px 10px 0;
+  background: #69B7E3;
+  cursor: pointer;
+}
+
+#dialog.dialog.link .button {
+  margin: 20px 0 0;
+}
+
+
+.editor .page-sidebar {
+  float: right;
+}
+
+
+/* Diff */
+
+.view.diff.page-inner .diff-content {
+  background: #FFF;
+}
+
+#drawer h2 {
+  padding: 0;
+  color: #EEE;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 16px 15px -4px;
+  border-bottom: 0;
+}
+
+#drawer textarea {
+  padding: 15px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #444;
+  border-radius: 0;
+  background: #F5F5F5;
+}
+
+#drawer textarea:focus {
+  border-color: #69B7E3;
+}
+
+.wiki .edit form input {
+  width: 900px;
+}
+
+.editor {
+  padding-top: 0 !important;
+}
+
+.edit form {
+  padding-top: 15px;
+  background: #F0F0E8;
+}
+
 .CodeMirror {
   padding: 10px;
 }
@@ -3576,6 +3608,10 @@ ul.section-tabs li.active:before {
   margin: 0;
   padding: 60px;
   background: #F2F0E7;
+  width: 100%;
+}
+
+.wiki .page-inner-edit {
   width: 100%;
 }
 
@@ -3893,6 +3929,7 @@ ul.selection li.active {
 .selection .active {
 	background: blue;
 }
+
 
 
 body {

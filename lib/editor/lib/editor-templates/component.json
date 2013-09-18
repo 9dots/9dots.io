@@ -2,6 +2,17 @@
   "name": "editor-templates",
   "description": "the content editor templates",
   "scripts": ["index.js"],
-  "templates": [ "post.html", "start.html", "vert.html", "lesson-body.html", "unit-body.html", "lesson-post.html", "unit-post.html", "new.html"],
+  "templates": [ 
+  	"post.html", 
+  	"start.html", 
+  	"vert.html", 
+  	"lesson-body.html", 
+  	"unit-body.html", 
+  	"lesson-post.html", 
+  	"unit-post.html", 
+  	"new.html",
+  	"wiki-body.html",
+  	"wiki-post.html"
+  ],
   "main": "index.js"
 }

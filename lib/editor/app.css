@@ -596,10 +596,6 @@ ins {
   padding-bottom:5px;
   }
 
-.vert ul li {
-  float: left;
-}
-
 .vert .nav.auth {
   position:absolute;
   padding:0;
@@ -1327,14 +1323,14 @@ ins {
     }
   .dialog.media {
     width:240px;
-    left:200px;
+    left:55px;
     }
     .fixed .dialog.media {
       left:105px;
       }
   .dialog.link {
     width:210px;
-    left:180px;
+    left:30px;
     }
     .fixed .dialog.link {
       left:78px;

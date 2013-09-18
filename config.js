@@ -26,11 +26,15 @@ module.exports = {
 	},
 
   server: 'http://9dots.io',
+  backend: 'http://backend.9dots.io',
+  uploads: 'http://uploads.9dots.io',
+  posts: 'http://posts.9dots.io',
 
   dev: {
     userRepo: {
       name: '9dots.io-pages-dev'
     },
-    server: 'http://76.168.229.78:3500'
+    server: 'http://76.168.229.78:3500',
+    backend: 'http://localhost:1337'
   }
 };
