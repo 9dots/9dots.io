@@ -1,6 +1,6 @@
 module.exports = {
   clientId: '587fbc93e17fa1bc9497',
-  gatekeeperUrl: 'http://9dots.io',
+  gatekeeperUrl: 'http://www.9dots.io',
   repo: {
   	name: '9dots.io',
   	branch: 'master',
@@ -24,7 +24,7 @@ module.exports = {
 	  }
 	},
 
-  server: 'http://9dots.io',
+  server: 'http://www.9dots.io',
   backend: 'http://backend.9dots.io',
   uploads: 'http://uploads.9dots.io',
   posts: 'http://posts.9dots.io',
