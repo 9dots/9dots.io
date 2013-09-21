@@ -1,8 +1,18 @@
 {
-  "oauth_client_id": "232a8f6747152e6eae6f",
-  "oauth_client_secret": "9b02a6ce7b0a37b4acaf4dc67700d98d31f8d247",
-  "oauth_host": "github.com",
-  "oauth_port": 443,
-  "oauth_path": "/login/oauth/access_token",
-  "oauth_method": "POST"
+	"development": {
+	  "oauth_client_id": "232a8f6747152e6eae6f",
+	  "oauth_client_secret": "9b02a6ce7b0a37b4acaf4dc67700d98d31f8d247",
+	  "oauth_host": "github.com",
+	  "oauth_port": 443,
+	  "oauth_path": "/login/oauth/access_token",
+	  "oauth_method": "POST"
+	},
+	"production": {
+		"oauth_client_id": "587fbc93e17fa1bc9497",
+		"oauth_client_secret": "c8bf3c99a074f8622394356bf22f831bcfa9af48",
+		"oauth_host": "github.com",
+	  "oauth_port": 443,
+	  "oauth_path": "/login/oauth/access_token",
+	  "oauth_method": "POST"
+	}
 }

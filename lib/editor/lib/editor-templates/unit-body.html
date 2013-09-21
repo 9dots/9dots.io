@@ -2,7 +2,7 @@
 	<a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
     {{post.publishedText()}}<span class='ico small checkmark'></span>
   </a>
-	<div select='post.addLesson(result)' search='post.pageQuery(query)' placeholder='add lesson'>
+	<div select='post.addLesson(result)' search='post.pageQuery(query)' placeholder='add lesson' on-change='post.makeDirty()'>
 		<div>{{result.title}}</div>
 	</div>
 

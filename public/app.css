@@ -233,7 +233,6 @@ footer h1 {
 }
 
 .wiki .page-image-wrap .page-title {
-  color: #343131;
   background: none;
   font-size: 24px;
   position: static;
@@ -3418,6 +3417,10 @@ ul.section-tabs li.active:before {
 }
 
 #blurb {
+  font: 15px/20px 'OpenSans';
+}
+
+#standards {
   font: 15px/20px 'OpenSans';
 }
 

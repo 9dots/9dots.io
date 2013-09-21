@@ -18,6 +18,10 @@
             <input id='blurb' ng-model='post.data.metadata.blurb' placeholder='Summary...' maxlength='140' ng-change='post.makeDirty()'/>
             <div class='char-count'>{{post.data.metadata.blurb.length || 0}}/140</div>
           </div>
+          <span ng-show='post.newFile'>
+            <label>Organization: </label>
+            <select ng-show='post.newFile' ng-model='post.data.metadata.org' ng-options='o.login as o.login for o in post.$user.orgs' ng-change='post.makeDirty()'></select>
+          </span>
         </form>
         <div ng-include='post.bodyTemplate'></div>
       </div>

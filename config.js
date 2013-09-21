@@ -1,10 +1,9 @@
 module.exports = {
-	clientId: '232a8f6747152e6eae6f',
-  gatekeeperUrl: 'http://localhost:3000',
+  clientId: '587fbc93e17fa1bc9497',
+  gatekeeperUrl: 'http://9dots.io',
   repo: {
   	name: '9dots.io',
   	branch: 'master',
-  	path: 'lib/markdown/src'
   },
   userRepo: {
   	name: '9dots.io-pages',
@@ -31,6 +30,8 @@ module.exports = {
   posts: 'http://posts.9dots.io',
 
   dev: {
+    gatekeeperUrl: 'http://localhost:3000',
+    clientId: '232a8f6747152e6eae6f',
     userRepo: {
       name: '9dots.io-pages-dev'
     },

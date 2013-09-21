@@ -1,3 +1,6 @@
+<form class='clearfix'>
+  <input id='standards' ng-model='post.data.metadata.standards' placeholder='Standards, comma separated...' ng-change='post.makeDirty()' ng-list/>
+</form>
 <ul class='group clearfix'>
   <li>
     <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
@@ -12,7 +15,7 @@
     </li>
   </ul>
   <div class='section' ng-repeat='section in post.sections' ng-show='Section.tab == $index'>
-    <div md-area='section.content'></div>
+    <div md-area ng-model='section.content' on-change='post.makeDirty()'></div>
     <div class='pagination'>
       <div class='prev' ng-hide='$first' ng-click='Section.tab = $index - 1'>Prev</div>
       <div class='next' ng-hide='$last' ng-click='Section.tab = $index + 1'>Next</div>

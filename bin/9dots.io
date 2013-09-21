@@ -19,6 +19,6 @@ process.title = '9dots.io';
 
 // listen
 
-var port = program.port || process.env.port || 3000;
+var port = program.port || process.env.PORT || 3000;
 app.listen(port);
 console.log('application listening on port %d', port);
