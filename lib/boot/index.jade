@@ -3,12 +3,11 @@ html(ng-app="app")
   head
     base(href='/')
     title= settings.title
-    link(rel='stylesheet', href='/app.css')
-    link(rel='stylesheet', href='/bower.css')
     script.
       SETTINGS = !{JSON.stringify(settings)}
+    link(rel='stylesheet', href='/app.css')
+    link(rel='stylesheet', href='/bower.css')
     script(src='/bower.js')
-    script(src='/socket.io.js')
 
   body
     div(main-nav)
