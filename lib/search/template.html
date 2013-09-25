@@ -15,8 +15,8 @@
 	</div>
 	<div class='pages-container clearfix'>
 		<div ng-repeat='page in pages | filter:{type: type} | orderBy:sort' class="page-overview" ng-class='page.type'>
-			<a ng-href='/{{link(page)}}' ng-init='draftText = "Draft"'>
-				<div class='page-image-wrap'  style='background-image: url({{page.image}})' ng-mouseenter='draftText = "Only You Can See Me"' ng-mouseleave='draftText = "Draft"'>
+			<a ng-href='/{{link(page)}}' ng-init='draftText = "Draft"' ng-mouseenter='draftText = "Only You Can See Me"' ng-mouseleave='draftText = "Draft"'>
+				<div class='page-image-wrap'  style='background-image: url({{page.image}})' >
 					<div ng-show='!page.published' class='draft-text'>{{draftText}}</div>
 					<div class='page-title'>{{page.title}}</div>
 				</div>

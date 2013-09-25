@@ -289,6 +289,13 @@ footer h1 {
   transition: all 0.3s;*/
 }
 
+.wiki .page-image-wrap .draft-text {
+  top: 145px;
+  width: 255px;
+  background: #888;
+  color: white;
+}
+
 /*.page-image-wrap:hover .draft-text {
   opacity: 1;
 }*/
