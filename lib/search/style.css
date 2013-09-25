@@ -198,17 +198,33 @@ footer h1 {
   position: relative;
 }
 
+
+
+.wiki.page-overview {
+  padding: 20px;
+  height: 260px;
+}
+
+.wiki .page-image-wrap .page-title {
+  padding-top: 10px !important;
+  color: #777;
+  text-shadow: 0 0;
+}
+
 .page-heel .page-blurb {
   height: 60px;
   font: 12px/16px OpenSans;
 }
 
 .wiki .page-image-wrap {
-  height: 135px;
+  width: 100% !important;
+  height: 40px;
+  background: none !important;
 }
 
 .wiki .page-heel {
   height: 190px;
+  width: 100%;
 }
 
 .wiki .page-heel .page-blurb {

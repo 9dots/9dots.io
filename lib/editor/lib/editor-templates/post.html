@@ -1,4 +1,4 @@
- <div id="post" class="post" ng-class='post.data.metadata.type'>
+ <div id="post" class="post" ng-class='post.data.metadata.type+" "+post.newFileClass'>
   <div ng-show='post.mode == "preview"' class='view preview' ng-include='post.previewUrl'>
   </div>
   <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
@@ -19,8 +19,9 @@
             <div class='char-count'>{{post.data.metadata.blurb.length || 0}}/140</div>
           </div>
           <span ng-show='post.newFile'>
-            <label>Organization: </label>
-            <select ng-show='post.newFile' ng-model='post.data.metadata.org' ng-options='o.login as o.login for o in post.$user.orgs' ng-change='post.makeDirty()'></select>
+            <select ng-show='post.newFile' ng-class='{null: !post.data.metadata.org}' ng-model='post.data.metadata.org' ng-options='o.login as o.login for o in post.$user.orgs' ng-change='post.makeDirty()'>
+              <option value="">Select Your Organization...</option>
+            </select>
           </span>
         </form>
         <div ng-include='post.bodyTemplate'></div>

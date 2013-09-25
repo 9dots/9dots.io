@@ -27,7 +27,7 @@
   position: absolute;
   top: 13px;
   z-index: 99;
-  right: 20px;
+  left: 6px;
 }
 .vert .nav li .error {
   position: absolute;
@@ -197,6 +197,24 @@ ul.section-tabs li.active:before {
   background: #FFF;
 }
 
+.edit form select.null {
+  color: #AAA;
+}
+
+.edit form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0 15px -6px;
+  width: 586px;
+  border: 0;
+  height: 45px;
+  font: 15px/20px 'OpenSans';
+  padding: 0 15px;
+  border-radius: 0 0;
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, .45), inset -1px -1px 0 rgba(0, 0, 0, .08);
+}
+
 /* EDITOR */
 
 #code {
@@ -218,7 +236,29 @@ ul.section-tabs li.active:before {
 }
 
 .wiki .blurb-wrap {
-  width: 900px;
+  width: 905px;
+}
+
+.wiki  .edit form select {
+  width: 905px;
+  margin-bottom: 0px;
+}
+
+.wiki .md-area {
+  background: #F0F0E8;
+}
+
+.wiki #toolbar {
+  float: left;
+  margin-top: -42px;
+}
+
+.wiki .code .CodeMirror-scroll {
+  min-height: 243px;
+}
+
+.wiki.edit-file .code .CodeMirror-scroll {
+  min-height: 288px;
 }
 
 #title {
@@ -365,7 +405,7 @@ ul.section-tabs li.active:before {
 }
 
 .wiki .edit form input {
-  width: 900px;
+  width: 905px;
 }
 
 .editor {

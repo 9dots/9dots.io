@@ -5,4 +5,4 @@
     </a>
   </li>
 </ul>
-<div md-area='post.content' init='post.init'></div>
+<div md-area ng-model='post.content' on-change='post.makeDirty()'></div>

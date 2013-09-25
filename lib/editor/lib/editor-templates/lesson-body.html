@@ -1,14 +1,14 @@
 <form class='clearfix'>
   <input id='standards' ng-model='post.data.metadata.standards' placeholder='Standards, comma separated...' ng-change='post.makeDirty()' ng-list/>
 </form>
-<ul class='group clearfix'>
-  <li>
-    <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
-      {{post.publishedText()}}<span class='ico small checkmark'></span>
-    </a>
-  </li>
-</ul>
 <div class='sections' ng-init='Section.tab = 0'>
+  <ul class='group clearfix'>
+    <li>
+      <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+        {{post.publishedText()}}<span class='ico small checkmark'></span>
+      </a>
+    </li>
+  </ul>
   <ul class='section-tabs'>
     <li ng-repeat='section in post.sections' ng-class='{active: Section.tab == $index}' ng-click='Section.tab = $index'>
       {{section.title}}
