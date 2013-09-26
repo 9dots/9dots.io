@@ -30,6 +30,9 @@
     <div class='page-sidebar' ng-show='post.showSidebar()'>
       <span ng-switch='post.mode'>
         <div ng-switch-when='edit' class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty();'>
+          <div class='progress' ng-hide='progress == 100'>
+            <div class='progress-bar' style='width: {{progress}}%'></div>
+          </div>
           <input class="fileUpload" type="file" name="files[]" multiple>
         </div>
         <div ng-switch-when='save'>
@@ -46,6 +49,9 @@
       <span ng-show='post.showAttachments()'>
         <div class='upload-attachment' ng-controller="uploadCtrl" onend='post.addAttachment(path, name); post.makeDirty()'>
           <input class="fileUpload" type="file" name="files[]" multiple>
+          <div class='progress' ng-hide='progress == 100'>
+            <div class='progress-bar' style='width: {{progress}}%'></div>
+          </div>
         </div>
         <ul class='attachments'>
           <li ng-repeat='attachment in post.data.metadata.attachments'>
