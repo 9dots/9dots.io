@@ -1,4 +1,5 @@
 <form class='clearfix'>
+  <input id='objective' ng-model='post.data.metadata.objective' placeholder='Objective...' ng-change='post.makeDirty()'/>
   <input id='standards' ng-model='post.data.metadata.standards' placeholder='Standards, comma separated...' ng-change='post.makeDirty()' ng-list/>
 </form>
 <div class='sections' ng-init='Section.tab = 0'>
@@ -15,7 +16,7 @@
     </li>
   </ul>
   <div class='section' ng-repeat='section in post.sections' ng-show='Section.tab == $index'>
-    <div md-area ng-model='section.content' on-change='post.makeDirty()'></div>
+    <div md-area ng-model='section.content' on-change='post.makeDirty()' placeholder='section.placeholder'></div>
     <div class='pagination'>
       <div class='prev' ng-hide='$first' ng-click='Section.tab = $index - 1'>Prev</div>
       <div class='next' ng-hide='$last' ng-click='Section.tab = $index + 1'>Next</div>

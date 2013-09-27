@@ -1,5 +1,6 @@
  <div id="post" class="post" ng-class='post.data.metadata.type+" "+post.newFileClass'>
-  <div ng-show='post.mode == "preview"' class='view preview' ng-include='post.previewUrl'>
+  <div ng-show='post.mode == "preview"' class='view preview' >
+    <div ng-include='post.previewUrl'></div>
   </div>
   <div ng-hide='post.mode == "preview"' class='page-content-wrap inner editor views markdown clearfix'>
     <div editor-menu></div>

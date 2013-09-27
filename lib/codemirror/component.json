@@ -10,7 +10,8 @@
   	"htmlmixed.js",
   	"markdown.js",
   	"yaml.js",
-  	"overlay.js"
+  	"overlay.js",
+    "placeholder.js"
   ],
   "main": "index.js"
 }

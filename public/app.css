@@ -456,6 +456,14 @@ iframe {
   color: #666;
 }
 
+.page-info p {
+  margin-bottom: 10px;
+}
+
+.page-info p.objective {
+  font-style: italic;
+}
+
 .page-inner a {
   font-weight: normal;
   color: #69B7E3;
@@ -3484,6 +3492,10 @@ ul.section-tabs li.active:before {
 }
 
 #standards {
+  font: 15px/20px 'OpenSans';
+}
+
+#objective {
   font: 15px/20px 'OpenSans';
 }
 

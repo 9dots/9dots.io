@@ -273,6 +273,10 @@ ul.section-tabs li.active:before {
   font: 15px/20px 'OpenSans';
 }
 
+#objective {
+  font: 15px/20px 'OpenSans';
+}
+
 .blurb-wrap .char-count {
   font-size: 11px;
   position: absolute;
