@@ -16,7 +16,7 @@
     </li>
   </ul>
   <div class='section' ng-repeat='section in post.sections' ng-show='Section.tab == $index'>
-    <div md-area ng-model='section.content' on-change='post.makeDirty()' placeholder='section.placeholder'></div>
+    <div md-area ng-model='section.content' on-change='post.makeDirty()' placeholder='post.placeholders[section.title]'></div>
     <div class='pagination'>
       <div class='prev' ng-hide='$first' ng-click='Section.tab = $index - 1'>Prev</div>
       <div class='next' ng-hide='$last' ng-click='Section.tab = $index + 1'>Next</div>
