@@ -2,19 +2,19 @@
 	<div class="search-filter-bar">
 		<div class="inner-search-filter-bar">
 			<ul class='search-type'>
-				<li><a ng-click='type = "unit"' ng-class='{active: type === "unit"}'>Unit</a></li>
-				<li><a ng-click='type = "lesson"' ng-class='{active: type === "lesson"}'>Lesson</a></li>
-				<li><a ng-click='type = "wiki"' ng-class='{active: type === "wiki"}'>Wiki</a></li>
+				<li><a ng-click='search("type", "unit")' ng-class='{active: search("type") == "unit"}'>Unit</a></li>
+				<li><a ng-click='search("type","lesson")' ng-class='{active: search("type") == "lesson"}'>Lesson</a></li>
+				<li><a ng-click='search("type", "wiki")' ng-class='{active: search("type") == "wiki"}'>Wiki</a></li>
 			</ul>
-			<input id='query' ng-model='query' placeholder='Search by keyword, #hash-tag or @author'></input>
+			<input id='query' ng-model='query' ng-blur='locationQuery()' placeholder='Search by keyword, #hash-tag or @author'></input>
 			<ul class='search-sort'>
-				<li><a ng-click='sort = "-createdAt"' ng-class='{active: sort == "-createdAt"}'>Recent</a></li>
-				<li><a ng-click='sort = "-views"' ng-class='{active: sort == "-views"}'>Popular</a></li>
+				<li><a ng-click='search("sort", "-createdAt")' ng-class='{active: search("sort") == "-createdAt"}'>Recent</a></li>
+				<li><a ng-click='search("sort", "-views")' ng-class='{active: search("sort") == "-views"}'>Popular</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class='pages-container clearfix'>
-		<div ng-repeat='page in pages | filter:{type: type} | orderBy:sort' class="page-overview" ng-class='page.type'>
+		<div ng-repeat='page in pages | filter:{type: search("type")} | orderBy:search("sort")' class="page-overview" ng-class='page.type'>
 			<a ng-href='/{{link(page)}}' ng-init='draftText = "Draft"' ng-mouseenter='draftText = "Only You Can See Me"' ng-mouseleave='draftText = "Draft"'>
 				<div class='page-image-wrap'  style='background-image: url({{page.image}})' >
 					<div ng-show='!page.published' class='draft-text'>{{draftText}}</div>

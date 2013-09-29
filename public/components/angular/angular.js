@@ -7291,7 +7291,6 @@ function LocationHashbangUrl(appBase, hashPrefix) {
   }
 }
 
-
 /**
  * LocationHashbangUrl represents url
  * This object is exposed as $location service when html5 history api is enabled but the browser

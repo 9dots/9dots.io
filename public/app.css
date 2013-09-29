@@ -238,6 +238,10 @@ footer h1 {
   color: #999;
 }
 
+.page-heel .author-info img {
+  height: 29px;
+}
+
 .page-heel img {
   float: right;
   display: inline-block;
