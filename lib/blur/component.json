@@ -1,6 +1,9 @@
 {
   "name": "blur",
   "description": "blur component",
+  "dependencies": {
+    "component/upload": "*"
+  },
   "local": [],
   "scripts": ["main.js", "stack-blur.js"],
   "main": "main.js"

@@ -402,7 +402,7 @@ iframe {
 
 .page-inner .page-info {
   background: #F0F0E8;
-  padding: 25px 35px;
+  padding: 25px;
 }
 
 .page-image {
@@ -445,14 +445,14 @@ iframe {
 }
 .page-inner h3 {
   font-size: 20px;
-  font-size: lighter;
+  font-weight: lighter;
 }
 .page-inner h4 {
   font-size: 14px;
 }
 
 .page-inner article {
-  padding: 20px;
+  padding: 25px;
 }
 
 .page-inner p {

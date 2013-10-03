@@ -1,9 +1,11 @@
-<canvas id='post-blurred-image' class='stretch' blur='{{data.image}}'></canvas>
+{{=<% %>=}}
+<img id='post-blurred-image' class='stretch' ng-src='{{"<%data.image%>" | blur}}'/>
+<%={{ }}=%>
 <div class='page-content-wrap clearfix'>
 	<div editor-menu default-edit-mode='preview'></div>
 	<div class='page-inner'>
 		<div class='page-info'>
-			<h1 class='title'>{{data.title}}</h1>
+			<h1 class='title'>{{data.title}}</h1>		
 			<p>{{data.blurb}}</p>
 			<p class='objective'>{{data.objective}}</p>
 		</div>
