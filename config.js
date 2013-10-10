@@ -35,7 +35,7 @@ module.exports = {
     userRepo: {
       name: '9dots.io-pages-dev'
     },
-    server: 'http://76.168.229.78:3500',
-    backend: 'http://localhost:1337'
+    server: 'http://76.168.229.78:3000',
+    backend: 'http://76.168.229.78:1337'
   }
 };
