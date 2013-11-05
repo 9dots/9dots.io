@@ -3474,6 +3474,19 @@ ul.section-tabs li.active:before {
   background: #F0F0E8;
 }
 
+.lesson .md-area {
+  background: #F0F0E8;
+}
+
+.lesson .edit ul {
+  float: right;
+}
+
+.lesson #toolbar {
+  float: left;
+  margin-top: -42px;
+}
+
 .wiki #toolbar {
   float: left;
   margin-top: -42px;

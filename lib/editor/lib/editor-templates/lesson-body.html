@@ -1,26 +1,11 @@
 <form class='clearfix'>
   <input id='objective' ng-model='post.data.metadata.objective' placeholder='Objective...' ng-change='post.makeDirty()'/>
-  <input id='standards' ng-model='post.data.metadata.standards' placeholder='Standards, comma separated...' ng-change='post.makeDirty()' ng-list/>
 </form>
-<div class='sections' ng-init='Section.tab = 0'>
-  <ul class='group clearfix'>
-    <li>
-      <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
-        {{post.publishedText()}}<span class='ico small checkmark'></span>
-      </a>
-    </li>
-  </ul>
-  <ul class='section-tabs'>
-    <li ng-repeat='section in post.sections' ng-class='{active: Section.tab == $index}' ng-click='Section.tab = $index'>
-      {{section.title}}
-    </li>
-  </ul>
-  <div class='section' ng-repeat='section in post.sections' ng-show='Section.tab == $index'>
-    <div md-area ng-model='section.content' on-change='post.makeDirty()' placeholder='post.placeholders[section.title]'></div>
-    <div class='pagination'>
-      <div class='prev' ng-hide='$first' ng-click='Section.tab = $index - 1'>Prev</div>
-      <div class='next' ng-hide='$last' ng-click='Section.tab = $index + 1'>Next</div>
-      <div style='clear: both; float: none; height: 0; padding: 0;'></div>
-    </div>
-  </div>
-</div>
+<ul class='group clearfix'>
+  <li>
+    <a class='publish-flag' ng-class='{published: post.published()}' data-state='true' ng-click='post.togglePublish()'>
+      {{post.publishedText()}}<span class='ico small checkmark'></span>
+    </a>
+  </li>
+</ul>
+<div md-area ng-model='post.content' on-change='post.makeDirty()'></div>
