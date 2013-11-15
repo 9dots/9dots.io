@@ -504,6 +504,21 @@ iframe {
   border-radius: 0 !important;
 }
 
+.page-inner pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: normal;
+  padding: 6px 10px;
+  margin: 15px 0;
+  background-color: #f8f8f8;
+  font-size: 13px;
+  line-height: 19px;
+  border: 1px solid #ddd;
+}
+
+
+
+
 
 
 

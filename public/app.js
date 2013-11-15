@@ -415,6 +415,10 @@ require.alias("component-emitter/index.js", "search/deps/emitter/index.js");
 require.alias("markdown/comp.js", "search/deps/markdown/comp.js");
 require.alias("markdown/renderClient.js", "search/deps/markdown/renderClient.js");
 require.alias("markdown/type2Layout.js", "search/deps/markdown/type2Layout.js");
+require.alias("markdown/template.js", "search/deps/markdown/template.js");
+require.alias("markdown/layoutsPost.js", "search/deps/markdown/layoutsPost.js");
+require.alias("markdown/layoutsUnit.js", "search/deps/markdown/layoutsUnit.js");
+require.alias("markdown/layoutsWiki.js", "search/deps/markdown/layoutsWiki.js");
 require.alias("markdown/comp.js", "search/deps/markdown/index.js");
 require.alias("component-emitter/index.js", "markdown/deps/emitter/index.js");
 
