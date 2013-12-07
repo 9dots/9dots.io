@@ -192,6 +192,49 @@ iframe {
   border: 1px solid #ddd;
 }
 
+.page-inner table {
+  overflow: auto;
+  display: block;
+  margin: 15px 0;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  display: table;
+  border-color: gray;
+}
 
+.page-inner table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.page-inner table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.page-inner table th {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+  font-weight: bold;
+}
+
+.page-inner thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.page-inner table td {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+}
+
+.page-inner tbody {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
 
 
