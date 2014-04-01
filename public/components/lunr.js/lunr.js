@@ -1,6 +1,6 @@
 /**
- * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 0.4.0
- * Copyright (C) 2013 Oliver Nightingale
+ * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 0.4.5
+ * Copyright (C) 2014 Oliver Nightingale
  * MIT Licensed
  * @license
  */
@@ -50,14 +50,15 @@ var lunr = function (config) {
   return idx
 }
 
-lunr.version = "0.4.0"
+lunr.version = "0.4.5"
 
 if (typeof module !== 'undefined') {
   module.exports = lunr
 }
+;
 /*!
  * lunr.utils
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -97,9 +98,10 @@ lunr.utils.zeroFillArray = (function () {
     return zeros.slice(0, length)
   }
 })()
+;
 /*!
  * lunr.EventEmitter
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -179,9 +181,10 @@ lunr.EventEmitter.prototype.hasHandler = function (name) {
   return name in this.events
 }
 
+;
 /*!
  * lunr.tokenizer
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -189,14 +192,14 @@ lunr.EventEmitter.prototype.hasHandler = function (name) {
  * the search index.
  *
  * @module
- * @param {String} str The string to convert into tokens
+ * @param {String} obj The string to convert into tokens
  * @returns {Array}
  */
-lunr.tokenizer = function (str) {
-  if (!str) return []
-  if (Array.isArray(str)) return str
+lunr.tokenizer = function (obj) {
+  if (!arguments.length || obj == null || obj == undefined) return []
+  if (Array.isArray(obj)) return obj.map(function (t) { return t.toLowerCase() })
 
-  var str = str.replace(/^\s+/, '')
+  var str = obj.toString().replace(/^\s+/, '')
 
   for (var i = str.length - 1; i >= 0; i--) {
     if (/\S/.test(str.charAt(i))) {
@@ -211,9 +214,10 @@ lunr.tokenizer = function (str) {
       return token.replace(/^\W+/, '').replace(/\W+$/, '').toLowerCase()
     })
 }
+;
 /*!
  * lunr.Pipeline
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -419,9 +423,10 @@ lunr.Pipeline.prototype.toJSON = function () {
     return fn.label
   })
 }
+;
 /*!
  * lunr.Vector
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -499,9 +504,10 @@ lunr.Vector.prototype.similarity = function (otherVector) {
 lunr.Vector.prototype.toArray = function () {
   return this.elements
 }
+;
 /*!
  * lunr.SortedSet
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -737,9 +743,10 @@ lunr.SortedSet.prototype.union = function (otherSet) {
 lunr.SortedSet.prototype.toJSON = function () {
   return this.toArray()
 }
+;
 /*!
  * lunr.Index
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -984,7 +991,8 @@ lunr.Index.prototype.update = function (doc, emitEvent) {
  * @memberOf Index
  */
 lunr.Index.prototype.idf = function (term) {
-  if (this._idfCache[term]) return this._idfCache[term]
+  var cacheKey = "@" + term
+  if (Object.prototype.hasOwnProperty.call(this._idfCache, cacheKey)) return this._idfCache[cacheKey]
 
   var documentFrequency = this.tokenStore.count(term),
       idf = 1
@@ -993,7 +1001,7 @@ lunr.Index.prototype.idf = function (term) {
     idf = 1 + Math.log(this.tokenStore.length / documentFrequency)
   }
 
-  return this._idfCache[term] = idf
+  return this._idfCache[cacheKey] = idf
 }
 
 /**
@@ -1127,9 +1135,10 @@ lunr.Index.prototype.toJSON = function () {
     pipeline: this.pipeline.toJSON()
   }
 }
+;
 /*!
  * lunr.Store
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -1223,9 +1232,10 @@ lunr.Store.prototype.toJSON = function () {
   }
 }
 
+;
 /*!
  * lunr.stemmer
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
  */
 
@@ -1414,9 +1424,10 @@ lunr.stemmer = (function(){
 })();
 
 lunr.Pipeline.registerFunction(lunr.stemmer, 'stemmer')
+;
 /*!
  * lunr.stopWordFilter
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  */
 
 /**
@@ -1561,9 +1572,10 @@ lunr.stopWordFilter.stopWords.elements = [
 ]
 
 lunr.Pipeline.registerFunction(lunr.stopWordFilter, 'stopWordFilter')
+;
 /*!
  * lunr.stemmer
- * Copyright (C) 2013 Oliver Nightingale
+ * Copyright (C) 2014 Oliver Nightingale
  * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
  */
 
@@ -1754,3 +1766,4 @@ lunr.TokenStore.prototype.toJSON = function () {
   }
 }
 
+;

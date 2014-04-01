@@ -15,21 +15,18 @@ SRC = lib/lunr.js \
 YEAR = $(shell date +%Y)
 VERSION = $(shell cat VERSION)
 
-all: lunr.js lunr.min.js docs component.json package.json
+all: lunr.js lunr.min.js docs bower.json package.json component.json
 
 lunr.js: $(SRC)
-	cat $^ | \
+	for src in $^ ; do cat $$src; echo ";" ; done | \
 	sed "s/@YEAR/${YEAR}/" | \
 	sed "s/@VERSION/${VERSION}/" > $@
 
 lunr.min.js: lunr.js
 	uglifyjs --compress --mangle --comments < $< > $@
 
-component.json:
-	cat build/component.json.template | sed "s/@VERSION/${VERSION}/" > $@
-
-package.json:
-	cat build/package.json.template | sed "s/@VERSION/${VERSION}/" > $@
+%.json: build/%.json.template
+	cat $< | sed "s/@VERSION/${VERSION}/" > $@
 
 size: lunr.min.js
 	gzip -c lunr.min.js | wc -c
@@ -45,7 +42,8 @@ docs:
 
 clean:
 	rm -f lunr{.min,}.js
-	rm component.json
+	rm bower.json
 	rm package.json
+	rm component.json
 
 .PHONY: test clean docs

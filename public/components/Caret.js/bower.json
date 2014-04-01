@@ -1,6 +1,6 @@
 {
   "name": "Caret.js",
-  "version": "0.0.0",
+  "version": "0.0.7",
   "main": "src/jquery.caret.js",
   "ignore": [
     "**/.*",
@@ -16,15 +16,5 @@
   },
   "devDependencies": {
     "jasmine-jquery": "~1.5.8"
-  },
-  "gitHead": "fdc3406d14ac2cb10e8a0d18c1a415e024373510",
-  "readme": "Caret.js\n========\n\nGet caret postion or offset from inputor\n\nThis is the core function that working in [At.js](http://ichord.github.com/At.js).  \nNow, It just become an simple jquery plugin so that everybody can use it.  \nAnd, of course, **At.js** is using this plugin too.\n\nLive Demo\n=========\n\nhttp://ichord.github.com/Caret.js/\n\n\nUsage\n=====\n\n```javascript\n\n// Get caret position\n$('#inputor').caret('position'); // => {left: 15, top: 30, height: 20}\n\n// Get caret offset\n$('#inputor').caret('offset'); // => {left: 300, top: 400, height: 20}\n\nvar fixPos = 20\n// Get position of the 20th char in the inputor.\n$('#inputor').caret('position', fixPos);\n\n// Get offset of the 20th char.\n$('#inputor').caret('offset', fixPos);\n\n// more\n\n// Get caret position from first char in inputor.\n$('#inputor').caret('pos'); // => 15\n// Set caret position in the inputor\n$('#inputor').caret('pos', 15);\n\n```\n",
-  "readmeFilename": "README.md",
-  "_id": "Caret.js@0.0.1",
-  "description": "Caret.js ========",
-  "commit": "fdc3406d14ac2cb10e8a0d18c1a415e024373510",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ichord/Caret.js.git"
   }
 }

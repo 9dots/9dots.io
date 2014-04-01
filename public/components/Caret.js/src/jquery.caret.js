@@ -24,111 +24,187 @@
     }
   })(function($) {
     "use strict";
-    var Caret, Mirror, methods, pluginName;
-
+    var EditableCaret, InputCaret, Mirror, Utils, methods, oDocument, oFrame, oWindow, pluginName;
     pluginName = 'caret';
-    Caret = (function() {
-      function Caret($inputor) {
+    EditableCaret = (function() {
+      function EditableCaret($inputor) {
         this.$inputor = $inputor;
         this.domInputor = this.$inputor[0];
       }
 
-      Caret.prototype.getPos = function() {
-        var end, endRange, inputor, len, normalizedValue, pos, range, start, textInputRange;
-
-        inputor = this.domInputor;
-        inputor.focus();
-        if (document.selection) {
-          /*
-          #assume we select "HATE" in the inputor such as textarea -> { }.
-           *               start end-point.
-           *              /
-           * <  I really [HATE] IE   > between the brackets is the selection range.
-           *                   \
-           *                    end end-point.
-          */
-
-          range = document.selection.createRange();
-          pos = 0;
-          if (range && range.parentElement() === inputor) {
-            normalizedValue = inputor.value.replace(/\r\n/g, "\n");
-            /* SOMETIME !!!
-             "/r/n" is counted as two char.
-              one line is two, two will be four. balalala.
-              so we have to using the normalized one's length.;
-            */
-
-            len = normalizedValue.length;
-            /*
-               <[  I really HATE IE   ]>:
-                the whole content in the inputor will be the textInputRange.
-            */
-
-            textInputRange = inputor.createTextRange();
-            /*                 _here must be the position of bookmark.
-                             /
-               <[  I really [HATE] IE   ]>
-                [---------->[           ] : this is what moveToBookmark do.
-               <   I really [[HATE] IE   ]> : here is result.
-                              \ two brackets in should be in line.
-            */
-
-            textInputRange.moveToBookmark(range.getBookmark());
-            endRange = inputor.createTextRange();
-            /*  [--------------------->[] : if set false all end-point goto end.
-              <  I really [[HATE] IE  []]>
-            */
-
-            endRange.collapse(false);
-            /*
-                            ___VS____
-                           /         \
-             <   I really [[HATE] IE []]>
-                                      \_endRange end-point.
-            
-            " > -1" mean the start end-point will be the same or right to the end end-point
-                     * simplelly, all in the end.
-            */
-
-            if (textInputRange.compareEndPoints("StartToEnd", endRange) > -1) {
-              start = end = len;
-            } else {
-              /*
-                      I really |HATE] IE   ]>
-                             <-|
-                    I really[ [HATE] IE   ]>
-                          <-[
-                  I reall[y  [HATE] IE   ]>
-              
-                will return how many unit have moved.
-              */
-
-              start = -textInputRange.moveStart("character", -len);
-              end = -textInputRange.moveEnd("character", -len);
-            }
-          }
-        } else {
-          start = inputor.selectionStart;
-        }
-        return start;
+      EditableCaret.prototype.setPos = function(pos) {
+        return this.domInputor;
       };
 
-      Caret.prototype.setPos = function(pos) {
-        var inputor, range;
+      EditableCaret.prototype.getIEPosition = function() {
+        return $.noop();
+      };
 
+      EditableCaret.prototype.getPosition = function() {
+        return $.noop();
+      };
+
+      EditableCaret.prototype.getOldIEPos = function() {
+        var preCaretTextRange, textRange;
+        textRange = oDocument.selection.createRange();
+        preCaretTextRange = oDocument.body.createTextRange();
+        preCaretTextRange.moveToElementText(this.domInputor);
+        preCaretTextRange.setEndPoint("EndToEnd", textRange);
+        return preCaretTextRange.text.length;
+      };
+
+      EditableCaret.prototype.getPos = function() {
+        var clonedRange, pos, range;
+        if (range = this.range()) {
+          clonedRange = range.cloneRange();
+          clonedRange.selectNodeContents(this.domInputor);
+          clonedRange.setEnd(range.endContainer, range.endOffset);
+          pos = clonedRange.toString().length;
+          clonedRange.detach();
+          return pos;
+        } else if (oDocument.selection) {
+          return this.getOldIEPos();
+        }
+      };
+
+      EditableCaret.prototype.getOldIEOffset = function() {
+        var range, rect;
+        range = oDocument.selection.createRange().duplicate();
+        range.moveStart("character", -1);
+        rect = range.getBoundingClientRect();
+        return {
+          height: rect.bottom - rect.top,
+          left: rect.left,
+          top: rect.top
+        };
+      };
+
+      EditableCaret.prototype.getOffset = function(pos) {
+        var clonedRange, offset, range, rect;
+        if (oWindow.getSelection && (range = this.range())) {
+          if (range.endOffset - 1 < 0) {
+            return null;
+          }
+          clonedRange = range.cloneRange();
+          clonedRange.setStart(range.endContainer, range.endOffset - 1);
+          clonedRange.setEnd(range.endContainer, range.endOffset);
+          rect = clonedRange.getBoundingClientRect();
+          offset = {
+            height: rect.height,
+            left: rect.left + rect.width,
+            top: rect.top
+          };
+          clonedRange.detach();
+        } else if (oDocument.selection) {
+          offset = this.getOldIEOffset();
+        }
+        if (offset && !oFrame) {
+          offset.top += $(oWindow).scrollTop();
+          offset.left += $(oWindow).scrollLeft();
+        }
+        return offset;
+      };
+
+      EditableCaret.prototype.range = function() {
+        var sel;
+        if (!oWindow.getSelection) {
+          return;
+        }
+        sel = oWindow.getSelection();
+        if (sel.rangeCount > 0) {
+          return sel.getRangeAt(0);
+        } else {
+          return null;
+        }
+      };
+
+      return EditableCaret;
+
+    })();
+    InputCaret = (function() {
+      function InputCaret($inputor) {
+        this.$inputor = $inputor;
+        this.domInputor = this.$inputor[0];
+      }
+
+      InputCaret.prototype.getIEPos = function() {
+        var endRange, inputor, len, normalizedValue, pos, range, textInputRange;
         inputor = this.domInputor;
-        if (document.selection) {
+        range = oDocument.selection.createRange();
+        pos = 0;
+        if (range && range.parentElement() === inputor) {
+          normalizedValue = inputor.value.replace(/\r\n/g, "\n");
+          len = normalizedValue.length;
+          textInputRange = inputor.createTextRange();
+          textInputRange.moveToBookmark(range.getBookmark());
+          endRange = inputor.createTextRange();
+          endRange.collapse(false);
+          if (textInputRange.compareEndPoints("StartToEnd", endRange) > -1) {
+            pos = len;
+          } else {
+            pos = -textInputRange.moveStart("character", -len);
+          }
+        }
+        return pos;
+      };
+
+      InputCaret.prototype.getPos = function() {
+        if (oDocument.selection) {
+          return this.getIEPos();
+        } else {
+          return this.domInputor.selectionStart;
+        }
+      };
+
+      InputCaret.prototype.setPos = function(pos) {
+        var inputor, range;
+        inputor = this.domInputor;
+        if (oDocument.selection) {
           range = inputor.createTextRange();
           range.move("character", pos);
-          return range.select();
+          range.select();
+        } else if (inputor.setSelectionRange) {
+          inputor.setSelectionRange(pos, pos);
+        }
+        return inputor;
+      };
+
+      InputCaret.prototype.getIEOffset = function(pos) {
+        var h, textRange, x, y;
+        textRange = this.domInputor.createTextRange();
+        pos || (pos = this.getPos());
+        textRange.move('character', pos);
+        x = textRange.boundingLeft;
+        y = textRange.boundingTop;
+        h = textRange.boundingHeight;
+        return {
+          left: x,
+          top: y,
+          height: h
+        };
+      };
+
+      InputCaret.prototype.getOffset = function(pos) {
+        var $inputor, offset, position;
+        $inputor = this.$inputor;
+        if (oDocument.selection) {
+          offset = this.getIEOffset(pos);
+          offset.top += $(oWindow).scrollTop() + $inputor.scrollTop();
+          offset.left += $(oWindow).scrollLeft() + $inputor.scrollLeft();
+          return offset;
         } else {
-          return inputor.setSelectionRange(pos, pos);
+          offset = $inputor.offset();
+          position = this.getPosition(pos);
+          return offset = {
+            left: offset.left + position.left - $inputor.scrollLeft(),
+            top: offset.top + position.top - $inputor.scrollTop(),
+            height: position.height
+          };
         }
       };
 
-      Caret.prototype.getPosition = function(pos) {
-        var $inputor, at_rect, format, h, html, mirror, start_range, x, y;
-
+      InputCaret.prototype.getPosition = function(pos) {
+        var $inputor, at_rect, format, html, mirror, start_range;
         $inputor = this.$inputor;
         format = function(value) {
           return value.replace(/</g, '&lt').replace(/>/g, '&gt').replace(/`/g, '&#96').replace(/"/g, '&quot').replace(/\r\n|\r|\n/g, "<br />");
@@ -140,36 +216,11 @@
         html = "<span>" + format(start_range) + "</span>";
         html += "<span id='caret'>|</span>";
         mirror = new Mirror($inputor);
-        at_rect = mirror.create(html).rect();
-        x = at_rect.left - $inputor.scrollLeft();
-        y = at_rect.top - $inputor.scrollTop();
-        h = at_rect.height;
-        return {
-          left: x,
-          top: y,
-          height: h
-        };
+        return at_rect = mirror.create(html).rect();
       };
 
-      Caret.prototype.getOffset = function(pos) {
-        var $inputor, h, offset, position, x, y;
-
-        $inputor = this.$inputor;
-        offset = $inputor.offset();
-        position = this.getPosition(pos);
-        x = offset.left + position.left;
-        y = offset.top + position.top;
-        h = position.height;
-        return {
-          left: x,
-          top: y,
-          height: h
-        };
-      };
-
-      Caret.prototype.getIEPosition = function(pos) {
+      InputCaret.prototype.getIEPosition = function(pos) {
         var h, inputorOffset, offset, x, y;
-
         offset = this.getIEOffset(pos);
         inputorOffset = this.$inputor.offset();
         x = offset.left - inputorOffset.left;
@@ -182,24 +233,7 @@
         };
       };
 
-      Caret.prototype.getIEOffset = function(pos) {
-        var h, range, x, y;
-
-        range = this.domInputor.createTextRange();
-        if (pos) {
-          range.move('character', pos);
-        }
-        x = range.boundingLeft + $inputor.scrollLeft();
-        y = range.boundingTop + $(window).scrollTop() + $inputor.scrollTop();
-        h = range.boundingHeight;
-        return {
-          left: x,
-          top: y,
-          height: h
-        };
-      };
-
-      return Caret;
+      return InputCaret;
 
     })();
     Mirror = (function() {
@@ -212,7 +246,6 @@
       Mirror.prototype.mirrorCss = function() {
         var css,
           _this = this;
-
         css = {
           position: 'absolute',
           left: -9999,
@@ -236,7 +269,6 @@
 
       Mirror.prototype.rect = function() {
         var $flag, pos, rect;
-
         $flag = this.$mirror.find("#caret");
         pos = $flag.position();
         rect = {
@@ -251,39 +283,60 @@
       return Mirror;
 
     })();
+    Utils = {
+      contentEditable: function($inputor) {
+        return !!($inputor[0].contentEditable && $inputor[0].contentEditable === 'true');
+      }
+    };
     methods = {
       pos: function(pos) {
-        if (pos) {
+        if (pos || pos === 0) {
           return this.setPos(pos);
         } else {
           return this.getPos();
         }
       },
       position: function(pos) {
-        if (document.selection) {
+        if (oDocument.selection) {
           return this.getIEPosition(pos);
         } else {
           return this.getPosition(pos);
         }
       },
       offset: function(pos) {
-        if (document.selection) {
-          return this.getIEOffset(pos);
-        } else {
-          return this.getOffset(pos);
+        var iOffset, offset;
+        offset = this.getOffset(pos);
+        if (oFrame) {
+          iOffset = $(oFrame).offset();
+          offset.top += iOffset.top;
+          offset.left += iOffset.left;
         }
+        return offset;
       }
     };
-    return $.fn.caret = function(method) {
-      var caret;
-
-      caret = new Caret(this);
+    oDocument = null;
+    oWindow = null;
+    oFrame = null;
+    $.fn.caret = function(method) {
+      var caret, error;
+      oDocument = this[0].ownerDocument;
+      oWindow = oDocument.defaultView || oDocument.parentWindow;
+      try {
+        oFrame = oWindow.frameElement;
+      } catch (_error) {
+        error = _error;
+      }
+      caret = Utils.contentEditable(this) ? new EditableCaret(this) : new InputCaret(this);
       if (methods[method]) {
         return methods[method].apply(caret, Array.prototype.slice.call(arguments, 1));
       } else {
         return $.error("Method " + method + " does not exist on jQuery.caret");
       }
     };
+    $.fn.caret.EditableCaret = EditableCaret;
+    $.fn.caret.InputCaret = InputCaret;
+    $.fn.caret.Utils = Utils;
+    return $.fn.caret.apis = methods;
   });
 
 }).call(this);
