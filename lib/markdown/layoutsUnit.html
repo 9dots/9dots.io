@@ -13,7 +13,7 @@
 				{{#data.lessons}}
 					{{=<% %>=}}
 					<div class='page-overview'>
-						<a ng-href='/<%.%>'>
+						<a ng-href='{{"/<%.%>" | idToUrl}}'>
 							<div class='page-image-wrap'  style='background-image: url({{$pages["<%.%>"].image}})'>
 								<div class='page-title'>{{$pages["<%.%>"].title}}</div>
 							</div>
