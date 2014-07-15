@@ -16,18 +16,21 @@
 	<div class='pages-container clearfix'>
 		<div ng-repeat='page in pages | filter:{type: search("type")} | orderBy:search("sort")' class="page-overview" ng-class='page.type'>
 			<a ng-href='/{{link(page)}}' ng-init='draftText = "Draft"' ng-mouseenter='draftText = "Only You Can See Me"' ng-mouseleave='draftText = "Draft"'>
-				<div class='page-image-wrap'  style='background-image: url({{page.image}})' >
-					<div ng-show='!page.published' class='draft-text'>{{draftText}}</div>
+				<div class='page-header'>
 					<div class='page-title'>{{page.title}}</div>
-				</div>
-				<div class='page-heel'>
 					<div class='page-blurb'>{{page.blurb}}</div>
-					<div class='author-info'>
-						<span class='name'>by {{page.author}}</span>
-						<span class='page-views'>
-							{{page.views}} view<span ng-show='page.views!=1'>s</span>
-						</span>
-						<img ng-src="{{page.author | avatar}}" />
+				</div>
+				<!-- Fix This !!! -->
+				<div class='page-image-wrap'  style='background-image: url(http://uploads.9dots.io/OjN7Jaf_md.jpg)' >
+					<div ng-show='!page.published' class='draft-text'>{{draftText}}</div>
+					<div class='author-info-wrap'>
+						<div class='author-info'>
+							<span class='name'>by {{page.author}}</span>
+							<span class='page-views'>
+								{{page.views}} view<span ng-show='page.views!=1'>s</span>
+							</span>
+							<img ng-src="{{page.author | avatar}}" />
+						</div>
 					</div>
 				</div>
 			</a>

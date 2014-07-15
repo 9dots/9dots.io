@@ -490,7 +490,7 @@ ul.section-tabs li.active:before {
   text-align: center;
   margin: 0;
   padding: 60px;
-  background: #F2F0E7;
+  background: #F5F5F5;
   width: 100%;
 }
 
@@ -511,7 +511,7 @@ ul.section-tabs li.active:before {
   padding-top: 105px;
   /*padding: 90px 0 50px;*/
   /*line-height: 250px;*/
-  background: rgba(255,255,255, 0.3);
+  background: rgba(0,0,0, 0.05);
   outline: 4px solid white;
   transition: all 0.5s;
 }
@@ -681,13 +681,13 @@ ul.selection li.active {
   width: 67px;
   background: #555;
   line-height: 35px;
-  color: #888;
+  color: #ccc;
   border-radius: 2px;
 }
 
 .search-type li a:hover, .search-type li a.active{
   background: #444;
-  color: #BBB;
+  color: #F5F5F5;
 }
 
 

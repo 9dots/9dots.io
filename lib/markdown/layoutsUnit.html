@@ -3,10 +3,10 @@
 <%={{ }}=%>
 <div class='page-content-wrap clearfix'>
 	<div editor-menu default-edit-mode='preview'></div>
-	<div class='page-inner'>
+	<div class='page-inner page-full'>
 		<div class='page-info'>
 			<h1 class='title'>{{data.title}}</h1>
-			<p>{{data.blurb}}</p>
+			<h5>{{data.blurb}}</h5>
 		</div>
 		<article>
 			<div class="lessons">
@@ -14,21 +14,19 @@
 					{{=<% %>=}}
 					<div class='page-overview'>
 						<a ng-href='{{"/<%.%>" | idToUrl}}'>
-							<div class='page-image-wrap'  style='background-image: url({{$pages["<%.%>"].image}})'>
+							<div class='page-header'>
 								<div class='page-title'>{{$pages["<%.%>"].title}}</div>
+								<div class='page-blurb'>{{$pages["<%.%>"].blurb}}</div>
+							</div>
+							<div class='page-image-wrap' style='background-image: url(http://uploads.9dots.io/OjN7Jaf_md.jpg)'>
+								<div class='page-image' style='background-image: url({{$pages["<%.%>"].image}})'></div>
 							</div>
 						</a>
-						<div class='page-heel'>
-							<div class='page-blurb'>{{$pages["<%.%>"].blurb}}</div>
-						</div>
 					</div>
 					<%={{ }}=%>
 				{{/data.lessons}}
 			</div>
 		</article>
-	</div>
-	<div class='page-sidebar'>
-		<div style='background-image: url({{data.image}})' class='page-image'></div>
 	</div>
 </div>
 
