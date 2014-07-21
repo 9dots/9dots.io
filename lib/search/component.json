@@ -5,7 +5,7 @@
   	"component/emitter": "*"
   },
   "local": ["markdown", "npm"],
-  "scripts": ["index.js"],
+  "scripts": ["index.js", "scroll.js"],
   "templates": ["template.html"],
   "styles": ["style.css"],
   "images": [],

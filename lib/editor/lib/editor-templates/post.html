@@ -30,7 +30,7 @@
     </span>
     <div class='page-sidebar' ng-show='post.showSidebar()'>
       <span ng-switch='post.mode'>
-        <div ng-switch-when='edit' class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.makeDirty(); post.saveBlur = true;'>
+        <div ng-switch-when='edit' class='upload-image' style='background-image: url({{post.data.metadata.image}})' ng-controller="uploadCtrl" onend='post.data.metadata.image = path; post.data.metadata.fullImage = pathFull; post.makeDirty(); post.saveBlur = true;'>
           <div class='progress' ng-hide='progress == 100'>
             <div class='progress-bar' style='width: {{progress}}%'></div>
           </div>

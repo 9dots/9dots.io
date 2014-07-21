@@ -84,6 +84,13 @@ footer h1 {
   position: relative;
 }
 
+.search-filter-bar.fixed{
+  width:100%;
+  position:fixed;
+  top: 0;
+  z-index: 1;
+}
+
 .search-filter-bar input {
 	width: 500px;
 	display: block;
@@ -159,7 +166,7 @@ footer h1 {
   left: 50%;
   margin-left: -12px;
   border: 12px solid transparent;
-  border-bottom: 12px solid rgba(0,0,0,0.05);
+  border-bottom: 12px solid rgba(229,229,229,1);
 }
 
 .pages-container {

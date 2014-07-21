@@ -34,7 +34,7 @@ iframe {
 	z-index: 0;
 	top: -5%;
 	left: -5%;
-  background-color: #E5E5E5;
+  background-color: #F5F5F5;
   background-size: cover;
   background-position: center;
 }
@@ -46,11 +46,10 @@ iframe {
 .page-content-wrap {
   z-index: 1;
   position: relative;
-  background: #FFF;
   min-height: 490px;
 	width: 935px;
-	margin: 60px auto;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	margin: auto;
+  margin-bottom:60px;
 }
 
 .unit .page-content-wrap{
@@ -90,8 +89,64 @@ iframe {
   border-bottom:1px solid #ccc;
 }
 
+.header-image-darken{
+  height:100%;
+  background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.4));
+}
+
+.page-image .page-info-wrapper{
+  position:absolute;
+  bottom:12%;
+  width:100%;
+}
+
+.page-image .page-info{
+  width:935px;
+  padding:25px;
+  margin: auto;
+  color: #fff;
+  position: relative;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
+}
+
+.large-image-wrap {
+  height:100vh;
+  max-height:900px;
+  position: relative;
+  width: 100%;
+  background:rgba(0,0,0,0.5);
+}
+
+.jump-to-lesson{
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -8px;
+  border: 2px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0);
+  border-left: 0;
+  border-top: 0;
+  outline: none;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.jump-to-lesson:hover{
+  border-color: rgba(255,255,255,0.6);
+}
+
 .page-image {
-  height: 232px;
+  height: 100%;
+  width: 100%;
+  position: relative;
   background-position: center;
   background-size: cover;
 }
@@ -145,6 +200,20 @@ iframe {
   color: #666;
 }
 
+.page-image h1.title{
+  font-size: 50px;
+  line-height: 52px;
+  font-weight:600;
+  margin:0;
+  margin-bottom: 15px;
+}
+
+.page-image h5{
+  font-size:25px;
+  line-height: normal;
+  font-weight:300;
+}
+
 .page-inner h1.title {
   font-size: 50px;
   line-height: 52px;
@@ -168,7 +237,7 @@ iframe {
 .page-inner h3 {
   font-size: 22px;
   font-weight: 700;
-  color:#777;
+  color:#555;
   text-transform: lowercase;
   margin-bottom:8px;
 }
@@ -220,6 +289,7 @@ iframe {
 
 .page-inner li { 
   font-size:16px;
+  color:#555;
   line-height: normal;
 }
 
