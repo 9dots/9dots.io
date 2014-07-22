@@ -31,12 +31,17 @@ iframe {
 	width: 110%;
 	height: 110%;
 	position: fixed;
-	z-index: 0;
+	z-index: -1;
 	top: -5%;
 	left: -5%;
-  background-color: #F5F5F5;
+  background-color: #444;
   background-size: cover;
   background-position: center;
+}
+
+.stretch.color{
+  z-index:0;
+  background-color:#F5F5F5;
 }
 
 .unit .stretch{
