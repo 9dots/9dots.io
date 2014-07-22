@@ -78,8 +78,8 @@ footer h1 {
 }
 
 .search-filter-bar {
-	height: 85px;
-  line-height: 85px;
+	height: 60px;
+  line-height: 60px;
 	background: #F5F5F5;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
@@ -90,6 +90,7 @@ footer h1 {
   position:fixed;
   top: 0;
   z-index: 1;
+  background: #FFF;
 }
 
 .search-filter-bar input {
@@ -97,8 +98,8 @@ footer h1 {
 	display: block;
 	background: none;
 	border: 0;
-	font: 24px/35px OpenSans;
-  padding: 25px 0;
+	font: 20px/35px OpenSans;
+  padding: 12.5px 0;
 	color: #5D5D5D;
   margin: 0 0 0 15px;
 	float: left;
@@ -138,6 +139,7 @@ footer h1 {
 	width: 100px;
   text-align: center;
 }
+
 
 .search-type li {
   width: 50px;
@@ -419,6 +421,8 @@ iframe {
 }
 
 .page-inner img {
+  display: block;
+  margin: 20px auto;
   max-width: 100%;
 }
 
@@ -490,7 +494,7 @@ iframe {
   background-size: cover;
 }
 
-.lessons .page-overview:nth-child(2n+1){
+.lessons .page-overview:nth-child(3n-2){
   margin-left: 0;
   margin-right: 10px;
 }
@@ -4108,15 +4112,15 @@ ul.selection li.active {
   display: block;
   padding: 0;
   width: 67px;
-  background: #555;
+  background: #6AB8E5;
   line-height: 35px;
-  color: #ccc;
+  color: #FFF;
   border-radius: 2px;
 }
 
 .search-type li a:hover, .search-type li a.active{
-  background: #444;
-  color: #F5F5F5;
+  background: #5CA1C8;
+  color: #FFF;
 }
 
 
@@ -4196,35 +4200,29 @@ ul.selection li.active {
   	width:100%;
 	position: relative;
 	z-index: 999;
-	background:#444;
+	background:#FFF;
 	height:80px;
-}
-
-#main-nav-header.transparent{
-	background: transparent;
-	position: fixed;
-	z-index: 999;
-	background:linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,.4));
-	transition: background 0.2s linear;
-}
-
-#main-nav-header.solid{
-	transition: background 0.2s linear;
-	background:#444;
+	box-shadow: 0 -4px 9px rgba(0,0,0,0.2);
 }
 
 .inner-main-header {
 	width: 980px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 12.5px;
 	height: 80px;
 }
 
 .logo {
 	float: left;
 	color: #EEE;
-	line-height: 75px;
+	line-height: 80px;
+	height: 80px;
 	font-size: 24px;
+}
+
+.logo img {
+	width:140px;
+	vertical-align: middle;
 }
 
 #nav {
@@ -4241,7 +4239,7 @@ ul.selection li.active {
 #nav a {
 	font-size: 14px;
 	font-weight: lighter;
-	color: #EEE;
+	color: #333;
 	display: block;
 }
 
@@ -4252,6 +4250,12 @@ ul.selection li.active {
 
 .footer {
 	position: relative;
+	background: #444;
+	color:#F5F5F5;
+}
+
+.footer li a {
+	color:#E5E5E5;
 }
 .selection .active {
 	background: blue;

@@ -3,35 +3,29 @@
   	width:100%;
 	position: relative;
 	z-index: 999;
-	background:#444;
+	background:#FFF;
 	height:80px;
-}
-
-#main-nav-header.transparent{
-	background: transparent;
-	position: fixed;
-	z-index: 999;
-	background:linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,.4));
-	transition: background 0.2s linear;
-}
-
-#main-nav-header.solid{
-	transition: background 0.2s linear;
-	background:#444;
+	box-shadow: 0 -4px 9px rgba(0,0,0,0.2);
 }
 
 .inner-main-header {
 	width: 980px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 12.5px;
 	height: 80px;
 }
 
 .logo {
 	float: left;
 	color: #EEE;
-	line-height: 75px;
+	line-height: 80px;
+	height: 80px;
 	font-size: 24px;
+}
+
+.logo img {
+	width:140px;
+	vertical-align: middle;
 }
 
 #nav {
@@ -48,7 +42,7 @@
 #nav a {
 	font-size: 14px;
 	font-weight: lighter;
-	color: #EEE;
+	color: #333;
 	display: block;
 }
 

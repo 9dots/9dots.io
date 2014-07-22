@@ -344,16 +344,13 @@ require.register("editor/short.js", Function("exports, require, module",
 "module.exports = function (num) {\n  var digits = [];\n  var remainder;\n\n  while (num > 0) {\n    remainder = num % 62;\n    digits.push(remainder);\n    num = Math.floor(num / 62);\n\n  }\n\n  digits = digits.reverse();\n  return _.chain(digits)\n    .map(function(digit) {\n      if (digit < 10) {\n        return '' + digit;\n      } else if (digit < 36) {\n        return String.fromCharCode(digit + 55);\n      } else {\n        return String.fromCharCode(digit + 61);\n      }\n    })\n    .join('');\n};//@ sourceURL=editor/short.js"
 ));
 require.register("mainNav/index.js", Function("exports, require, module",
-"module.exports = function() {\n\treturn {\n\t\tcontroller: require('./controller'),\n\t\ttemplate: require('./template'),\n\t\tscroll: require('./scroll')\n\t};\n}//@ sourceURL=mainNav/index.js"
+"module.exports = function() {\n\treturn {\n\t\tcontroller: require('./controller'),\n\t\ttemplate: require('./template')\n\t};\n}//@ sourceURL=mainNav/index.js"
 ));
 require.register("mainNav/controller.js", Function("exports, require, module",
 "var url = require('url');\n\nmodule.exports = ['$scope', 'editorAuth', '$location', '$timeout', 'editorModels', 'editorEvents',\nfunction($scope, auth, $location, $timeout, models, events) {\n\t$scope.links = [\n\t\t{name: 'Discover', path: '/'},\n\t\t{name: 'Contribute', path: '/new'},\n\t\t{name: 'About', path: '/9dots/OIQQVMT'},\n\t\t{name: 'Partners', path: '/9dots/OIQRXqx'}\n\t];\n\t$scope.auth = auth;\n\t$scope.$on('$routeChangeSuccess', function(evt, current) {\n    var parse = url.parse(window.location.href);\n    //$scope.redirectUri = 'http://' + parse.host + '/login?redirect_uri=' + $location.path();\n    $scope.redirectUri = $location.path();\n    $('#main-nav-header').removeClass('transparent');\n\t});\n\n\t$scope.logout = function() {\n\t\tmodels.logout();\n\t  events.emit('logout');\n\t  $timeout(function() {\n\t    $location.path('/');\n\t  });\n\t}\n\t\n\n}];//@ sourceURL=mainNav/controller.js"
 ));
-require.register("mainNav/scroll.js", Function("exports, require, module",
-"$(window).scroll(\n    {\n      previousTop: 0\n    }, \n    function () {\n      var curDirection = 'down';\n      var currentTop = $(window).scrollTop();\n      var header = $('#main-nav-header.transparent')\n\n      curDirection = currentTop < this.previousTop ? 'up' : 'down';\n\n      if ( currentTop == 0 )\n        header.stop(true,true).removeClass('solid').fadeIn(100);\n      else {\n        if( this.prevDirection != curDirection ){\n          if ( curDirection == 'down' )\n            header.stop(true,true).animate({'top':'-80px'},300, 'swing', function(){\n              $(this).addClass('solid');\n            });\n          else\n            header.stop(true,true).animate({'top':'0px'},300, 'swing');\n        }\n      }\n\n\n      this.prevDirection = curDirection;\n      this.previousTop = currentTop;\n});\n//@ sourceURL=mainNav/scroll.js"
-));
 require.register("mainNav/template.js", Function("exports, require, module",
-"module.exports = '<div id=\\'main-nav-header\\'>\\n\t<div class=\\'inner-main-header\\'>\\n\t\t<div class=\\'logo\\'>\\n\t\t\t<a href=\"/\">\\n\t\t\t<img style=\\'margin-bottom: -10px\\' src=\\'http://uploads.9dots.io/9DotsHorizLogoDark2.png\\' />\\n\t\t\t</a>\\n\t\t\t<!-- 9dots.io -->\\n\t\t</div>\\n\t\t<nav id=\\'nav\\'>\\n\t\t\t<ul>\\n\t\t\t\t<li ng-repeat=\\'link in links\\'>\\n\t\t\t\t\t<a ng-href=\\'{{link.path}}\\'>{{link.name}}</a>\\n\t\t\t\t</li>\\n\t\t\t\t<li>\\n\t\t\t\t\t<a ng-hide=\\'auth.authenticated()\\' href=\\'/login?redirect_uri={{redirectUri}}\\'>\\n\t\t\t\t\t\tSign In\\n\t        </a>\\n\t        <a class=\\'logout\\' ng-show=\\'auth.authenticated()\\' ng-click=\\'logout()\\'>\\n\t        \tSign Out\\n\t        </a>\\n\t       </li>\\n\t\t\t<ul>\\n\t\t</nav>\\n\t</div>\\n</div>';//@ sourceURL=mainNav/template.js"
+"module.exports = '<div id=\\'main-nav-header\\'>\\n\t<div class=\\'inner-main-header\\'>\\n\t\t<div class=\\'logo\\'>\\n\t\t\t<a href=\"/\">\\n\t\t\t<img src=\\'http://9dots.s3.amazonaws.com/2013/11/logo-x1_0.png\\' />\\n\t\t\t</a>\\n\t\t\t<!-- 9dots.io -->\\n\t\t</div>\\n\t\t<nav id=\\'nav\\'>\\n\t\t\t<ul>\\n\t\t\t\t<li ng-repeat=\\'link in links\\'>\\n\t\t\t\t\t<a ng-href=\\'{{link.path}}\\'>{{link.name}}</a>\\n\t\t\t\t</li>\\n\t\t\t\t<li>\\n\t\t\t\t\t<a ng-hide=\\'auth.authenticated()\\' href=\\'/login?redirect_uri={{redirectUri}}\\'>\\n\t\t\t\t\t\tSign In\\n\t        </a>\\n\t        <a class=\\'logout\\' ng-show=\\'auth.authenticated()\\' ng-click=\\'logout()\\'>\\n\t        \tSign Out\\n\t        </a>\\n\t       </li>\\n\t\t\t<ul>\\n\t\t</nav>\\n\t</div>\\n</div>';//@ sourceURL=mainNav/template.js"
 ));
 require.register("footer/main.js", Function("exports, require, module",
 "\nvar app = angular.module('app');\napp.run(['$templateCache', function($templateCache) {\n  $templateCache.put('footer.html', require('./footer'));\n}]);\n//@ sourceURL=footer/main.js"
@@ -426,10 +423,6 @@ require.alias("markdown/comp.js", "search/deps/markdown/comp.js");
 require.alias("markdown/renderClient.js", "search/deps/markdown/renderClient.js");
 require.alias("markdown/type2Layout.js", "search/deps/markdown/type2Layout.js");
 require.alias("markdown/scrollTo.js", "search/deps/markdown/scrollTo.js");
-require.alias("markdown/template.js", "search/deps/markdown/template.js");
-require.alias("markdown/layoutsPost.js", "search/deps/markdown/layoutsPost.js");
-require.alias("markdown/layoutsUnit.js", "search/deps/markdown/layoutsUnit.js");
-require.alias("markdown/layoutsWiki.js", "search/deps/markdown/layoutsWiki.js");
 require.alias("markdown/comp.js", "search/deps/markdown/index.js");
 require.alias("component-emitter/index.js", "markdown/deps/emitter/index.js");
 
@@ -592,7 +585,6 @@ require.alias("editor/boot.js", "editor/index.js");
 
 require.alias("mainNav/index.js", "boot/deps/mainNav/index.js");
 require.alias("mainNav/controller.js", "boot/deps/mainNav/controller.js");
-require.alias("mainNav/scroll.js", "boot/deps/mainNav/scroll.js");
 require.alias("mainNav/index.js", "boot/deps/mainNav/index.js");
 require.alias("component-url/index.js", "mainNav/deps/url/index.js");
 

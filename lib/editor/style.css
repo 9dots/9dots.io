@@ -679,15 +679,15 @@ ul.selection li.active {
   display: block;
   padding: 0;
   width: 67px;
-  background: #555;
+  background: #6AB8E5;
   line-height: 35px;
-  color: #ccc;
+  color: #FFF;
   border-radius: 2px;
 }
 
 .search-type li a:hover, .search-type li a.active{
-  background: #444;
-  color: #F5F5F5;
+  background: #5CA1C8;
+  color: #FFF;
 }
 
 

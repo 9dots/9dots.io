@@ -1,3 +1,9 @@
 .footer {
 	position: relative;
+	background: #444;
+	color:#F5F5F5;
+}
+
+.footer li a {
+	color:#E5E5E5;
 }

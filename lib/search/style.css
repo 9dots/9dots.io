@@ -77,8 +77,8 @@ footer h1 {
 }
 
 .search-filter-bar {
-	height: 85px;
-  line-height: 85px;
+	height: 60px;
+  line-height: 60px;
 	background: #F5F5F5;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
@@ -89,6 +89,7 @@ footer h1 {
   position:fixed;
   top: 0;
   z-index: 1;
+  background: #FFF;
 }
 
 .search-filter-bar input {
@@ -96,8 +97,8 @@ footer h1 {
 	display: block;
 	background: none;
 	border: 0;
-	font: 24px/35px OpenSans;
-  padding: 25px 0;
+	font: 20px/35px OpenSans;
+  padding: 12.5px 0;
 	color: #5D5D5D;
   margin: 0 0 0 15px;
 	float: left;
@@ -137,6 +138,7 @@ footer h1 {
 	width: 100px;
   text-align: center;
 }
+
 
 .search-type li {
   width: 50px;
