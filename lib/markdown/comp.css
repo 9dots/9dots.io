@@ -117,7 +117,11 @@ iframe {
 }
 
 .large-image-wrap {
-  height:100vh;
+  height: calc(100vh - 80px);
+  height: -moz-calc(100vh - 80px);
+  height: -ms-calc(100vh - 80px);
+  height: -o-calc(100vh - 80px);
+  height: -webkit-calc(100vh - 80px);
   max-height:900px;
   position: relative;
   width: 100%;
