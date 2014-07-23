@@ -187,6 +187,7 @@ footer h1 {
   background: #FFFFFF;
   box-shadow: 0 1px 1px rgba(0,0,0,0.15);
   border-radius: 2px;
+  vertical-align: middle;
   overflow: hidden;
 }
 
@@ -458,6 +459,7 @@ iframe {
 }
 
 .large-image-wrap {
+  height:90vh;
   height: calc(100vh - 80px);
   height: -moz-calc(100vh - 80px);
   height: -ms-calc(100vh - 80px);
@@ -474,7 +476,7 @@ iframe {
   display: block;
   width: 16px;
   height: 16px;
-  position: relative;
+  position: absolute;
   bottom: 10%;
   left: 50%;
   margin-left: -8px;
@@ -498,7 +500,7 @@ iframe {
 .page-image {
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
   background-position: center;
   background-size: cover;
 }
