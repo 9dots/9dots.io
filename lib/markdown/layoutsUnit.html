@@ -22,21 +22,22 @@
 			<div class="lessons">
 				{{#data.lessons}}
 					{{=<% %>=}}
-					<div class='page-overview'>
-						<a ng-href='{{"/<%.%>" | idToUrl}}'>
-							<div class='page-header'>
-								<div class='page-title'>{{$pages["<%.%>"].title}}</div>
-								<div class='page-blurb'>{{$pages["<%.%>"].blurb}}</div>
+					<a ng-href='{{"/<%.%>" | idToUrl}}'>
+						<div class='page-overview'>
+							<div class='page-image-wrap'  style='background-image: url({{$pages["<%.%>"].image}})' ></div>
+							<div class='info'>
+								<div class='page-header'>
+									<div class='page-title'>{{$pages["<%.%>"].title}}</div>
+								</div>
+								<div class='more-info'>
+									<div class='page-blurb'>{{$pages["<%.%>"].blurb}}</div>
+								</div>
 							</div>
-							<div class='page-image-wrap' style='background-image: url(http://uploads.9dots.io/OjN7Jaf_md.jpg)'>
-								<div class='page-image' style='background-image: url({{$pages["<%.%>"].image}})'></div>
-							</div>
-						</a>
-					</div>
+						</div>
+					</a>
 					<%={{ }}=%>
 				{{/data.lessons}}
 			</div>
 		</article>
 	</div>
 </div>
-
