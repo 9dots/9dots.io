@@ -32,7 +32,7 @@ app.use(require('./lib/upload'));
 //	console.log('upload');
 //})
 
-// boot app
-app.use(require('boot'));
 app.use(require('prerender-node').set('prerenderToken', 'toId3gs33teeQt7Ln7XR'));
 
+// boot app
+app.use(require('boot'));
