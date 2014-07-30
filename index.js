@@ -15,7 +15,6 @@ app.use(express.logger('dev'));
 app.use(express.compress());
 app.use(express.static(__dirname + '/public'));
 var prerender = require('prerender-node').set('prerenderToken', 'toId3gs33teeQt7Ln7XR');
-app.use(prerender);
 
 // mount
 
@@ -35,3 +34,4 @@ app.use(require('./lib/upload'));
 
 // boot app
 app.use(require('boot'));
+app.use(prerender);
