@@ -31,7 +31,6 @@ app.use(require('./lib/upload'));
 //app.post('/upload', function() {
 //	console.log('upload');
 //})
-
+app.use(prerender);
 // boot app
 app.use(require('boot'));
-app.use(prerender);
