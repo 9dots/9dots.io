@@ -14,6 +14,7 @@ app.set('view engine', 'jade');
 app.use(express.logger('dev'));
 app.use(express.compress());
 app.use(express.static(__dirname + '/public'));
+app.use(require('prerender-node').set('prerenderToken', 'toId3gs33teeQt7Ln7XR'));
 
 // mount
 
