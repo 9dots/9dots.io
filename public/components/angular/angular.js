@@ -19070,8 +19070,9 @@ var ngIncludeDirective = ['$http', '$templateCache', '$anchorScroll', '$animate'
 
               currentScope.$emit('$includeContentLoaded');
               scope.$eval(onloadExp);
-            }).error(function() {
+            }).error(function(err) {
               if (thisChangeId === changeCounter) cleanupLastIncludeContent();
+              currentScope.$error = {src: src, err: err};
             });
             scope.$emit('$includeContentRequested');
           } else {
