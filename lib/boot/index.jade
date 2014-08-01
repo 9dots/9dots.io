@@ -5,6 +5,7 @@ html(ng-app="app")
     title {{ seo.title }}
     script.
       SETTINGS = !{JSON.stringify(settings)}
+      window.prerenderReady = false;
     link(rel='stylesheet', href='/app.css')
     link(rel='stylesheet', href='/bower.css')
     script(src='/bower.js')
