@@ -19072,7 +19072,7 @@ var ngIncludeDirective = ['$http', '$templateCache', '$anchorScroll', '$animate'
               scope.$eval(onloadExp);
             }).error(function(err) {
               if (thisChangeId === changeCounter) cleanupLastIncludeContent();
-              scope.$error = {src: src, err: err};
+              scope.$error = {src: src, err: [].slice.call(arguments)};
               console.log('error', err);
             });
             scope.$emit('$includeContentRequested');
