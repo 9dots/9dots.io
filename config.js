@@ -27,7 +27,7 @@ module.exports = {
   server: 'http://www.9dots.io',
   backend: 'http://backend.9dots.io',
   uploads: 'http://uploads.9dots.io',
-  posts: 'http://posts.9dots.io',
+  posts: 'http://posts.9dots.io.s3-website-us-east-1.amazonaws.com',
 
   dev: {
     gatekeeperUrl: 'http://localhost:3000',
