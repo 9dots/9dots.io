@@ -10,7 +10,7 @@
 		<nav id='nav'>
 			<ul>
 				<li ng-repeat='link in links'>
-					<a ng-href='{{link.path}}'>{{link.name}}</a>
+					<a ng-href='{{link.path}}' ng-click='seo.title=link.name'>{{link.name}}</a>
 				</li>
 				<li>
 					<a ng-hide='auth.authenticated()' href='/login?redirect_uri={{redirectUri}}'>
