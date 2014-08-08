@@ -8,7 +8,7 @@
 			</ul>
 			<input id='query' ng-model='query' ng-blur='locationQuery()' placeholder='Search by keyword, #hash-tag or @author'></input>
 			<ul class='search-sort'>
-				<li><a ng-click='search("sort", "-createdAt")' ng-class='{active: search("sort") == "-createdAt"}'>Recent</a></li>
+				<li><a ng-click='search("sort", "-updatedAt")' ng-class='{active: search("sort") == "-createdAt"}'>Recent</a></li>
 				<li><a ng-click='search("sort", "-views")' ng-class='{active: search("sort") == "-views"}'>Popular</a></li>
 			</ul>
 		</div>
