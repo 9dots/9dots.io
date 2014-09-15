@@ -41,9 +41,14 @@
 
 #nav a {
 	font-size: 14px;
-	font-weight: lighter;
-	color: #333;
+	font-weight: 400;
+	color: #222;
 	display: block;
+	text-transform: uppercase;
+}
+
+#nav a:hover{
+	color:#6AB8E5;
 }
 
 #nav a.logout {
