@@ -3,7 +3,6 @@
     {{post.publishedText()}}<span class='ico small checkmark'></span>
   </a>
 	<div select='post.addLesson(result)' search='post.pageQuery(query)' placeholder='add lesson' on-change='post.makeDirty()'>
-		<div>{{result.title}}</div>
 	</div>
 
 	<ul class='unit-form-lessons' ui-sortable ng-model='post.data.metadata.lessons'>
