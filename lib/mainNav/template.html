@@ -20,7 +20,18 @@
 	        	Sign Out
 	        </a>
 	       </li>
+	       <li>
+	       	<a id='sign-up' ng-click='mail = true'> Mailing List
+	       		<div id='mail-container' ng-show='mail'>
+	       			<div id='close' ng-click='$event.stopPropagation(); mail = false'></div>
+	       			<iframe id='mc_embed_signup' src='http://eepurl.com/3x6kr'></iframe>
+	       		</div>
+	       	</a>
+	       </li>
 			<ul>
 		</nav>
 	</div>
+		<!-- Begin MailChimp Signup Form -->
+				
+					<!--End mc_embed_signup-->
 </div>

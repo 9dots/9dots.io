@@ -45,6 +45,7 @@
 	color: #222;
 	display: block;
 	text-transform: uppercase;
+	cursor:pointer;
 }
 
 #nav a:hover{
@@ -53,5 +54,34 @@
 
 #nav a.logout {
 	cursor: pointer;
+}
+
+#mail-container {
+	position:relative;
+	left:-145px;
+}
+
+#close{
+	position: absolute;
+	left: 317px;
+	top: -6px;
+	z-index: 1;
+	height: 25px;
+	width: 25px;
+	padding: 0;
+	background: url('http://webdocs.commvault.com/images/fy14-campaigns/close-button.png');
+	background-size: 100%;
+	cursor: pointer;
+}
+
+#mc_embed_signup {
+	position:absolute;
+	width:300px;
+	height:540px;
+	padding-top: 20px;
+	background-color: #fff;
+	margin-top: -10px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+	border-radius: 5px;
 }
 
