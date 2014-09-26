@@ -304,13 +304,26 @@ iframe {
   text-decoration: underline;
 }
 
-.page-inner ul, .page-inner ol {
+.page-inner ul{
   display: block;
   -webkit-margin-before: 1em;
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   -webkit-padding-start: 40px;
+}
+
+.page-inner ol {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 20px;
+}
+
+.page-inner li ul {
+  -webkit-padding-start: 20px;
 }
 
 .page-inner li { 
