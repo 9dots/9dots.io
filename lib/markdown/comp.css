@@ -327,12 +327,14 @@ iframe {
 }
 
 .page-inner li { 
-  font-size:16px;
+  font-size:18px;
   line-height: normal;
+  color:#333;
 }
 
 .page-inner ul li {
   color:#555;
+  font-size:16px;
 }
 
 .page-inner ul { list-style-type: disc; }
