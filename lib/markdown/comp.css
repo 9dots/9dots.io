@@ -326,7 +326,7 @@ iframe {
   -webkit-padding-start: 20px;
 }
 
-.page-inner li { 
+.page-inner ul li { 
   font-size:16px;
   color:#555;
   line-height: normal;
