@@ -257,8 +257,11 @@ iframe {
 .page-inner h2 {
   font-size: 25px;
   font-weight: 300;
+  line-height: 1.225;
   color:#EC5766;
   border: 0;
+  border-bottom:1px solid rgba(236, 87, 102, 0.25);
+  margin:20px auto;
 }
 .page-inner h3 {
   font-size: 22px;
@@ -330,10 +333,6 @@ iframe {
   font-size:18px;
   line-height: normal;
   color:#333;
-}
-
-.page-inner ol li {
-  
 }
 
 .page-inner ul li {
