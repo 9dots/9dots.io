@@ -727,7 +727,7 @@ iframe {
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
-  -webkit-padding-start: 20px;
+  -webkit-padding-start: 24px;
 }
 
 .page-inner li ul {
@@ -735,9 +735,23 @@ iframe {
 }
 
 .page-inner li { 
-  font-size:16px;
-  color:#555;
+  font-size:18px;
   line-height: normal;
+  color:#333;
+}
+
+.page-inner ol li {
+  
+}
+
+.page-inner ul li {
+  color:#555;
+  font-size:16px;
+  margin:10px 0;
+}
+
+.page-inner #materials li{
+  margin:0;
 }
 
 .page-inner ul { list-style-type: disc; }
@@ -3816,10 +3830,6 @@ ul.section-tabs li.active:before {
 }
 
 #blurb {
-  font: 15px/20px 'OpenSans';
-}
-
-#standards {
   font: 15px/20px 'OpenSans';
 }
 

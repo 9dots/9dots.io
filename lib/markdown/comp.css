@@ -330,12 +330,24 @@ iframe {
   font-size:18px;
   line-height: normal;
   color:#333;
-  margin:10px 0;
+}
+
+.page-inner ol li {
+  
 }
 
 .page-inner ul li {
   color:#555;
   font-size:16px;
+  margin:10px 0;
+}
+
+.page-inner ul ul {
+  list-style-type: circle;
+}
+
+.page-inner #materials li{
+  margin:0;
 }
 
 .page-inner ul { list-style-type: disc; }
