@@ -3,3 +3,4 @@
 User-agent: *
 Disallow: /edit/
 Disallow: /login*
+Disallow: /app/
