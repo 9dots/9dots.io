@@ -30,7 +30,6 @@ app.use('/editor', require('./lib/editor'));
 
 app.use(require('./lib/upload'));
 //app.post('/upload', function() {
-//	console.log('upload');
 //})
 // boot app
 app.use(require('boot'));
