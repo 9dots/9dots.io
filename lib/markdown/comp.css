@@ -345,6 +345,10 @@ iframe {
   list-style-type: circle;
 }
 
+.page-inner ul ul ul {
+  list-style-type: square;
+}
+
 .page-inner #materials li{
   margin:0;
 }
