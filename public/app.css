@@ -753,6 +753,10 @@ iframe {
   list-style-type: circle;
 }
 
+.page-inner ul ul ul {
+  list-style-type: square;
+}
+
 .page-inner #materials li{
   margin:0;
 }
@@ -4408,6 +4412,10 @@ ul.selection li.active {
 
 .footer li a {
 	color:#E5E5E5;
+}
+
+.footer h3 {
+	margin-top:0;
 }
 .selection .active {
 	background: blue;
