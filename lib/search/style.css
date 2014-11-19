@@ -221,7 +221,7 @@ footer h1 {
   bottom: 0;
   transition: all .2s linear;
 }
-
+  
 .more-info{
   position: absolute;
   width:100%;
@@ -247,8 +247,14 @@ footer h1 {
 
 .more-info .page-blurb {
   font: 14px OpenSans;
-  color:#F5F5F5;
-  padding: 20px
+  color: #F5F5F5;
+  padding: 14px 20px;
+  max-height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .full {
@@ -308,14 +314,18 @@ footer h1 {
 .wiki .more-info .page-blurb {
   font-size: 18px;
   color:#888;
+  height: 90px;
+  max-height: 90px;
+  margin-bottom: 5px;
 }
 
 .page-image-wrap .author-info-wrap {
   line-height: 30px;
-  bottom:0;
-  width:100%;
+  bottom: 0;
+  width: 100%;
   color: #F5F5F5;
-  text-shadow:1px 1px 0 rgba(0,0,0,.2);
+  text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+  padding-bottom: 5px;
 }
 
 .page-image-wrap .author-info{
@@ -327,6 +337,7 @@ footer h1 {
 
 .page-image-wrap .author-info img {
   height: 29px;
+  border-radius: 50%;
 }
 
 .page-image-wrap img {
@@ -372,9 +383,6 @@ footer h1 {
   font: bolder 16px/35px 'OpenSans';
   text-align: center;
   border-radius: 0px;
-
-  /*opacity: 0.7;
-  transition: all 0.3s;*/
 }
 
 .wiki .page-image-wrap .draft-text {

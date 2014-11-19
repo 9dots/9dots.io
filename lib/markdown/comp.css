@@ -234,7 +234,7 @@ iframe {
   margin-bottom: 15px;
 }
 
-.page-image h5{
+.page-image h5, .page-image h5 p{
   font-size:25px;
   line-height: normal;
   font-weight:300;
@@ -271,7 +271,8 @@ iframe {
   margin-bottom:8px;
 }
 .page-inner h4 {
-  font-size: 16px;
+  font-size: 20px;
+  color:rgb(0,0,0);
 }
 .page-inner h5 {
   font-size:30px;

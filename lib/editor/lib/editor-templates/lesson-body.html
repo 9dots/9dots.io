@@ -1,5 +1,13 @@
-<form class='clearfix'>
-  <input id='objective' ng-model='post.data.metadata.objective' placeholder='Objective...' ng-change='post.makeDirty()'/>
+<ul class="objectives">
+	<h1> Students will be able to: </h1>
+	<li ng-repeat="objective in post.data.metadata.objective track by $index">
+		<span class="objective">{{objective}}</span>
+		<span class="remove" ng-click="removeObjective($index)">remove</span>
+	</li>
+</ul>
+<form class='clearfix' ng-submit="submitObjective()" controller="Submit">
+  <input id='objective' ng-model='post.objective' placeholder='Add objective...' ng-change='post.makeDirty()'/>
+  <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
 </form>
 <ul class='group clearfix'>
   <li>

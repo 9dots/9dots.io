@@ -16,8 +16,7 @@
         <form class='clearfix'>
           <input id='title' ng-model='post.data.metadata.title' placeholder='Title...' ng-change='post.makeDirty()'/>
           <div class='blurb-wrap'>
-            <input id='blurb' ng-model='post.data.metadata.blurb' placeholder='Summary...' maxlength='140' ng-change='post.makeDirty()'/>
-            <div class='char-count'>{{post.data.metadata.blurb.length || 0}}/140</div>
+            <textarea id='blurb' ng-model='post.data.metadata.blurb' placeholder='Lesson Overview...' ng-change='post.makeDirty()' msd-elastic="\n"/>
           </div>
           <span ng-show='post.newFile'>
             <select ng-show='post.newFile' ng-class='{null: !post.data.metadata.org}' ng-model='post.data.metadata.org' ng-options='o.login as o.login for o in post.$user.orgs' ng-change='post.makeDirty()'>

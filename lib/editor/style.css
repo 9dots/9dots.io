@@ -190,7 +190,7 @@ ul.section-tabs li.active:before {
   padding: 15px;
 }
 
-.edit form input {
+.edit form input, .edit form textarea {
   padding: 15px;
   margin: 0 15px 8px;
   width: 585px;
@@ -280,10 +280,72 @@ ul.section-tabs li.active:before {
 
 #blurb {
   font: 15px/20px 'OpenSans';
+  resize:none;
+  border:none;
+  color:rgb(0,0,0);
 }
 
 #objective {
   font: 15px/20px 'OpenSans';
+}
+
+.objectives {
+  float:none;
+  background:#F0F0E8;
+  font:15px/20px 'OpenSans', sans-serif;
+  color:rgb(0,0,0);
+  width:100%;
+  margin:0 15px;
+  margin-right: 0;
+  padding: 0 15px 5px;
+}
+
+.objectives h1 {
+  font-size:18px/20px 'OpenSans', sans-serif;
+  margin:0;
+  margin-bottom:5px;
+}
+
+.objectives .objective {
+  vertical-align: middle;
+  display: inline-block;
+  width: 87%;
+  overflow: hidden;
+}
+
+.objectives li {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom:1px;
+}
+
+.objectives .remove{
+  width: 12%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: rgba(236,87,98,.65);
+  color: #fff;
+  cursor: pointer;
+  padding: 0 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.objectives li:hover .remove {
+  opacity: 1;
+}
+
+.objectives li .remove:hover {
+  background: rgba(236, 87, 98, 0.85);
+}
+
+.blurb-wrap {
+  resize:none;
+  border:none;
 }
 
 .blurb-wrap .char-count {
@@ -431,7 +493,7 @@ ul.section-tabs li.active:before {
   border-color: #69B7E3;
 }
 
-.wiki .edit form input {
+.wiki .edit form input, .wiki .edit form textarea {
   width: 905px;
 }
 

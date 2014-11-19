@@ -222,7 +222,7 @@ footer h1 {
   bottom: 0;
   transition: all .2s linear;
 }
-
+  
 .more-info{
   position: absolute;
   width:100%;
@@ -248,8 +248,14 @@ footer h1 {
 
 .more-info .page-blurb {
   font: 14px OpenSans;
-  color:#F5F5F5;
-  padding: 20px
+  color: #F5F5F5;
+  padding: 14px 20px;
+  max-height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .full {
@@ -309,14 +315,18 @@ footer h1 {
 .wiki .more-info .page-blurb {
   font-size: 18px;
   color:#888;
+  height: 90px;
+  max-height: 90px;
+  margin-bottom: 5px;
 }
 
 .page-image-wrap .author-info-wrap {
   line-height: 30px;
-  bottom:0;
-  width:100%;
+  bottom: 0;
+  width: 100%;
   color: #F5F5F5;
-  text-shadow:1px 1px 0 rgba(0,0,0,.2);
+  text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+  padding-bottom: 5px;
 }
 
 .page-image-wrap .author-info{
@@ -328,6 +338,7 @@ footer h1 {
 
 .page-image-wrap .author-info img {
   height: 29px;
+  border-radius: 50%;
 }
 
 .page-image-wrap img {
@@ -373,9 +384,6 @@ footer h1 {
   font: bolder 16px/35px 'OpenSans';
   text-align: center;
   border-radius: 0px;
-
-  /*opacity: 0.7;
-  transition: all 0.3s;*/
 }
 
 .wiki .page-image-wrap .draft-text {
@@ -642,7 +650,7 @@ iframe {
   margin-bottom: 15px;
 }
 
-.page-image h5{
+.page-image h5, .page-image h5 p{
   font-size:25px;
   line-height: normal;
   font-weight:300;
@@ -679,7 +687,8 @@ iframe {
   margin-bottom:8px;
 }
 .page-inner h4 {
-  font-size: 16px;
+  font-size: 20px;
+  color:rgb(0,0,0);
 }
 .page-inner h5 {
   font-size:30px;
@@ -3748,7 +3757,7 @@ ul.section-tabs li.active:before {
   padding: 15px;
 }
 
-.edit form input {
+.edit form input, .edit form textarea {
   padding: 15px;
   margin: 0 15px 8px;
   width: 585px;
@@ -3838,10 +3847,72 @@ ul.section-tabs li.active:before {
 
 #blurb {
   font: 15px/20px 'OpenSans';
+  resize:none;
+  border:none;
+  color:rgb(0,0,0);
 }
 
 #objective {
   font: 15px/20px 'OpenSans';
+}
+
+.objectives {
+  float:none;
+  background:#F0F0E8;
+  font:15px/20px 'OpenSans', sans-serif;
+  color:rgb(0,0,0);
+  width:100%;
+  margin:0 15px;
+  margin-right: 0;
+  padding: 0 15px 5px;
+}
+
+.objectives h1 {
+  font-size:18px/20px 'OpenSans', sans-serif;
+  margin:0;
+  margin-bottom:5px;
+}
+
+.objectives .objective {
+  vertical-align: middle;
+  display: inline-block;
+  width: 87%;
+  overflow: hidden;
+}
+
+.objectives li {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom:1px;
+}
+
+.objectives .remove{
+  width: 12%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: rgba(236,87,98,.65);
+  color: #fff;
+  cursor: pointer;
+  padding: 0 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.objectives li:hover .remove {
+  opacity: 1;
+}
+
+.objectives li .remove:hover {
+  background: rgba(236, 87, 98, 0.85);
+}
+
+.blurb-wrap {
+  resize:none;
+  border:none;
 }
 
 .blurb-wrap .char-count {
@@ -3989,7 +4060,7 @@ ul.section-tabs li.active:before {
   border-color: #69B7E3;
 }
 
-.wiki .edit form input {
+.wiki .edit form input, .wiki .edit form textarea {
   width: 905px;
 }
 

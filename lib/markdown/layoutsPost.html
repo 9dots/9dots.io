@@ -8,7 +8,6 @@
 			<div class='page-info-wrapper'>
 				<div class='page-info'>
 					<h1 class='title'>{{data.title}}</h1>		
-					<h5>{{data.blurb}}</h5>
 				</div>
 			</div>
 		</div>
@@ -19,7 +18,15 @@
 	<div editor-menu default-edit-mode='preview'></div>
 	<div class='page-inner page-full'>
 		<article>
-			<p class='objective'>{{data.objective}}</p>
+			<h2> Learning Objectives </h2>
+			<h4> Students will be able to: </h4>
+			<ul>
+				{{#data.objective}}
+				<li class='objective'> {{name}} </li>
+				{{/data.objective}}
+			</ul>
+			<h2> Lesson Overview </h2>
+			{{{data.blurb}}}
 			{{{data.content}}}
 			{{#data.attachments.length}}
 					<h2>Attachments</h2>
