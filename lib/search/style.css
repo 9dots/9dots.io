@@ -155,20 +155,12 @@ footer h1 {
   line-height: 35px;
   color: #FFF;
   border-radius: 2px;
-  transition: all 0.1s linear;
 }
 
 .search-type li a:hover, .search-type li a.active{
   background: #5CA1C8;
   color: #FFF;
-}
-
-.search-type li a.hover {
-  transform: translateY(-2px);
-}
-
-.search-type li a.click {
-  transform: translatey(1px);
+  transition: all 0.1s linear;
 }
 
 .search-sort a, .search-type a {
