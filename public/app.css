@@ -134,7 +134,7 @@ footer h1 {
 	float: right;
 }
 
-.search-sort li, .search-type li {
+.search-sort li {
 	float: left;
 	width: 100px;
   text-align: center;
@@ -142,7 +142,34 @@ footer h1 {
 
 
 .search-type li {
-  width: 50px;
+  float: none;
+  display: inline-block;
+  width: auto;
+  text-align:center;
+}
+
+.search-type li a {
+  display: block;
+  padding: 0;
+  width: 67px;
+  background: #6AB8E5;
+  line-height: 35px;
+  color: #FFF;
+  border-radius: 2px;
+  transition: all 0.1s linear;
+}
+
+.search-type li a:hover, .search-type li a.active{
+  background: #5CA1C8;
+  color: #FFF;
+}
+
+.search-type li a.hover {
+  transform: translateY(-2px);
+}
+
+.search-type li a.click {
+  transform: translatey(1px);
 }
 
 .search-sort a, .search-type a {
@@ -180,19 +207,20 @@ footer h1 {
 
 .page-overview {
   display: inline-block;
-  position:relative;
+  position: relative;
   text-align: left;
-	width: 24vw;
-  min-width:360px;
-  max-width:480px;
-	height: 18vw;
-  min-height:270px;
-  max-height:360px;
-	margin: 2px;
-  background: #FFFFFF;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  width: 24vw;
+  min-width: 360px;
+  max-width: 480px;
+  height: 18vw;
+  min-height: 270px;
+  max-height: 360px;
+  margin: 15px;
+  background: #FFF;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
   vertical-align: middle;
   overflow: hidden;
+  border-radius: 2px;
 }
 
 @media all and (max-width:1490px) {
@@ -4292,29 +4320,6 @@ ul.selection li.active {
 .unit-form-lessons li .remove:hover {
   background: rgba(236, 87, 98, 0.85);
 }
-
-
-.search-type li {
-  float: none;
-  display: inline-block;
-  width: auto;
-}
-
-.search-type li a {
-  display: block;
-  padding: 0;
-  width: 67px;
-  background: #6AB8E5;
-  line-height: 35px;
-  color: #FFF;
-  border-radius: 2px;
-}
-
-.search-type li a:hover, .search-type li a.active{
-  background: #5CA1C8;
-  color: #FFF;
-}
-
 
 .upload-attachment {
   position: relative;

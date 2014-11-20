@@ -726,29 +726,6 @@ ul.selection li.active {
   background: rgba(236, 87, 98, 0.85);
 }
 
-
-.search-type li {
-  float: none;
-  display: inline-block;
-  width: auto;
-}
-
-.search-type li a {
-  display: block;
-  padding: 0;
-  width: 67px;
-  background: #6AB8E5;
-  line-height: 35px;
-  color: #FFF;
-  border-radius: 2px;
-}
-
-.search-type li a:hover, .search-type li a.active{
-  background: #5CA1C8;
-  color: #FFF;
-}
-
-
 .upload-attachment {
   position: relative;
   height: 45px;
