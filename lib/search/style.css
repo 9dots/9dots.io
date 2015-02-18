@@ -145,11 +145,11 @@ footer h1 {
 
 .search-type {
   float: left;
-  margin-right: 50px;
+  margin-right: 35px;
 }
 
 .search-sort {
-	float: right;
+	display:inline;
 }
 
 .search-sort li {
