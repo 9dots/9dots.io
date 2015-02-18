@@ -894,7 +894,6 @@ iframe {
 
 
 
-
 /* ------------------------------------------
   Reset ♥
   http://meyerweb.com/eric/tools/css/reset/
@@ -4405,6 +4404,7 @@ ul.selection li.active {
   background: #333;
   text-shadow: 1px 1px rgba(0,0,0,0.2);
 }
+
 #main-nav-header {
 	min-width: 980px;
   	width:100%;

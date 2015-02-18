@@ -5,7 +5,7 @@
     "component/url": "*"
   },
   "local": [],
-  "scripts": ["index.js", "controller.js", "config.js"],
+  "scripts": ["index.js", "controller.js"],
   "templates": ["template.html"],
   "styles": ["style.css"],
   "images": [],
