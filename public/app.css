@@ -146,11 +146,11 @@ footer h1 {
 
 .search-type {
   float: left;
-  margin-right: 50px;
+  margin-right: 35px;
 }
 
 .search-sort {
-	float: right;
+	display:inline;
 }
 
 .search-sort li {
@@ -884,6 +884,7 @@ iframe {
   vertical-align: middle;
   border-color: inherit;
 }
+
 
 
 
@@ -4404,7 +4405,6 @@ ul.selection li.active {
   background: #333;
   text-shadow: 1px 1px rgba(0,0,0,0.2);
 }
-
 #main-nav-header {
 	min-width: 980px;
   	width:100%;

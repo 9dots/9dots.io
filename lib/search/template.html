@@ -2,8 +2,8 @@
 	<div class="search-filter-bar">
 		<div class="inner-search-filter-bar">
 			<ul class='search-type'>
-				<li><a ng-click='search("type","lesson")' ng-class='{active: search("type") == "lesson"}'>Lesson</a></li>
 				<li><a ng-click='search("type", "unit")' ng-class='{active: search("type") == "unit"}'>Unit</a></li>
+				<li><a ng-click='search("type","lesson")' ng-class='{active: search("type") == "lesson"}'>Lesson</a></li>
 				<li><a ng-click='search("type", "wiki")' ng-class='{active: search("type") == "wiki"}'>Wiki</a></li>
 			</ul>
 			<input id='query' ng-model='query' ng-blur='locationQuery(); active = false;' placeholder='Search by keyword, #hash-tag or @author' ng-class='{active:active}' ng-click='active=true'><img src="http://www.challies.com/sites/all/themes/challies/images/search-glass.png"/></input>
